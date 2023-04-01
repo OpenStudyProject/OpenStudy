@@ -6,11 +6,17 @@ header nav {
   justify-content: space-around;
 }
 header nav a h1 {
-  font-size: 24px;
+  font-size: 26px;
 }
 header nav ul {
   display: flex;
 }
 header nav ul a li {
   padding: 12px 12px;
+}
+
+@media screen and (max-width: 599px) {
+  header nav ul {
+    display: none;
+  }
 }/*# sourceMappingURL=header.css.map */
