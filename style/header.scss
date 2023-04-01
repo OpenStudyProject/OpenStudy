@@ -1,0 +1,24 @@
+header {
+    background-color: #eee;
+    
+    nav {
+        display: flex;
+        justify-content: space-around;
+
+        a {
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        ul {
+            display: flex;
+
+            a {
+                li {
+                    padding: 12px 12px;
+                }
+            }
+        }
+    }
+}

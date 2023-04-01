@@ -1,0 +1,16 @@
+header {
+  background-color: #eee;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+}
+header nav a h1 {
+  font-size: 24px;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul a li {
+  padding: 12px 12px;
+}/*# sourceMappingURL=header.css.map */
