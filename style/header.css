@@ -1,22 +1,47 @@
-header {
-  background-color: #eee;
-}
 header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-header nav a h1 {
-  font-size: 26px;
+header nav a.logo {
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+}
+header nav a.logo img {
+  width: 34px;
+  height: 34px;
+}
+header nav a.logo h1 {
+  font-size: 22px;
+  padding: 6px 4px;
+  line-height: 1em;
 }
 header nav ul {
   display: flex;
+  padding: 0 8px;
+}
+header nav ul a {
+  margin: 20px 12px;
 }
 header nav ul a li {
-  padding: 12px 12px;
+  font-size: 14px;
+  line-height: 1em;
+}
+header nav img.sp-menu {
+  display: none;
 }
 
 @media screen and (max-width: 599px) {
+  header nav a.logo {
+    padding: 10px;
+  }
   header nav ul {
     display: none;
+  }
+  header nav img.sp-menu {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 14px;
   }
 }/*# sourceMappingURL=header.css.map */

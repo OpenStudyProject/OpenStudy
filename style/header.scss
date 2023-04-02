@@ -1,24 +1,41 @@
 header {
-    background-color: #eee;
-    
     nav {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
-        a {
+        a.logo {
+            display: flex;
+            justify-content: left;
+            padding: 10px;
+
+            img {
+                width: 34px;
+                height: 34px;
+            }
+
             h1 {
-                font-size: 26px;
+                font-size: 22px;
+                padding: 6px 4px;
+                line-height: 1em;
             }
         }
 
         ul {
             display: flex;
+            padding: 0 8px;
 
             a {
+                margin: 20px 12px;
+
                 li {
-                    padding: 12px 12px;
+                    font-size: 14px;
+                    line-height: 1em;
                 }
             }
+        }
+
+        img.sp-menu {
+            display: none;
         }
     }
 }
@@ -26,8 +43,27 @@ header {
 @media screen and (max-width: 599px) {
     header {
         nav {
+            a.logo {
+                padding: 10px;
+
+                img {
+
+                }
+
+                h1 {
+
+                }
+            }
+
             ul {
                 display: none;
+            }
+
+            img.sp-menu {
+                display: block;
+                width: 26px;
+                height: 26px;
+                margin: 14px;
             }
         }
     }
