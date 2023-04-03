@@ -1,7 +1,26 @@
 main {
     .container {
-        background-color: lavenderblush;
-        padding: 60px 20px;
+        padding: 40px 20px;
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin: 22px 0;
+        }
+
+        h2 {
+            padding: 20px 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            padding: 10px 0;
+        }
+
+        p {
+            padding: 10px 0;
+            font-size: 16px;
+        }
 
         img {
             display: block;
@@ -9,23 +28,18 @@ main {
             width: 140px;
             height: 140px;
         }
-
-        h1 {
-            font-size: 24px;
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        p {
-            font-size: 18px;
-        }
     }
 
-    h2 {
-        padding: 16px 0;
+    .top {
+        background-color: #ffefef;
+        padding: 60px 20px;
     }
 
-    p {
-        padding: 10px 0;
+    .green {
+        background-color: #efffef;
+    }
+
+    .blue {
+        background-color: #efefff;
     }
 }
