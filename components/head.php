@@ -5,6 +5,7 @@
     <meta name="description" content="<?php echo $description ?>">
     <link rel="stylesheet" href="style/default.css">
     <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="shortcut icon" href="images/OpenStudySmall.ico" type="image/x-icon">
     <title><?php echo $title ?></title>
