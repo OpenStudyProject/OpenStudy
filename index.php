@@ -1,13 +1,14 @@
 <?php
     $title = "OpenStudy";
-    $description = "desc.";
-    $path = "./";
+    $description = "全ての受験生のための強力なプラットフォーム";
+    $path = './';
+    $isHome = true;
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-<?php require $path . 'components/' . 'head.php'; ?>
+<?php require $path . 'components/head.php'; ?>
 <body>
-<?php require $path . 'components/' . 'header.php'; ?>
+<?php require $path . 'components/header.php'; ?>
 <main>
     <div class="wrapper top">
         <div class="container top2">
@@ -59,10 +60,10 @@
     <div class="wrapper">
         <div class="container">
             <h2><span>あなたの貢献が</span><span>大きな力になります</span></h2>
-            <p>エンジニアの方もほしい</p>
+            <p>作成中...</p>
         </div>
     </div>
 </main>
-<?php require $path . 'components/' . 'footer.php'; ?>
+<?php require $path . 'components/footer.php'; ?>
 </body>
 </html>

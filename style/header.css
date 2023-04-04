@@ -18,7 +18,7 @@ header nav a.logo h1 {
   line-height: 1em;
 }
 header nav ul {
-  display: flex;
+  display: none;
   padding: 0 8px;
 }
 header nav ul a {
