@@ -9,11 +9,12 @@ footer .container {
   margin: 0 auto;
   padding: 18px;
 }
-footer .container img {
+footer .container svg {
   display: block;
   width: 24px;
   height: 24px;
   opacity: 0.4;
+  fill: black;
 }
 footer .container p.copyright {
   text-align: center;

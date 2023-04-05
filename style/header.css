@@ -28,7 +28,7 @@ header nav ul a li {
   font-size: 14px;
   line-height: 1em;
 }
-header nav img.sp-menu {
+header nav svg.sp-menu {
   display: none;
 }
 
@@ -38,11 +38,5 @@ header nav img.sp-menu {
   }
   header nav ul {
     display: none;
-  }
-  header nav img.sp-menu {
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 14px;
   }
 }/*# sourceMappingURL=header.css.map */

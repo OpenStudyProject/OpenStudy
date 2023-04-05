@@ -36,7 +36,7 @@ header {
             }
         }
 
-        img.sp-menu {
+        svg.sp-menu {
             display: none;
         }
     }
@@ -61,12 +61,13 @@ header {
                 display: none;
             }
 
-            img.sp-menu {
-                display: block;
-                width: 26px;
-                height: 26px;
-                margin: 14px;
-            }
+            // svg.sp-menu {
+            //     display: block;
+            //     width: 26px;
+            //     height: 26px;
+            //     margin: 14px;
+            //     fill: black;
+            // }
         }
     }
 }
