@@ -1,0 +1,7 @@
+name: deploy
+run-name: Transfer article files to the server
+on: [push]
+jobs:
+  FTP-Deploy:
+    name: FTP-Deploy
+    runs-on: ubuntu-latest
