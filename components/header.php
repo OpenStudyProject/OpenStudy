@@ -6,10 +6,8 @@
         </a>
         
         <ul>
-            <a href="<?php echo $path ?>lists"><li>最新のコンテンツ</li></a>
-            <a href=""><li>Menu2</li></a>
-            <a href=""><li>Menu3</li></a>
-            <a href=""><li>Menu4</li></a>
+            <a href="<?php echo $path ?>about"><li>OpenStudyとは</li></a>
+            <a href="<?php echo $path ?>contribute"><li>作成に参加する</li></a>
         </ul>
 
         <a href="<?php echo $path ?>lists" class="sp-menu">

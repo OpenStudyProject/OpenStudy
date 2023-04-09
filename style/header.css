@@ -22,11 +22,12 @@ header nav ul {
   padding: 0 8px;
 }
 header nav ul a {
-  margin: 20px 12px;
+  margin: 20px 16px;
 }
 header nav ul a li {
   font-size: 14px;
   line-height: 1em;
+  font-weight: 600;
 }
 header nav a.sp-menu {
   display: none;
