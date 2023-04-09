@@ -44,6 +44,18 @@ main {
     .blue {
         background-color: #efefff;
     }
+
+    a.contribute {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        font-weight: 800;
+        color: #0066cc;
+    }
+
+    .last {
+        padding: 80px 20px;
+    }
 }
 
 @media screen and (max-width: 599px) {
