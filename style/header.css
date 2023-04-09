@@ -18,7 +18,7 @@ header nav a.logo h1 {
   line-height: 1em;
 }
 header nav ul {
-  display: none;
+  display: flex;
   padding: 0 8px;
 }
 header nav ul a {
@@ -28,7 +28,7 @@ header nav ul a li {
   font-size: 14px;
   line-height: 1em;
 }
-header nav svg.sp-menu {
+header nav a.sp-menu {
   display: none;
 }
 
@@ -38,5 +38,15 @@ header nav svg.sp-menu {
   }
   header nav ul {
     display: none;
+  }
+  header nav a.sp-menu {
+    display: block;
+  }
+  header nav svg.sp-menu {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 14px;
+    fill: black;
   }
 }

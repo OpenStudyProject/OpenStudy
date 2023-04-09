@@ -11,6 +11,6 @@
     <link rel="stylesheet" href="<?php echo $path ?>style/default.css?<?php echo filemtime($path .'style/default.css'); ?>">
     <link rel="stylesheet" href="<?php echo $path ?>style/header.css?<?php echo filemtime($path .'style/header.css'); ?>">
     <link rel="stylesheet" href="<?php echo $path ?>style/footer.css?<?php echo filemtime($path .'style/footer.css'); ?>">
-    <link rel="stylesheet" href="<?php echo $path ?>style/style.css?<?php echo filemtime($path .'style/style.css'); ?>">
+    <link rel="stylesheet" href="<?php echo $path ?>style/<?php echo $style ?>.css?<?php echo filemtime($path .'style/' . $style . '.css'); ?>">
     <meta name="google-site-verification" content="rYJHGR_uUcxmqkD9mSn79HxxWq4ikIz755zQGjaf87A" />
 </head>

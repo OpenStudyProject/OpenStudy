@@ -1,0 +1,31 @@
+.container {
+  padding: 40px 20px;
+}
+.container h1 {
+  margin: 20px 0;
+  padding: 0 10px;
+  font-size: 26px;
+}
+.container a.article {
+  display: block;
+  padding: 34px 10px;
+  border-top: solid #bbb 1px;
+}
+.container a.article:last-child {
+  border-bottom: solid #bbb 1px;
+}
+.container a.article h2 {
+  font-size: 20px;
+}
+.container a.article p {
+  color: #888;
+  font-size: 14px;
+  font-weight: 800;
+  padding-top: 4px 0;
+}
+
+@media screen and (max-width: 599px) {
+  .container {
+    padding: 20px;
+  }
+}

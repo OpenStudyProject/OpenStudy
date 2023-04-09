@@ -22,8 +22,7 @@ header {
         }
 
         ul {
-            display: none;
-            // display: flex;
+            display: flex;
             padding: 0 8px;
 
             a {
@@ -36,7 +35,7 @@ header {
             }
         }
 
-        svg.sp-menu {
+        a.sp-menu {
             display: none;
         }
     }
@@ -47,27 +46,23 @@ header {
         nav {
             a.logo {
                 padding: 10px;
-
-                img {
-
-                }
-
-                h1 {
-
-                }
             }
 
             ul {
                 display: none;
             }
 
-            // svg.sp-menu {
-            //     display: block;
-            //     width: 26px;
-            //     height: 26px;
-            //     margin: 14px;
-            //     fill: black;
-            // }
+            a.sp-menu {
+                display: block;
+            }
+
+            svg.sp-menu {
+                display: block;
+                width: 26px;
+                height: 26px;
+                margin: 14px;
+                fill: black;
+            }
         }
     }
 }

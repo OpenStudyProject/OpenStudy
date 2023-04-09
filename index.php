@@ -3,6 +3,7 @@
     $description = "全ての受験生のための強力なプラットフォーム";
     $path = './';
     $isHome = true;
+    $style = "top";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
