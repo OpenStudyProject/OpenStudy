@@ -1,3 +1,4 @@
+<script src="<?php echo $path . 'js/spHeaderMenu.js'; ?>"></script>
 <footer>
     <div class="container">
         <p class="copyright">&copy; 2023 OpenStudy</p>

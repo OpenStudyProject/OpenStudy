@@ -1,53 +1,77 @@
-header nav {
+header nav.pc, header nav.sp {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px #888 solid;
 }
-header nav a.logo {
+header nav.pc a.home-link, header nav.sp a.home-link {
   display: flex;
   justify-content: left;
   padding: 10px;
 }
-header nav a.logo img {
+header nav.pc a.home-link img, header nav.sp a.home-link img {
   width: 34px;
   height: 34px;
 }
-header nav a.logo h1 {
+header nav.pc a.home-link h1, header nav.sp a.home-link h1 {
   font-size: 22px;
   padding: 6px 4px;
   line-height: 1em;
 }
-header nav ul {
+header nav.pc ul, header nav.sp ul {
   display: flex;
   padding: 0 8px;
 }
-header nav ul a {
+header nav.pc ul a, header nav.sp ul a {
   margin: 20px 16px;
 }
-header nav ul a li {
+header nav.pc ul a li, header nav.sp ul a li {
   font-size: 14px;
   line-height: 1em;
   font-weight: 600;
 }
-header nav a.sp-menu {
+header nav.pc a.sp-menu, header nav.sp a.sp-menu {
+  display: none;
+}
+header nav.sp {
   display: none;
 }
 
 @media screen and (max-width: 599px) {
-  header nav a.logo {
-    padding: 10px;
-  }
-  header nav ul {
+  header nav.pc {
     display: none;
   }
-  header nav a.sp-menu {
+  header nav.sp {
     display: block;
   }
-  header nav svg.sp-menu {
+  header nav.sp .topbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #888 solid;
+  }
+  header nav.sp .topbar input {
+    display: none;
+  }
+  header nav.sp .topbar button {
+    border: none;
+    background-color: transparent;
+  }
+  header nav.sp .topbar button svg {
     display: block;
     width: 26px;
     height: 26px;
     margin: 14px;
     fill: black;
+  }
+  header nav.sp ul {
+    display: block;
+    padding: 0;
+  }
+  header nav.sp ul a {
+    display: block;
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 10px 14px;
   }
 }

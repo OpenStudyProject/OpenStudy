@@ -1,10 +1,10 @@
 header {
-    nav {
+    nav.pc, nav.sp {
         display: flex;
         justify-content: space-between;
         border-bottom: 1px #888 solid;
 
-        a.logo {
+        a.home-link {
             display: flex;
             justify-content: left;
             padding: 10px;
@@ -40,29 +40,56 @@ header {
             display: none;
         }
     }
+
+    nav.sp {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 599px) {
     header {
-        nav {
-            a.logo {
-                padding: 10px;
+        nav.pc {
+            display: none;
+        }
+
+        nav.sp {
+            display: block;
+
+            .topbar {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px #888 solid;
+
+                input {
+                    display: none;
+                }
+
+                button {
+                    border: none;
+                    background-color: transparent;
+
+                    svg {
+                        display: block;
+                        width: 26px;
+                        height: 26px;
+                        margin: 14px;
+                        fill: black;
+                    }
+                }
             }
 
             ul {
-                display: none;
-            }
-
-            a.sp-menu {
                 display: block;
-            }
+                padding: 0;
 
-            svg.sp-menu {
-                display: block;
-                width: 26px;
-                height: 26px;
-                margin: 14px;
-                fill: black;
+                a {
+                    display: block;
+                    text-align: center;
+                    background-color: #111;
+                    color: #fff;
+                    margin: 0;
+                    padding: 10px 14px;
+                }
             }
         }
     }
