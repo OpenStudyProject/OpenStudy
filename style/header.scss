@@ -1,10 +1,10 @@
 header {
-    nav {
+    nav.pc, nav.sp {
         display: flex;
         justify-content: space-between;
         border-bottom: 1px #888 solid;
 
-        a.logo {
+        a.home-link, div.home-link {
             display: flex;
             justify-content: left;
             padding: 10px;
@@ -22,52 +22,110 @@ header {
         }
 
         ul {
-            display: none;
-            // display: flex;
+            display: flex;
             padding: 0 8px;
 
             a {
-                margin: 20px 12px;
+                margin: 20px 16px;
 
                 li {
                     font-size: 14px;
                     line-height: 1em;
+                    font-weight: 600;
                 }
             }
         }
 
-        svg.sp-menu {
+        a.sp-menu {
             display: none;
         }
+    }
+
+    nav.sp {
+        display: none;
     }
 }
 
 @media screen and (max-width: 599px) {
+    main {
+        padding: 57px 0 0;
+    }
+
     header {
-        nav {
-            a.logo {
-                padding: 10px;
+        nav.pc {
+            display: none;
+        }
 
-                img {
+        nav.sp {
+            display: block;
+            position: fixed;
+            right: 0;
+            left: 0;
 
-                }
+            .topbar {
+                display: flex;
+                position: relative;
+                background-color: #fff;
+                justify-content: space-between;
+                border-bottom: 1px #888 solid;
+                z-index: 2;
 
-                h1 {
+                button {
+                    border: solid 1px transparent;
+                    background-color: transparent;
 
+                    svg {
+                        display: block;
+                        width: 26px;
+                        height: 26px;
+                        margin: 14px;
+                        fill: black;
+                    }
                 }
             }
 
-            ul {
+            #abc:checked + div.topbar {
+                background-color: #1d1d1f;
+                border: none;
+
+                .home-link {
+                    visibility: hidden;
+                }
+
+                button {
+                    svg {
+                        fill: #fff;
+                    }
+                }
+            }
+
+            input {
                 display: none;
             }
 
-            // svg.sp-menu {
-            //     display: block;
-            //     width: 26px;
-            //     height: 26px;
-            //     margin: 14px;
-            //     fill: black;
-            // }
+            ul {
+                display: block;
+                position: absolute;
+                right: 0;
+                left: 0;
+                transform: translate(0, -100%);
+                transition: 0.5s;
+                z-index: 1;
+                padding: 40px 30px calc(100vh - 220px);
+                background-color: #1d1d1f;
+
+                a {
+                    display: block;
+                    color: #fff;
+                    margin: 0;
+                    padding: 12px 0;
+                }
+            }
+
+            #trigger-checkbox2:checked + ul {
+                transform: translate(0, 0);
+                transition: 0.5s;
+            }
         }
     }
 }

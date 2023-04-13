@@ -1,42 +1,105 @@
-header nav {
+header nav.pc, header nav.sp {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px #888 solid;
 }
-header nav a.logo {
+header nav.pc a.home-link, header nav.pc div.home-link, header nav.sp a.home-link, header nav.sp div.home-link {
   display: flex;
   justify-content: left;
   padding: 10px;
 }
-header nav a.logo img {
+header nav.pc a.home-link img, header nav.pc div.home-link img, header nav.sp a.home-link img, header nav.sp div.home-link img {
   width: 34px;
   height: 34px;
 }
-header nav a.logo h1 {
+header nav.pc a.home-link h1, header nav.pc div.home-link h1, header nav.sp a.home-link h1, header nav.sp div.home-link h1 {
   font-size: 22px;
   padding: 6px 4px;
   line-height: 1em;
 }
-header nav ul {
-  display: none;
+header nav.pc ul, header nav.sp ul {
+  display: flex;
   padding: 0 8px;
 }
-header nav ul a {
-  margin: 20px 12px;
+header nav.pc ul a, header nav.sp ul a {
+  margin: 20px 16px;
 }
-header nav ul a li {
+header nav.pc ul a li, header nav.sp ul a li {
   font-size: 14px;
   line-height: 1em;
+  font-weight: 600;
 }
-header nav svg.sp-menu {
+header nav.pc a.sp-menu, header nav.sp a.sp-menu {
+  display: none;
+}
+header nav.sp {
   display: none;
 }
 
 @media screen and (max-width: 599px) {
-  header nav a.logo {
-    padding: 10px;
+  main {
+    padding: 57px 0 0;
   }
-  header nav ul {
+  header nav.pc {
     display: none;
+  }
+  header nav.sp {
+    display: block;
+    position: fixed;
+    right: 0;
+    left: 0;
+  }
+  header nav.sp .topbar {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    justify-content: space-between;
+    border-bottom: 1px #888 solid;
+    z-index: 2;
+  }
+  header nav.sp .topbar button {
+    border: solid 1px transparent;
+    background-color: transparent;
+  }
+  header nav.sp .topbar button svg {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 14px;
+    fill: black;
+  }
+  header nav.sp #abc:checked + div.topbar {
+    background-color: #1d1d1f;
+    border: none;
+  }
+  header nav.sp #abc:checked + div.topbar .home-link {
+    visibility: hidden;
+  }
+  header nav.sp #abc:checked + div.topbar button svg {
+    fill: #fff;
+  }
+  header nav.sp input {
+    display: none;
+  }
+  header nav.sp ul {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    transform: translate(0, -100%);
+    transition: 0.5s;
+    z-index: 1;
+    padding: 40px 30px calc(100vh - 220px);
+    background-color: #1d1d1f;
+  }
+  header nav.sp ul a {
+    display: block;
+    color: #fff;
+    margin: 0;
+    padding: 12px 0;
+  }
+  header nav.sp #trigger-checkbox2:checked + ul {
+    transform: translate(0, 0);
+    transition: 0.5s;
   }
 }
