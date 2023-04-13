@@ -3,16 +3,16 @@ header nav.pc, header nav.sp {
   justify-content: space-between;
   border-bottom: 1px #888 solid;
 }
-header nav.pc a.home-link, header nav.sp a.home-link {
+header nav.pc a.home-link, header nav.pc div.home-link, header nav.sp a.home-link, header nav.sp div.home-link {
   display: flex;
   justify-content: left;
   padding: 10px;
 }
-header nav.pc a.home-link img, header nav.sp a.home-link img {
+header nav.pc a.home-link img, header nav.pc div.home-link img, header nav.sp a.home-link img, header nav.sp div.home-link img {
   width: 34px;
   height: 34px;
 }
-header nav.pc a.home-link h1, header nav.sp a.home-link h1 {
+header nav.pc a.home-link h1, header nav.pc div.home-link h1, header nav.sp a.home-link h1, header nav.sp div.home-link h1 {
   font-size: 22px;
   padding: 6px 4px;
   line-height: 1em;
@@ -42,14 +42,15 @@ header nav.sp {
   }
   header nav.sp {
     display: block;
+    position: relative;
   }
   header nav.sp .topbar {
     display: flex;
+    position: relative;
+    background-color: #fff;
     justify-content: space-between;
     border-bottom: 1px #888 solid;
-  }
-  header nav.sp .topbar input {
-    display: none;
+    z-index: 2;
   }
   header nav.sp .topbar button {
     border: none;
@@ -62,16 +63,37 @@ header nav.sp {
     margin: 14px;
     fill: black;
   }
+  header nav.sp #abc:checked + div.topbar {
+    background-color: #1d1d1f;
+  }
+  header nav.sp #abc:checked + div.topbar .home-link h1 {
+    color: #fff;
+  }
+  header nav.sp #abc:checked + div.topbar button svg {
+    fill: #fff;
+  }
+  header nav.sp input {
+    display: none;
+  }
   header nav.sp ul {
     display: block;
-    padding: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    transform: translate(0, -100%);
+    transition: 0.5s;
+    z-index: 1;
+    padding: 40px 30px calc(100vh - 220px);
+    background-color: #1d1d1f;
   }
   header nav.sp ul a {
     display: block;
-    text-align: center;
-    background-color: #111;
     color: #fff;
     margin: 0;
-    padding: 10px 14px;
+    padding: 12px 0;
+  }
+  header nav.sp #trigger-checkbox2:checked + ul {
+    transform: translate(0, 0);
+    transition: 0.5s;
   }
 }

@@ -1,9 +1,18 @@
 <header>
     <nav class="pc">
-        <a <?php echo isset($isHome) ? '' : 'href="' . $path . '"' ?> class="home-link">
-            <img src="<?php echo $path ?>images/OpenStudyTransparent.png" alt="Logo">
-            <h1>OpenStudy</h1>
-        </a>
+        <?php
+            if (isset($isHome)) {
+                echo '<div class="home-link">';
+                    echo '<img src="' . $path . 'images/OpenStudyTransparent.png" alt="Logo">';
+                    echo '<h1>OpenStudy</h1>';
+                echo '</div>';
+            } else {
+                echo '<a href=' . $path . 'class="home-link">';
+                    echo '<img src="' . $path . 'images/OpenStudyTransparent.png" alt="Logo">';
+                    echo '<h1>OpenStudy</h1>';
+                echo '</a>';
+            }
+        ?>
     
         <ul>
             <a href="<?php echo $path ?>about"><li>OpenStudyとは</li></a>
@@ -12,12 +21,21 @@
     </nav>
 
     <nav class="sp">
+        <input type="checkbox" id="abc">
         <div class="topbar">
-            <a <?php echo isset($isHome) ? '' : 'href="' . $path . '"' ?> class="home-link">
-                <img src="<?php echo $path ?>images/OpenStudyTransparent.png" alt="Logo">
-                <h1>OpenStudy</h1>
-            </a>
-            <input type="checkbox" id="hidden-checkbox">
+            <?php
+                if (isset($isHome)) {
+                    echo '<div class="home-link">';
+                        echo '<img src="' . $path . 'images/OpenStudyTransparent.png" alt="Logo">';
+                        echo '<h1>OpenStudy</h1>';
+                    echo '</div>';
+                } else {
+                    echo '<a href=' . $path . 'class="home-link">';
+                        echo '<img src="' . $path . 'images/OpenStudyTransparent.png" alt="Logo">';
+                        echo '<h1>OpenStudy</h1>';
+                    echo '</a>';
+                }
+            ?>
             <button id="open-menu">
                 <svg viewbox="0 0 500 500">
                     <rect width="374.05966" height="33.398186" x="62.970169" y="113.10377" ry="16.699093"/>
@@ -27,6 +45,7 @@
             </button>
         </div>
         
+        <input type="checkbox" id="trigger-checkbox2">
         <ul>
             <a href="">Menu1</a>
             <a href="">Menu2</a>

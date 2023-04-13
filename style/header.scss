@@ -4,7 +4,7 @@ header {
         justify-content: space-between;
         border-bottom: 1px #888 solid;
 
-        a.home-link {
+        a.home-link, div.home-link {
             display: flex;
             justify-content: left;
             padding: 10px;
@@ -54,15 +54,15 @@ header {
 
         nav.sp {
             display: block;
+            position: relative;
 
             .topbar {
                 display: flex;
+                position: relative;
+                background-color: #fff;
                 justify-content: space-between;
                 border-bottom: 1px #888 solid;
-
-                input {
-                    display: none;
-                }
+                z-index: 2;
 
                 button {
                     border: none;
@@ -78,18 +78,48 @@ header {
                 }
             }
 
+            #abc:checked + div.topbar {
+                background-color: #1d1d1f;
+
+                .home-link {
+                    h1 {
+                        color: #fff;
+                    }
+                }
+
+                button {
+                    svg {
+                        fill: #fff;
+                    }
+                }
+            }
+
+            input {
+                display: none;
+            }
+
             ul {
                 display: block;
-                padding: 0;
+                position: absolute;
+                right: 0;
+                left: 0;
+                transform: translate(0, -100%);
+                transition: 0.5s;
+                z-index: 1;
+                padding: 40px 30px calc(100vh - 220px);
+                background-color: #1d1d1f;
 
                 a {
                     display: block;
-                    text-align: center;
-                    background-color: #111;
                     color: #fff;
                     margin: 0;
-                    padding: 10px 14px;
+                    padding: 12px 0;
                 }
+            }
+
+            #trigger-checkbox2:checked + ul {
+                transform: translate(0, 0);
+                transition: 0.5s;
             }
         }
     }
