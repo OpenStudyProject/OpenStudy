@@ -1,28 +1,33 @@
 header nav.pc, header nav.sp {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px #888 solid;
 }
 header nav.pc a.home-link, header nav.pc div.home-link, header nav.sp a.home-link, header nav.sp div.home-link {
   display: flex;
   justify-content: left;
-  padding: 10px;
+  padding: 8px;
 }
-header nav.pc a.home-link img, header nav.pc div.home-link img, header nav.sp a.home-link img, header nav.sp div.home-link img {
-  width: 34px;
-  height: 34px;
+header nav.pc a.home-link svg.logo, header nav.pc div.home-link svg.logo, header nav.sp a.home-link svg.logo, header nav.sp div.home-link svg.logo {
+  width: 32px;
+  height: 32px;
+  margin: 1px 0;
+  fill: #31beff;
 }
 header nav.pc a.home-link h1, header nav.pc div.home-link h1, header nav.sp a.home-link h1, header nav.sp div.home-link h1 {
-  font-size: 22px;
-  padding: 6px 4px;
-  line-height: 1em;
+  font-family: "Cookie", cursive;
+  font-size: 30px;
+  padding: 0 3px;
+  letter-spacing: 0.03em;
+  line-height: 1.1em;
+  color: #000;
+  transition: 0.5s;
 }
 header nav.pc ul, header nav.sp ul {
   display: flex;
   padding: 0 8px;
 }
 header nav.pc ul a, header nav.sp ul a {
-  margin: 20px 16px;
+  margin: 18px 16px;
 }
 header nav.pc ul a li, header nav.sp ul a li {
   font-size: 14px;
@@ -38,7 +43,7 @@ header nav.sp {
 
 @media screen and (max-width: 599px) {
   main {
-    padding: 57px 0 0;
+    padding: 50px 0 0;
   }
   header nav.pc {
     display: none;
@@ -54,29 +59,35 @@ header nav.sp {
     position: relative;
     background-color: #fff;
     justify-content: space-between;
-    border-bottom: 1px #888 solid;
     z-index: 2;
+    transition: 0.5s;
   }
-  header nav.sp .topbar button {
-    border: solid 1px transparent;
+  header nav.sp .topbar .home-link {
+    transition: 0.5s;
+    padding: 7px;
+  }
+  header nav.sp .topbar .home-link svg.logo {
+    width: 28px;
+    height: 28px;
+  }
+  header nav.sp .topbar .home-link h1 {
+    font-size: 22px;
+    padding: 3px 3px;
+  }
+  header nav.sp .topbar button#open-menu {
+    border: 0;
     background-color: transparent;
+    height: -moz-fit-content;
+    height: fit-content;
   }
-  header nav.sp .topbar button svg {
+  header nav.sp .topbar button#open-menu svg.menu-button {
     display: block;
-    width: 26px;
-    height: 26px;
-    margin: 14px;
+    width: 18px;
+    height: 18px;
+    margin: 12px;
     fill: black;
-  }
-  header nav.sp #abc:checked + div.topbar {
-    background-color: #1d1d1f;
-    border: none;
-  }
-  header nav.sp #abc:checked + div.topbar .home-link {
-    visibility: hidden;
-  }
-  header nav.sp #abc:checked + div.topbar button svg {
-    fill: #fff;
+    transition: 0.5s;
+    line-height: 0;
   }
   header nav.sp input {
     display: none;
@@ -87,19 +98,24 @@ header nav.sp {
     right: 0;
     left: 0;
     transform: translate(0, -100%);
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     z-index: 1;
-    padding: 40px 30px calc(100vh - 220px);
-    background-color: #1d1d1f;
+    padding: 10px 0 calc(100vh - 220px);
+    background-color: #fff;
   }
   header nav.sp ul a {
     display: block;
-    color: #fff;
     margin: 0;
-    padding: 12px 0;
+    color: transparent;
+    transition: 0.5s;
+    padding: 12px 36px;
   }
   header nav.sp #trigger-checkbox2:checked + ul {
     transform: translate(0, 0);
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
+  }
+  header nav.sp #trigger-checkbox2:checked + ul a {
+    color: #000;
+    transition: 0.5s 0.2s;
   }
 }

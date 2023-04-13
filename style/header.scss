@@ -2,22 +2,27 @@ header {
     nav.pc, nav.sp {
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px #888 solid;
 
         a.home-link, div.home-link {
             display: flex;
             justify-content: left;
-            padding: 10px;
+            padding: 8px;
 
-            img {
-                width: 34px;
-                height: 34px;
+            svg.logo {
+                width: 32px;
+                height: 32px;
+                margin: 1px 0;
+                fill: #31beff;
             }
 
             h1 {
-                font-size: 22px;
-                padding: 6px 4px;
-                line-height: 1em;
+                font-family: 'Cookie', cursive;
+                font-size: 30px;
+                padding: 0 3px;
+                letter-spacing: 0.03em;
+                line-height: 1.1em;
+                color: #000;
+                transition: 0.5s;
             }
         }
 
@@ -26,7 +31,7 @@ header {
             padding: 0 8px;
 
             a {
-                margin: 20px 16px;
+                margin: 18px 16px;
 
                 li {
                     font-size: 14px;
@@ -48,7 +53,7 @@ header {
 
 @media screen and (max-width: 599px) {
     main {
-        padding: 57px 0 0;
+        padding: 50px 0 0;
     }
 
     header {
@@ -67,37 +72,59 @@ header {
                 position: relative;
                 background-color: #fff;
                 justify-content: space-between;
-                border-bottom: 1px #888 solid;
                 z-index: 2;
-
-                button {
-                    border: solid 1px transparent;
-                    background-color: transparent;
-
-                    svg {
-                        display: block;
-                        width: 26px;
-                        height: 26px;
-                        margin: 14px;
-                        fill: black;
-                    }
-                }
-            }
-
-            #abc:checked + div.topbar {
-                background-color: #1d1d1f;
-                border: none;
+                transition: 0.5s;
 
                 .home-link {
-                    visibility: hidden;
+                    transition: 0.5s;
+                    padding: 7px;
+
+                    svg.logo {
+                        width: 28px;
+                        height: 28px;
+                    }
+
+                    h1 {
+                        font-size: 22px;
+                        padding: 3px 3px;
+                    }
                 }
 
-                button {
-                    svg {
-                        fill: #fff;
+                button#open-menu {
+                    border: 0;
+                    background-color: transparent;
+                    height: fit-content;
+
+                    svg.menu-button {
+                        display: block;
+                        width: 18px;
+                        height: 18px;
+                        margin: 12px;
+                        fill: black;
+                        transition: 0.5s;
+                        line-height: 0;
                     }
                 }
             }
+
+            // #abc:checked + div.topbar {
+            //     background-color: #1d1d1f;
+            //     transition: 0.5s;
+
+            //     .home-link {
+            //         h1 {
+            //             color: #fff;
+            //             transition: 0.5s 0.01s  ease-in-out;
+            //         }
+            //     }
+
+            //     button {
+            //         svg.menu-button {
+            //             fill: #fff;
+            //             transition: 0.5s ease-in-out;
+            //         }
+            //     }
+            // }
 
             input {
                 display: none;
@@ -109,22 +136,28 @@ header {
                 right: 0;
                 left: 0;
                 transform: translate(0, -100%);
-                transition: 0.5s;
+                transition: 0.5s ease-in-out;
                 z-index: 1;
-                padding: 40px 30px calc(100vh - 220px);
-                background-color: #1d1d1f;
+                padding: 10px 0 calc(100vh - 220px);
+                background-color: #fff;
 
                 a {
                     display: block;
-                    color: #fff;
                     margin: 0;
-                    padding: 12px 0;
+                    color: transparent;
+                    transition: 0.5s;
+                    padding: 12px 36px;
                 }
             }
 
             #trigger-checkbox2:checked + ul {
                 transform: translate(0, 0);
-                transition: 0.5s;
+                transition: 0.5s ease-in-out;
+
+                a {
+                    color: #000;
+                    transition: 0.5s 0.2s;
+                }
             }
         }
     }
