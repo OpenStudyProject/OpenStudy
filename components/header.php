@@ -7,7 +7,7 @@
                     echo '<h1>OpenStudy</h1>';
                 echo '</div>';
             } else {
-                echo '<a href=' . $path . 'class="home-link">';
+                echo '<a href="' . $path . '" class="home-link">';
                     echo '<img src="' . $path . 'images/OpenStudyTransparent.png" alt="Logo">';
                     echo '<h1>OpenStudy</h1>';
                 echo '</a>';
@@ -30,7 +30,7 @@
                         echo '<h1>OpenStudy</h1>';
                     echo '</div>';
                 } else {
-                    echo '<a href=' . $path . 'class="home-link">';
+                    echo '<a href="' . $path . '" class="home-link">';
                         echo '<img src="' . $path . 'images/OpenStudyTransparent.png" alt="Logo">';
                         echo '<h1>OpenStudy</h1>';
                     echo '</a>';

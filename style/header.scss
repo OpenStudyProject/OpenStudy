@@ -47,6 +47,10 @@ header {
 }
 
 @media screen and (max-width: 599px) {
+    main {
+        padding: 57px 0 0;
+    }
+
     header {
         nav.pc {
             display: none;
@@ -54,7 +58,9 @@ header {
 
         nav.sp {
             display: block;
-            position: relative;
+            position: fixed;
+            right: 0;
+            left: 0;
 
             .topbar {
                 display: flex;
@@ -65,7 +71,7 @@ header {
                 z-index: 2;
 
                 button {
-                    border: none;
+                    border: solid 1px transparent;
                     background-color: transparent;
 
                     svg {
@@ -80,11 +86,10 @@ header {
 
             #abc:checked + div.topbar {
                 background-color: #1d1d1f;
+                border: none;
 
                 .home-link {
-                    h1 {
-                        color: #fff;
-                    }
+                    visibility: hidden;
                 }
 
                 button {

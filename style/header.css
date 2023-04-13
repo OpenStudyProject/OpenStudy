@@ -37,12 +37,17 @@ header nav.sp {
 }
 
 @media screen and (max-width: 599px) {
+  main {
+    padding: 57px 0 0;
+  }
   header nav.pc {
     display: none;
   }
   header nav.sp {
     display: block;
-    position: relative;
+    position: fixed;
+    right: 0;
+    left: 0;
   }
   header nav.sp .topbar {
     display: flex;
@@ -53,7 +58,7 @@ header nav.sp {
     z-index: 2;
   }
   header nav.sp .topbar button {
-    border: none;
+    border: solid 1px transparent;
     background-color: transparent;
   }
   header nav.sp .topbar button svg {
@@ -65,9 +70,10 @@ header nav.sp {
   }
   header nav.sp #abc:checked + div.topbar {
     background-color: #1d1d1f;
+    border: none;
   }
-  header nav.sp #abc:checked + div.topbar .home-link h1 {
-    color: #fff;
+  header nav.sp #abc:checked + div.topbar .home-link {
+    visibility: hidden;
   }
   header nav.sp #abc:checked + div.topbar button svg {
     fill: #fff;
