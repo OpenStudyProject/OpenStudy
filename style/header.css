@@ -80,6 +80,9 @@ header nav.sp {
     height: -moz-fit-content;
     height: fit-content;
   }
+  header nav.sp .topbar button#open-menu:active {
+    background-color: transparent;
+  }
   header nav.sp .topbar button#open-menu svg.menu-button {
     display: block;
     width: 18px;
@@ -100,7 +103,7 @@ header nav.sp {
     transform: translate(0, -100%);
     transition: 0.5s ease-in-out;
     z-index: 1;
-    padding: 10px 0 calc(100vh - 220px);
+    padding: 24px 0 calc(100vh - 44px - 96px - 24px);
     background-color: #fff;
   }
   header nav.sp ul a {
@@ -108,7 +111,7 @@ header nav.sp {
     margin: 0;
     color: transparent;
     transition: 0.5s;
-    padding: 12px 36px;
+    padding: 12px 40px;
   }
   header nav.sp #trigger-checkbox2:checked + ul {
     transform: translate(0, 0);

@@ -95,6 +95,10 @@ header {
                     background-color: transparent;
                     height: fit-content;
 
+                    &:active {
+                        background-color: transparent;
+                    }
+
                     svg.menu-button {
                         display: block;
                         width: 18px;
@@ -138,7 +142,7 @@ header {
                 transform: translate(0, -100%);
                 transition: 0.5s ease-in-out;
                 z-index: 1;
-                padding: 10px 0 calc(100vh - 220px);
+                padding: 24px 0 calc(100vh - 44px - 48px * 2 - 24px);
                 background-color: #fff;
 
                 a {
@@ -146,7 +150,7 @@ header {
                     margin: 0;
                     color: transparent;
                     transition: 0.5s;
-                    padding: 12px 36px;
+                    padding: 12px 40px;
                 }
             }
 

@@ -12,7 +12,7 @@
 <main>
     <div class="wrapper">
         <div class="container">
-            <h1>参加する</h1>
+            <h1>"Hello, World!" から「フェルマーの最終定理」まで、あなたが詳しく知っていることを分かりやすく教えてあげよう</h1>
             
         </div>
     </div>

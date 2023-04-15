@@ -8,6 +8,7 @@ main {
 
         h2 {
             padding: 20px 0;
+            text-align: center;
         }
 
         h3 {
@@ -21,11 +22,12 @@ main {
             font-size: 16px;
         }
 
-        img {
+        svg.logo {
             display: block;
             margin: 0 auto;
             width: 140px;
             height: 140px;
+            fill: #31beff;
         }
     }
 
@@ -65,6 +67,10 @@ main {
 
             h1 {
                 margin: 22px 0;
+
+                .dot {
+                    display: none;
+                }
             }
             
             h3 {
