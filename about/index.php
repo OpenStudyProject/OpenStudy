@@ -1,6 +1,6 @@
 <?php
-    $title = "OpenStudy";
-    $description = "全ての受験生のための強力なプラットフォーム";
+    $title = "OpenStudyとは - Openstudy";
+    $description = "OpenStudyは、世界中の人により洗練された圧倒的に豊富で良質なコンテンツにより、全ての人の学習を大幅に効率的にするプラットフォームです。";
     $path = '../';
     $style = "about";
 ?>

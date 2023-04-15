@@ -1,6 +1,6 @@
 <?php
-    $title = "最新のコンテンツ";
-    $description = "";
+    $title = "最新のコンテンツ - OpenStudy";
+    $description = "全ての学びたい人に贈る、良質な学習コンテンツの統合体";
     $path = './';
     $isHome = true;
     $style = "article_index"

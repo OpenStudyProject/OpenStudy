@@ -1,5 +1,49 @@
-.container {
-    h1 {
-        text-align: center;
+main {
+    .container {
+        h1 {
+            text-align: center;
+            font-size: 24px;
+
+            span.hello-world {
+                font-size: 32px;
+                padding: 0 4px;
+                background: linear-gradient(90deg, #3b10e7, #e300ae);
+                background: -webkit-linear-gradient(0deg, #6f00ed, #e300ae);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            span.fermat {
+                font-size: 30px;
+                background: linear-gradient(90deg, #45b400, #07a6e0);
+                background: -webkit-linear-gradient(0deg, #00dc49, #00c3d9);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    main {
+        .container {
+            padding: 40px 20px;
+
+            &.top {
+                padding: 40px 10px;
+            }
+
+            h1 {
+                font-size: 22px;
+
+                span.hello-world {
+                    font-size: 30px;
+                }
+
+                span.fermat {
+                    font-size: 28px;
+                }
+            }
+        }
     }
 }
