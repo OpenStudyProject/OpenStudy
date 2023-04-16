@@ -1,5 +1,8 @@
 main {
     .container {
+        padding: 0 20px;
+        margin: 60px auto;
+
         h1 {
             text-align: center;
             font-size: 24px;
@@ -21,18 +24,61 @@ main {
                 -webkit-text-fill-color: transparent;
             }
         }
+
+        h2 {
+            font-size: 20px;
+            padding: 20px 0;
+            margin: 20px 0 0;
+        }
+
+        a.link-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100%;
+            margin: 10px auto;
+            border: solid #333 2px;
+            border-radius: 14px;
+            overflow: hidden;
+
+            p.title {
+                font-size: 18px;
+                font-weight: 600;
+                padding: 4px 20px;
+                line-height: 1em;
+            }
+
+            p.url {
+                font-size: 12px;
+                padding: 2px 20px;
+                line-height: 1em;
+            }
+
+            img {
+                width: 200px;
+            }
+        }
+
+        img.full-img {
+            width: 100%;
+            border-radius: 14px;
+            margin: 20px 0;
+        }
+
+        p {
+            padding: 10px 0;
+
+            a {
+                color: #0066cc;
+                font-weight: 600;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 599px) {
     main {
         .container {
-            padding: 40px 20px;
-
-            &.top {
-                padding: 40px 10px;
-            }
-
             h1 {
                 font-size: 22px;
 
@@ -42,6 +88,16 @@ main {
 
                 span.fermat {
                     font-size: 28px;
+                }
+            }
+
+            a.link-card {
+                p.title, p.url {
+                    padding: 2px 14px;
+                }
+
+                img {
+                    width: 160px;
                 }
             }
         }
