@@ -1,5 +1,5 @@
 <?php
-    $title = "Math";
+    $title = $_GET['title'];
     $description = "";
     $path = '../';
     $style = "article";
