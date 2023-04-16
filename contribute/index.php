@@ -22,7 +22,7 @@
                     <p class="title">開発者のためのプラットフォーム</p>
                     <p class="url">https://github.co.jp</p>
                 </div>
-                <img src="<?php echo $path; ?>images/GithubLogo.jpeg" alt="GitHub-Logo" class="thumbnail">
+                <img src="<?php echo $path; ?>images/GitHubLogo.jpeg" alt="GitHub-Logo" class="thumbnail">
             </a>
 
             <h2>2. コンテンツを自分のリポジトリにコピーする</h2>
