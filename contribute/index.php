@@ -27,7 +27,7 @@
 
             <h2>2. コンテンツを自分のリポジトリにコピーする</h2>
             <p>GitHubでは、各プロジェクトは「リポジトリ」と呼ばれるフォルダで管理されています。最初に、OpenStudyのリポジトリを丸ごと自分の場所にコピーします。</p>
-            <p><a href="https://github.com/OpenStudyProject/Content" target="_blank" rel="noopener noreferrer">OpenStudyProject/Content</a> の画面で右上にある "Fork" をクリックしてください。</p>
+            <p><a href="https://github.com/OpenStudyProject/Content" target="_blank" rel="noopener noreferrer">OpenStudyProject/Content</a> の右上にある "Fork" をクリックしてください。</p>
             <img src="<?php echo $path; ?>images/github-fork.png" alt="How-to-Fork-Repository" class="full-img">
 
             <h2>3. 記事を作成、編集する</h2>
