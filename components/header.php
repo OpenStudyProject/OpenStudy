@@ -19,8 +19,8 @@
         ?>
 
         <ul>
-            <a href="<?php echo $path ?>contribute"><li>記事を書く</li></a>
-            <a href="<?php echo $path ?>about"><li>OpenStudyとは</li></a>
+            <a href="<?php echo $path ?>contribute/"><li>記事を書く</li></a>
+            <a href="<?php echo $path ?>about/"><li>OpenStudyとは</li></a>
         </ul>
     </nav>
 
@@ -55,8 +55,8 @@
         
         <input type="checkbox" id="trigger-checkbox2">
         <ul>
-            <a href="<?php echo $path ?>contribute">記事を書く</a>
-            <a href="<?php echo $path ?>about">OpenStudyとは</a>
+            <a href="<?php echo $path ?>contribute/">記事を書く</a>
+            <a href="<?php echo $path ?>about/">OpenStudyとは</a>
         </ul>
     </nav>
 </header>

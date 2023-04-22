@@ -19,10 +19,10 @@
             <h1>最新のコンテンツ</h1>
             <?php
                 foreach ($articles as $a) {
-                    echo "<a href=" . $path . "articles?title=" . $a["url"] . " class=\"article\">";
-                        echo "<h2>" . $a["title"] . "</h2>";
-                        echo "<p>" . $a["createDate"] . "</p>";
-                    echo "</a>";
+                    echo '<a href="' . $path . 'articles/?title=' . $a["url"] . '" class="article">';
+                        echo '<h2>' . $a["title"] . '</h2>';
+                        echo '<p>' . $a["createDate"] . '</p>';
+                    echo '</a>';
                 }
             ?>
         </div>

@@ -63,7 +63,7 @@
     <div class="wrapper">
         <div class="container last">
             <h1><span>あなたの知識が</span><span>大きな力になります</span></h1>
-            <a href="<?php echo $path . 'contribute'; ?>" class="contribute">記事を書く</a>
+            <a href="<?php echo $path . 'contribute/'; ?>" class="contribute">記事を書く</a>
         </div>
     </div>
 </main>
