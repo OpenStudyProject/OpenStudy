@@ -1,0 +1,36 @@
+.container {
+    padding: 40px 20px;
+    
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin: 20px 0;
+        padding: 14px 0;
+        border-top: double rebeccapurple 4px;
+        border-bottom: double rebeccapurple 4px;
+    }
+
+    h2 {
+        margin: 60px 0 20px;
+        padding: 4px 6px;
+        font-size: 24px;
+        border-left: solid rebeccapurple 4px;
+        background-color: #9900ff22;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 30px 0 10px;
+    }
+
+    p {
+        padding: 16px 0;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .container {
+        padding: 20px;
+    }
+}
