@@ -1,0 +1,12 @@
+name = "MyTheme"
+license = "MIT"
+licenselink = "https://github.com/lin-24-ia/OpenStudy/blob/main/themes/myTheme/LICENSE"
+description = "Hugo theme for OpenStudy."
+homepage = "https://openstudy.jp/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = ""
+  homepage = ""

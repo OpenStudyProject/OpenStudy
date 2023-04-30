@@ -1,0 +1,10 @@
+baseURL = 'https://openstudy.jp/'
+languageCode = 'ja-jp'
+title = 'OpenStudy'
+theme = 'myTheme'
+pluralizeListTitles = false
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true

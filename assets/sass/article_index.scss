@@ -1,0 +1,36 @@
+.container {
+    padding: 20px;
+
+    h1 {
+        margin: 16px 0;
+        padding: 0 10px;
+        font-size: 26px;
+    }
+
+    a.article {
+        display: block;
+        padding: 8px 10px;
+        border-top: solid #bbb 1px;
+
+        &:last-child {
+            border-bottom: solid #bbb 1px;
+        }
+
+        h2 {
+            font-size: 20px;
+            padding: 2px 0;
+        }
+
+        p {
+            color: #888;
+            font-size: 14px;
+            font-weight: 800;
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .container {
+        padding: 20px;
+    }
+}
