@@ -2,10 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://openstudy.jp/categories/</loc>
+    <lastmod>2020-08-25T18:03:25+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://openstudy.jp/tags/example/</loc>
+    <lastmod>2020-08-25T18:03:25+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://openstudy.jp/categories/hugo/</loc>
+    <lastmod>2020-08-25T18:03:25+09:00</lastmod>
+  </url><url>
+    <loc>https://openstudy.jp/</loc>
+    <lastmod>2020-08-25T18:03:25+09:00</lastmod>
+  </url><url>
+    <loc>https://openstudy.jp/posts/</loc>
+    <lastmod>2020-08-25T18:03:25+09:00</lastmod>
+  </url><url>
+    <loc>https://openstudy.jp/posts/sample1/</loc>
+    <lastmod>2020-08-25T18:03:25+09:00</lastmod>
+  </url><url>
+    <loc>https://openstudy.jp/tags/</loc>
+    <lastmod>2020-08-25T18:03:25+09:00</lastmod>
+  </url><url>
+    <loc>https://openstudy.jp/tags/test/</loc>
+    <lastmod>2020-08-25T18:03:25+09:00</lastmod>
+  </url><url>
+    <loc>https://openstudy.jp/posts/sample2/</loc>
   </url>
 </urlset>

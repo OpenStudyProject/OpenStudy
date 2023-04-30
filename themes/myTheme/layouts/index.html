@@ -1,0 +1,8 @@
+{{ define "main" }}
+    <h1>TOP PAGE</h1>
+    <ul>
+        {{ range .Site.Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "2006-01-02" }})</li>
+        {{ end }}
+    </ul>
+{{ end }}

@@ -1,11 +1,8 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/gohugoio/hugoThemes#themetoml for an example
-
 name = "MyTheme"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
+licenselink = "https://github.com/lin-24-ia/OpenStudy/blob/main/themes/myTheme/LICENSE"
+description = "Hugo theme for OpenStudy."
+homepage = "https://openstudy.jp/"
 tags = []
 features = []
 min_version = "0.41.0"
@@ -13,9 +10,3 @@ min_version = "0.41.0"
 [author]
   name = ""
   homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
