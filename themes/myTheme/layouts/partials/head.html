@@ -1,5 +1,11 @@
 <head>
-    <title>temp</title>
-    {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
+    <title>OpenStudy</title>
+    {{ $style := resources.Get "sass/default.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    {{ $style := resources.Get "sass/footer.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    {{ $style := resources.Get "sass/header.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
