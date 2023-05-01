@@ -5,7 +5,6 @@
         {{ else }}
             <a href="{{ .Site.BaseURL }}" class="home-link">
         {{ end }}
-
                 <svg class="logo" viewbox="0 0 530 530">
                     <g transform="matrix(1.3904055,-0.25478091,0.25478091,1.3904055,-219.99281,-26.85259)">
                         <path d="m 300.03071,291.04162 -22.91357,-13.22917 v -26.45833 l 22.91357,-13.22917 22.91361,13.22917 v 26.45833 z"/>
@@ -13,27 +12,25 @@
                     </g>
                 </svg>
                 <h1>OpenStudy</h1>
-
         {{ if .Page.IsHome }}
             </div>
         {{ else }}
             </a>
         {{ end }}
-
         <ul>
             <a href="/contribute/"><li>記事を書く</li></a>
             <a href="/about/"><li>OpenStudyとは</li></a>
         </ul>
     </nav>
 
-    <!-- <nav class="sp">
+    <nav class="sp">
         <input type="checkbox" id="abc">
         <div class="topbar">
-            <?php
-                echo isset($isHome) == true ?
-                '<div class="home-link">' : 
-                '<a href="' . $path . '" class="home-link">';
-            ?>
+            {{ if .Page.IsHome }}
+                <div class="home-link">
+            {{ else }}
+                <a href="{{ .Site.BaseURL }}" class="home-link">
+            {{ end }}
                     <svg class="logo" viewbox="0 0 530 530">
                         <g transform="matrix(1.3904055,-0.25478091,0.25478091,1.3904055,-219.99281,-26.85259)">
                             <path d="m 300.03071,291.04162 -22.91357,-13.22917 v -26.45833 l 22.91357,-13.22917 22.91361,13.22917 v 26.45833 z"/>
@@ -41,11 +38,11 @@
                         </g>
                     </svg>
                     <h1>OpenStudy</h1>
-            <?php
-                echo isset($isHome) == true ?
-                '</div>' :
-                '</a>';
-            ?>
+            {{ if .Page.IsHome }}
+                </div>
+            {{ else }}
+                </a>
+            {{ end }}
             <button id="open-menu">
                 <svg class="menu-button" viewbox="0 0 500 500">
                     <rect width="499.99997" height="44.642857" x="2.0396195e-05" y="67.012856" ry="22.321428"/>
@@ -57,8 +54,8 @@
         
         <input type="checkbox" id="trigger-checkbox2">
         <ul>
-            <a href="<?php echo $path ?>contribute/">記事を書く</a>
-            <a href="<?php echo $path ?>about/">OpenStudyとは</a>
+            <a href="/contribute/"><li>記事を書く</li></a>
+            <a href="/about/"><li>OpenStudyとは</li></a>
         </ul>
-    </nav> -->
+    </nav>
 </header>
