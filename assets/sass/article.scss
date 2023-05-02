@@ -1,31 +1,274 @@
-.container {
-    padding: 40px 20px;
-    
-    h1 {
-        font-size: 24px;
-        text-align: center;
-        margin: 20px 0;
-        padding: 14px 0;
-        border-top: double rebeccapurple 4px;
-        border-bottom: double rebeccapurple 4px;
+main {
+    display: flex;
+
+    nav {
+        padding: 10px;
+        border: solid #96ffff 2px;
+        width: 350px;
     }
 
-    h2 {
-        margin: 60px 0 20px;
-        padding: 4px 6px;
-        font-size: 24px;
-        border-left: solid rebeccapurple 4px;
-        background-color: #9900ff22;
-    }
+    .articleSide {
+        width: calc(100% - 350px);
 
-    h3 {
-        font-size: 18px;
-        margin: 30px 0 10px;
-    }
+        .dates {
+            display: flex;
+            margin: 0 10px;
+            
+            .release-date, .update-date {
+                font-size: 14px;
+                font-weight: 500;
+                color: #666;
+                padding: 4px 8px;
+            }
+        }
 
-    p {
-        padding: 16px 0;
-        font-size: 16px;
+        > h1 {
+            font-size: 38px;
+            text-align: center;
+            padding: 20px 0;
+            margin: 10px 20px;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 0;
+
+            aside {
+                // border: solid #ffd2bf 2px;
+                border-radius: 12px;
+                padding: 10px;
+                margin: 20px;
+                display: flex;
+                justify-content: center;
+
+                .views-and-thanks {
+                    margin: 0 20px;
+
+                    .views {
+                        font-size: 22px;
+                        padding: 6px 12px;
+                    }
+
+                    .thanks {
+                        font-size: 22px;
+                        color: red;
+                        padding: 6px 12px;
+                    }
+                }
+
+                .contributors {
+                    margin: 0 20px;
+                    
+                    .contributors-label {
+                        font-size: 18px;
+                        font-weight: 600;
+
+                        .personNum {
+                            padding: 6px;
+                            background-color: #eee;
+                            border-radius: 9999px;
+                        }
+                    }
+
+                    .contributors-icon {
+                        display: flex;
+
+                        img {
+                            display: block;
+                            width: 44px;
+                            height: 44px;
+                            margin: 0 -6px 0 0;
+                            border-radius: 50%;
+                            border: solid 1px #fff;
+                        }
+
+                        i {
+                            display: block;
+                            padding: 7px 8.75px;
+                            font-size: 28px;
+                            margin: 0 0 0 6px;
+                        }
+                    }
+                }
+
+                .button {
+                    margin: 0 20px;
+
+                    .give-thanks {
+                        padding: 8px 14px;
+                        color: red;
+                        margin: 4px 0;
+                        border-radius: 8px;
+                        box-shadow: 0px 0px 8px 4px #ddd;
+                    }
+
+                    .link-to-repo {
+                        padding: 8px 14px;
+                        margin: 4px 0;
+                        border-radius: 8px;
+                        box-shadow: 0px 0px 8px 4px #ddd;
+                    }
+                }
+            }
+
+            article {
+                margin: 34px;
+
+                h1 {
+                    font-size: 36px;
+                    color: red;
+                    padding: 8px 12px;
+                    
+                    &::before {
+                        content: "#DO NOT USE <h1> INSIDE ARTICLE# <!--";
+                    }
+
+                    &::after {
+                        content: "-->";
+                    }
+                }
+
+                h2 {
+                    margin: 60px 0 20px;
+                    font-size: 24px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    margin: 30px 0 10px;
+                }
+
+                > h4 {
+
+                }
+
+                p {
+                    padding: 16px 0;
+                    font-size: 16px;
+
+                    code {
+                        font-family: 'Roboto Mono', monospace;
+                        background-color: #eee;
+                        padding: 4px 8px;
+                        margin: 0 4px;
+                        border-radius: 3px;
+                    }
+                }
+
+                a {
+                    color: #0066cc;
+                    font-weight: 600;
+                    transition: 5s;
+
+                    &:hover {
+                        text-decoration: underline;
+                        text-underline-offset: 3px;
+                    }
+                }
+
+                > ul {
+                    margin: 40px 0;
+                    padding: 20px 30px 20px 10px;
+                }
+
+                ul li {
+                    margin: 10px;
+
+                    ul {
+                        margin: 0 0 0 30px;
+                    }
+
+                    list-style-type: disc;
+                    line-height: 1.2em;
+                    word-wrap: break-word;
+                }
+
+                > ol {
+                    margin: 40px 0;
+                    padding: 20px 30px 20px 10px;
+                }
+
+                ol li {
+                    margin: 10px;
+
+                    ol {
+                        margin: 0 0 0 30px;
+                    }
+
+                    list-style-type: decimal;
+                    line-height: 1.2em;
+                    word-wrap: break-word;
+                }
+
+                > pre {
+                    background-color: #eee;
+                    border-radius: 10px;
+                    padding: 20px;
+                    margin: 10px 0;
+
+                    code {
+                        span {
+                            font-family: 'Roboto Mono', monospace;
+                        }
+                    }
+                }
+
+                .highlight {
+                    > pre {
+                        padding: 24px;
+                        margin: 0 0 10px;
+                        border-radius: 0 14px 14px 14px;
+
+                        code {
+                            font-family: 'Roboto Mono', monospace;
+                        }
+                    }
+                }
+
+                figure.xCodeBlock {
+                    margin: 14px 0 0;
+
+                    .xCodeBlock_title {
+                        display: inline-block;
+                        font-size: 14px;
+                        border-radius: 6px 6px 0 0;
+                        padding: 8px 14px;
+                        background: #444;
+                        color: white;
+
+                        figcaption.xCodeBlock_code {
+                            pre {
+                                padding: 4px;
+                                white-space: pre-wrap;
+                            }
+                        }
+                    }
+                }
+
+                figure:not(.xCodeBlock) {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    > figcaption {
+                        margin: 10px 0;
+                        text-align: center;
+                    }
+                }
+
+                blockquote {
+                    border-left: solid 4px #ccc;
+                    padding-left: 8px;
+                    margin: 12px 0;
+
+                    p {
+                        padding: 4px 0;
+                    }
+                }
+            }
+        }
     }
 }
 
