@@ -1,9 +1,77 @@
 {{ define "main" }}
-    <div class="site-content">  
-        <h1>{{ .Title }}</h1>   
-        <time>{{ .Date.Format "2006-01-02" }}</time>
-        <article>
-            {{ .Content }}
-        </article>
+    <nav class="tree">
+    </nav>
+
+    <div class="articleSide">
+        <div class="dates">
+            <div class="release-date">
+                <i class="fa-solid fa-earth-americas"></i>
+                <time>{{ .Date.Format "2006/01/02" }}</time>
+            </div>
+            <div class="update-date">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <time>{{ .Date.Format "2006/01/02" }}</time>
+            </div>
+        </div>
+        <h1>{{ .Title }}</h1>
+        <div class="container">
+            <aside>
+                <div class="views-and-thanks">
+                    <div class="views">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>1.6k</span>
+                    </div>
+                    <div class="thanks">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>653</span>
+                    </div>
+                </div>
+                <div class="contributors">
+                    <div class="contributors-label">
+                        <span class="description">作成・編集した人</span>
+                        <span class="personNum">163</span>
+                    </div>
+                    <div class="contributors-icon">
+                        <img src="/images/profileIconSample/137.jpeg" alt="">
+                        <img src="/images/profileIconSample/157.jpeg" alt="">
+                        <img src="/images/profileIconSample/277.jpeg" alt="">
+                        <img src="/images/profileIconSample/937.jpeg" alt="">
+                        <img src="/images/profileIconSample/837.jpeg" alt="">
+                        <img src="/images/profileIconSample/737.jpeg" alt="">
+                        <img src="/images/profileIconSample/1837.jpeg" alt="">
+                        <img src="/images/profileIconSample/1437.jpeg" alt="">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+                <div class="button">
+                    <div class="give-thanks">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>thanks!</span>
+                    </div>
+                    <div class="link-to-repo">
+                        <i class="fa-solid fa-code-pull-request"></i>
+                        <span>編集する</span>
+                    </div>
+                </div>
+            </aside>
+            <article>
+                {{ .Content }}
+            </article>
+        </div>
     </div>
+
 {{ end }}
+
+{{- define "breadcrumb" }}
+    {{- if .node.Parent }}
+        {{- template "breadcrumb" (dict "node" .node.Parent "start" .start) }}
+    {{- else if not .node.IsHome }}
+        {{- template "breadcrumb" (dict "node" .node.Site.Home "start" .start) }}
+    {{- end }}
+
+    {{- if eq .node .start }}
+        <li>{{ .node.LinkTitle }}
+    {{- else }}
+        <li><a href="{{ .node.Permalink }}">{{ .node.LinkTitle }}</a>
+    {{- end }}
+{{- end }}
