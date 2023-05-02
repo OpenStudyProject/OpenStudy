@@ -3,8 +3,16 @@ languageCode = 'ja-jp'
 title = 'OpenStudy'
 theme = 'myTheme'
 pluralizeListTitles = false
+enableGitInfo = true
 
-[markup]
-    [markup.goldmark]
-        [markup.goldmark.renderer]
-            unsafe = true
+# Enable syntax highlightning
+pygmentsCodeFences = true
+
+
+# Enable HTML inside Markdown
+[markup.goldmark.renderer]
+    unsafe = true
+
+[params]
+    # Sass files that always imported
+    basicStyle = ["default", "header", "footer", "breadcrumb"]
