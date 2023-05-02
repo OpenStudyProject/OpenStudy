@@ -1,6 +1,3 @@
-<!-- Sass files that always imported. -->
-{{ $basics := slice "default" "header" "footer" }}
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,10 +18,11 @@
     <!-- Google Fonts for Logo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 
     <!-- Basic CSS -->
-    {{ range $basics }}
+    {{ range .Site.Params.basicStyle }}
     {{ $path := . | printf "sass/%s" | printf "%s.scss" }}
     {{ $style := resources.Get $path | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
@@ -39,4 +37,7 @@
 
     <!-- Google Search Console -->
     <meta name="google-site-verification" content="rYJHGR_uUcxmqkD9mSn79HxxWq4ikIz755zQGjaf87A" />
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/973e7a8373.js" crossorigin="anonymous"></script>
 </head>
