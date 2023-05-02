@@ -1,0 +1,9 @@
+{{ $title := .Get "title" }}
+{{ $lang := or (.Get "lang") "" }}
+
+<figure class="xCodeBlock">
+    {{ with $title }}
+        <figcaption class="xCodeBlock_title">{{ . }}</figcaption>
+    {{ end }}
+        <div class="xCodeBlock_code">{{ highlight (trim .Inner "\r\n") $lang "" }}</div>
+</figure>
