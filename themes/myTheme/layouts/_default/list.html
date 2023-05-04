@@ -1,9 +1,68 @@
 {{ define "main" }}
-    <div>
-        <ul>
-            {{ range .Pages }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ end }}
-        </ul>
+    <nav class="tree">
+        <a href="{{ (index .Site.Sections 1).RelPermalink }}">
+            <h3>{{ (index .Site.Sections 1).Title }}</h3>
+        </a>
+            {{- template "navTree" (dict "section" (index .Site.Sections 1) "current" .) }}
+        </a>
+    </nav>
+
+    <div class="articleSide">
+        <div class="dates">
+            <div class="release-date">
+                <i class="fa-solid fa-earth-americas"></i>
+                <time>{{ .Date.Format "2006/01/02" }}</time>
+            </div>
+            <div class="update-date">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <time>{{ .Date.Format "2006/01/02" }}</time>
+            </div>
+        </div>
+        <h1>{{ .Title }}</h1>
+        <div class="container">
+            <aside>
+                <div class="views-and-thanks">
+                    <div class="views">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>1.6k</span>
+                    </div>
+                    <div class="thanks">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>653</span>
+                    </div>
+                </div>
+                <div class="contributors">
+                    <div class="contributors-label">
+                        <span class="description">作成・編集した人</span>
+                        <span class="personNum">163</span>
+                    </div>
+                    <div class="contributors-icon">
+                        <img src="/images/profileIconSample/131.jpeg" alt="">
+                        <img src="/images/profileIconSample/100.jpeg" alt="">
+                        <img src="/images/profileIconSample/38.jpeg" alt="">
+                        <img src="/images/profileIconSample/37.jpeg" alt="">
+                        <img src="/images/profileIconSample/137.jpeg" alt="">
+                        <img src="/images/profileIconSample/437.jpeg" alt="">
+                        <img src="/images/profileIconSample/487.jpeg" alt="">
+                        <img src="/images/profileIconSample/97.jpeg" alt="">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+                <div class="button">
+                    <div class="give-thanks">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>thanks!</span>
+                    </div>
+                    <div class="link-to-repo">
+                        <i class="fa-solid fa-code-pull-request"></i>
+                        <span>編集する</span>
+                    </div>
+                </div>
+            </aside>
+            <article>
+                {{ .Content }}
+            </article>
+        </div>
     </div>
+
 {{ end }}
