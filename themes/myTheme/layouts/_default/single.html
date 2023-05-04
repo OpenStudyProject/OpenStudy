@@ -1,5 +1,10 @@
 {{ define "main" }}
     <nav class="tree">
+        <a href="{{ (index .Site.Sections 1).RelPermalink }}">
+            <h3>{{ (index .Site.Sections 1).Title }}</h3>
+        </a>
+            {{- template "navTree" (dict "section" (index .Site.Sections 1) "current" .) }}
+        </a>
     </nav>
 
     <div class="articleSide">
@@ -32,14 +37,14 @@
                         <span class="personNum">163</span>
                     </div>
                     <div class="contributors-icon">
+                        <img src="/images/profileIconSample/131.jpeg" alt="">
+                        <img src="/images/profileIconSample/100.jpeg" alt="">
+                        <img src="/images/profileIconSample/38.jpeg" alt="">
+                        <img src="/images/profileIconSample/37.jpeg" alt="">
                         <img src="/images/profileIconSample/137.jpeg" alt="">
-                        <img src="/images/profileIconSample/157.jpeg" alt="">
-                        <img src="/images/profileIconSample/277.jpeg" alt="">
-                        <img src="/images/profileIconSample/937.jpeg" alt="">
-                        <img src="/images/profileIconSample/837.jpeg" alt="">
-                        <img src="/images/profileIconSample/737.jpeg" alt="">
-                        <img src="/images/profileIconSample/1837.jpeg" alt="">
-                        <img src="/images/profileIconSample/1437.jpeg" alt="">
+                        <img src="/images/profileIconSample/437.jpeg" alt="">
+                        <img src="/images/profileIconSample/487.jpeg" alt="">
+                        <img src="/images/profileIconSample/97.jpeg" alt="">
                         <i class="fa-solid fa-plus"></i>
                     </div>
                 </div>
