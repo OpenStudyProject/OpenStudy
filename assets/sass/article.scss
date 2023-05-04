@@ -1,10 +1,90 @@
 main {
     display: flex;
 
-    nav {
-        padding: 10px;
-        border: solid #96ffff 2px;
+    nav.tree {
+        // border: solid #96ffff 2px;
         width: 350px;
+
+        h3 {
+            font-size: 32px;
+            padding: 6px 12px;
+        }
+
+        > ul {
+            width: 350px;
+        }
+
+        ul {
+            a {
+                display: block;
+
+                li {
+                    display: block;
+                    padding: 10px 24px;
+                    line-height: 1.2em;
+                    word-wrap: break-word;
+                }
+
+                &:has(li.current) {
+                    background-color: rgb(207, 246, 255);
+                    color: #0e5cec;
+                    border-radius: 0 10px 10px 0;
+
+                }
+            }
+
+            .section {
+                // border: solid 2px #95caff;
+
+                > li.closed {
+                    &::before {
+                        content: "> ";
+                    }
+
+                    & + ul {
+                        display: none;
+                    }
+                }
+
+                > li:not(.closed) {
+                    &::before {
+                        content: "v ";
+                    }
+                }
+
+                > li {
+                    display: block;
+                    padding: 10px;
+                    line-height: 1.2em;
+                    word-wrap: break-word;
+                    font-weight: 600;
+                }
+
+                ul {
+                    .section {
+                        > li {
+                            padding: 10px 10px 10px 40px;
+                        }
+
+                        ul {
+                            a {
+                                padding: 0 0 0 60px;
+                            }
+                        }
+                    }
+
+                    &.closed {
+                        display: none;
+                    }
+                }
+            }
+
+            ul {
+                a {
+                    padding: 0 0 0 30px;
+                }
+            }
+        }
     }
 
     .articleSide {
@@ -43,6 +123,7 @@ main {
 
                 .views-and-thanks {
                     margin: 0 20px;
+                    display: flex;
 
                     .views {
                         font-size: 22px;
@@ -93,18 +174,19 @@ main {
 
                 .button {
                     margin: 0 20px;
+                    display: flex;
 
                     .give-thanks {
                         padding: 8px 14px;
                         color: red;
-                        margin: 4px 0;
+                        margin: 24px 6px;
                         border-radius: 8px;
                         box-shadow: 0px 0px 8px 4px #ddd;
                     }
 
                     .link-to-repo {
                         padding: 8px 14px;
-                        margin: 4px 0;
+                        margin: 24px 6px;
                         border-radius: 8px;
                         box-shadow: 0px 0px 8px 4px #ddd;
                     }
@@ -138,9 +220,9 @@ main {
                     margin: 30px 0 10px;
                 }
 
-                > h4 {
+                // > h4 {
 
-                }
+                // }
 
                 p {
                     padding: 16px 0;
