@@ -23,9 +23,15 @@
 
     <!-- Basic CSS -->
     {{ range .Site.Params.basicStyle }}
-    {{ $path := . | printf "sass/%s" | printf "%s.scss" }}
-    {{ $style := resources.Get $path | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+        {{ $path := . | printf "sass/%s" | printf "%s.scss" }}
+        {{ $style := resources.Get $path | toCSS | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ end }}
+
+    <!-- Top Page CSS -->
+    {{ if .IsHome }}
+        {{ $style := resources.Get "sass/top.scss" | toCSS | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ end }}
 
     <!-- Additional CSS -->
