@@ -1,5 +1,7 @@
 baseURL = 'https://openstudy.jp/'
 languageCode = 'ja-jp'
+defaultContentLanguage = "ja"
+hasCJKLanguage = true
 title = 'OpenStudy'
 theme = 'myTheme'
 pluralizeListTitles = false
