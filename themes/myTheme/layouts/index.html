@@ -2,7 +2,7 @@
     <h1>TOP PAGE</h1>
     <ul>
         {{ range .Sections }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            <a href="{{ .RelPermalink }}"><li>{{ .Title }}</li></a>
         {{ end }}
     </ul>
 {{ end }}
