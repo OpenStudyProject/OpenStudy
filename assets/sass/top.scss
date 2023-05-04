@@ -1,0 +1,17 @@
+main {
+    ul {
+        display: flex;
+
+        a {
+            padding: 12px 16px;
+            margin: 10px;
+            background-color: rgb(255, 225, 253);
+            border-radius: 8px;
+
+            li {
+                font-size: 30px;
+                font-weight: 500;
+            }
+        }
+    }
+}
