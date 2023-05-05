@@ -1,5 +1,5 @@
 +++
-title = "OpenStudyについて"
+title = "About"
 description = ""
 type = "special"
 layout = "raw"
