@@ -1,9 +1,3 @@
 +++
-title = "Markdown"
-lastmod = "2020-02-02"
-
+title = "Markdown_index"
 +++
-
-## MARKDOWN LANDING PAGE
-
-hi
