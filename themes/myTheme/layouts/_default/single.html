@@ -1,9 +1,10 @@
 {{ define "main" }}
     <nav class="tree">
-        <a href="{{ (index .Site.Sections 1).RelPermalink }}">
-            <h3>{{ (index .Site.Sections 1).Title }}</h3>
+        {{ $hierarchy := partial "function/fetchHierarchy" . }}
+        <a href="{{ (index $hierarchy 1).RelPermalink }}">
+            <h3>{{ (index $hierarchy 1).Title }}</h3>
         </a>
-            {{- template "navTree" (dict "section" (index .Site.Sections 1) "current" .) }}
+            {{- template "navTree" (dict "section" (index $hierarchy 1) "current" .) }}
         </a>
     </nav>
 
@@ -33,7 +34,7 @@
                 </div>
                 <div class="contributors">
                     <div class="contributors-label">
-                        <span class="description">作成・編集した人</span>
+                        <span class="description">作成した人</span>
                         <span class="personNum">163</span>
                     </div>
                     <div class="contributors-icon">
@@ -45,6 +46,11 @@
                         <img src="/images/profileIconSample/437.jpeg" alt="">
                         <img src="/images/profileIconSample/487.jpeg" alt="">
                         <img src="/images/profileIconSample/97.jpeg" alt="">
+                        {{ range .Params.author }}
+                            <a href="https://github.com/{{ print . }}">
+                                <img src="https://github.com/{{ print . }}.png" alt="">
+                            </a>
+                        {{ end}}
                         <i class="fa-solid fa-plus"></i>
                     </div>
                 </div>
@@ -59,12 +65,27 @@
                     </div>
                 </div>
             </aside>
+
+            <ul class="tags">
+                {{ range .Params.tags }}
+                    <a href="">
+                        <li>{{ . }}</li>
+                    </a>
+                {{ end}}
+                </ul>
+
+            {{- with .TableOfContents }}
+            <div class="index">
+                <h3 class="indexTitle">目次</h3>
+                {{ . }}
+            </div>
+            {{- end }}
+
             <article>
                 {{ .Content }}
             </article>
         </div>
     </div>
-
 {{ end }}
 
 {{- define "breadcrumb" }}
