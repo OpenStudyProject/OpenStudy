@@ -61,3 +61,23 @@ Python
 - 現実生活へのインテグレーションなど抽象的でディスカッションベースなもの
 - 資格試験の勉強法
 
+## Hugoの文法のまとめ
+
+### Partial
+
+- `{{ partial "foo.html" . }}` と書く
+- mdの中では使用できない
+- 引数は使用できない
+- `layout/partials` に保存する
+
+### Template
+
+- `{{ template "foo" }}`
+- 引数を使用できる
+
+### ShortCode
+
+- `{{< foo key="value" >}}` と書く
+- mdの中でのみ使用可能
+- 引数を使用できる
+- `layout/shortcodes` に保存する
