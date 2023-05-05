@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        
+            Markdownの記法 - OpenStudy
+        
+    </title>
+    <meta name="description" content="OpenStudyで表示されるMarkdownのプレビューです。">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" href="/favicon/favicon96.ico" size="96x96">
+    <link rel="apple-touch-icon" href="images/oapple-touch-icon180.png">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    
+    
+        
+        
+        <link rel="stylesheet" href="https://openstudy.jp/sass/default.min.e95d5b8d4d6d0557f02d209dab075ea387f32b1326e47bfdae0fb2ac94ac999b.css">
+    
+        
+        
+        <link rel="stylesheet" href="https://openstudy.jp/sass/header.min.680ea0aa0e2daec51ce5a948bcdb35f17da10bb985b32d04f619f1f7e3c0ee26.css">
+    
+        
+        
+        <link rel="stylesheet" href="https://openstudy.jp/sass/footer.min.59736c297fb247ffc4e48754b25bc754e79f22b203fee7d3df0adbec732eeb92.css">
+    
+        
+        
+        <link rel="stylesheet" href="https://openstudy.jp/sass/breadcrumb.min.f5e618e50ab6ce2075e570ba4c81bb69a08545a6e5b2af117bcf97af1b4e8ea8.css">
+    
+
+    
+    
+
+    
+    
+        
+        <link rel="stylesheet" href="https://openstudy.jp/sass/article.min.9a377e9454ffa8564169abad6c660e8c3cff215ff56557088a8f92e168528bfa.css">
+    
+
+    
+    
+
+    
+    <meta name="google-site-verification" content="rYJHGR_uUcxmqkD9mSn79HxxWq4ikIz755zQGjaf87A" />
+
+    
+    <script src="https://kit.fontawesome.com/973e7a8373.js" crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "\\[", right: "\\]", display: false},
+                    {left: "$", right: "$", display: true},
+                    {left: "\\(", right: "\\)", display: false}
+                ]
+            });
+        });
+    </script>
+</head><body><header>
+    <nav class="pc">
+        
+            <a href="https://openstudy.jp/" class="home-link">
+        
+                <svg class="logo" viewbox="0 0 530 530">
+                    <g transform="matrix(1.3904055,-0.25478091,0.25478091,1.3904055,-219.99281,-26.85259)">
+                        <path d="m 300.03071,291.04162 -22.91357,-13.22917 v -26.45833 l 22.91357,-13.22917 22.91361,13.22917 v 26.45833 z"/>
+                        <path d="m 311.48641,85.991134 c -3.48272,-2.011316 -7.43374,-3.070531 -11.45563,-3.071131 -4.05838,-5e-5 -7.86938,1.05644 -11.17554,2.907316 l -0.01,0.0062 -0.51315,0.296105 c -0.002,10e-4 -0.004,0.0016 -0.006,0.0036 -6.7111,3.995879 -11.20835,11.322379 -11.23384,17.567886 -0.0255,6.2455 -1.01609,10.07414 -3.04539,13.58887 -2.01147,3.48268 -4.90381,6.37446 -8.43961,8.38758 -3.5358,2.01313 -7.34658,3.06959 -11.40508,3.06953 -4.02174,-6e-4 -7.97279,-1.0598 -11.45563,-3.07113 l 5.2e-4,0.003 c -3.48282,-2.01114 -7.43392,-3.07053 -11.45563,-3.07113 -4.05849,-5e-5 -7.86929,1.05642 -11.17555,2.90732 -0.16011,0.0939 -0.33511,0.1934 -0.48361,0.27853 l -11.25564,32.95673 22.91333,13.22917 v 26.45833 l 22.91385,13.22917 22.91333,-13.22917 V 171.97917 L 300.03078,158.75 v -26.45833 l 22.91333,-13.22917 22.91385,13.22917 V 158.75 l -22.91385,13.22917 v 26.45833 l 22.91385,13.22917 22.91333,-13.22917 22.91385,13.22917 22.91333,-13.22917 22.91384,13.22917 V 238.125 l -22.91384,13.22917 -22.91333,-13.22917 -22.91385,13.22917 v 26.45833 l 22.91385,13.22917 V 317.5 l 22.91333,13.22917 V 357.1875 L 391.68514,370.41667 368.77129,357.1875 V 330.72917 L 345.85796,317.5 322.94411,330.72917 v 26.45833 l -22.91333,13.22917 V 396.875 L 277.11694,410.10417 254.20361,396.875 V 370.41667 L 277.11694,357.1875 V 330.72917 L 254.20361,317.5 231.28976,330.72917 208.37643,317.5 185.46258,330.72917 162.54925,317.5 v -26.45833 l 22.91333,-13.22917 22.91385,13.22917 22.91333,-13.22917 V 251.35417 L 208.37643,238.125 V 211.66667 L 185.4631,198.4375 V 171.97917 L 208.37591,158.75 219.55042,125.83935 c -3.30611,1.85091 -7.1172,2.90737 -11.17554,2.90731 -4.0219,-6e-4 -7.97295,-1.0598 -11.45611,-3.06955 -3.48316,-2.00975 -7.43423,-3.06911 -11.45596,-3.06971 -4.0561,-5e-5 -7.86511,1.05535 -13.1401,4.13091 -5.27498,3.07556 -9.77392,10.40322 -9.774,18.78224 v 0.3483 c -0.054,3.78102 -1.04452,7.60099 -3.06958,11.10837 -2.01137,3.48267 -4.90432,6.37507 -8.38675,8.38712 -3.48242,2.01205 -6.37491,4.90429 -8.38638,8.38705 -2.03389,3.52254 -3.02458,7.36096 -3.07062,11.15797 v 0.53899 c 0.0894,7.8264 4.18735,15.40628 11.45719,19.60345 l -5.2e-4,5.2e-4 0.26768,0.154 0.014,0.008 0.002,0.001 c 3.25523,1.9378 6.07519,4.70957 8.10389,8.22379 2.01043,3.48319 3.06848,7.43493 3.06803,11.45666 l 0.002,0.002 -0.002,0.32505 v -7e-5 c -0.0502,3.78866 -1.04028,7.61689 -3.06958,11.13162 -1.50493,2.68979 -10.12659,9.39183 -10.12659,9.39183 -1.74157,1.00528 -4.63457,3.89751 -6.64603,7.38027 -2.02929,3.51459 -3.01938,7.34337 -3.07056,11.45783 -0.0512,4.11447 -1.04179,7.94273 -3.07109,11.45747 -2.01133,3.48262 -4.90432,6.37496 -8.3876,8.38553 l 0.003,10e-4 c -3.48315,2.01054 -6.37614,4.90278 -8.3876,8.38554 -2.03012,3.51602 -3.02063,7.34652 -3.0701,11.13679 v 0.61029 c 0.10627,7.80561 4.19922,15.35876 11.44788,19.54817 l 0.009,0.005 -5.2e-4,0.002 0.27544,0.1571 0.006,0.004 0.002,10e-4 c 3.2554,1.9378 6.07555,4.70958 8.10441,8.22379 2.01043,3.48336 3.06848,7.43426 3.06803,11.45615 l 0.004,5.1e-4 c -4.5e-4,4.02188 1.0576,7.97294 3.06803,11.45615 2.02902,3.51448 4.84938,6.28697 8.10493,8.22482 l 0.008,0.005 0.51729,0.29869 c 0.005,0.003 0.009,0.005 0.0134,0.008 6.81478,3.8095 15.40449,4.03885 22.65702,-0.14831 l 0.29765,-0.17208 c 3.30242,-1.84518 7.1074,-2.89809 11.15901,-2.89802 4.0219,5.9e-4 7.97292,1.05992 11.45563,3.07113 l 0.003,-5.1e-4 0.28064,0.16426 v 5e-4 c 3.25605,1.93786 6.07626,4.70952 8.10544,8.22431 2.01043,3.48335 3.069,7.43477 3.06855,11.45666 l 0.003,-0.004 c -4.5e-4,4.02187 1.0576,7.97331 3.06803,11.45667 2.02808,3.51293 4.84689,6.284 8.10079,8.22172 0.002,9.5e-4 0.003,0.002 0.005,0.003 l 0.56373,0.32756 c 3.25607,1.93786 6.07625,4.70952 8.10545,8.22431 1.61233,2.48847 2.59966,7.12741 2.83488,11.30194 0.23522,4.17453 1.29327,8.12558 3.3037,11.6088 2.02889,3.51448 4.84924,6.28697 8.10493,8.22482 l 0.008,0.005 0.51728,0.29869 c 0.005,0.003 0.009,0.005 0.0134,0.008 6.8148,3.8095 15.40461,4.03885 22.65701,-0.14831 l 0.002,-10e-4 0.28113,-0.16176 c 3.30627,-1.85091 7.11705,-2.90738 11.17555,-2.90732 4.02187,6e-4 7.97279,1.05983 11.45563,3.07113 l 5.1e-4,-0.003 c 3.48283,2.01133 7.43375,3.07053 11.45564,3.07113 4.05216,5e-5 7.8583,-1.05289 11.16107,-2.89853 l 0.56377,-0.32526 c 6.70025,-3.99862 11.18839,-11.31959 11.18847,-19.68924 v -5.2e-4 c -0.28711,-10.57415 5.6839,-17.20663 10.00189,-19.45845 5.04429,-2.3985 8.85514,-3.45497 12.9136,-3.45491 4.0219,6e-4 7.97283,1.05984 11.45563,3.07113 v -0.003 c 3.48283,2.01132 7.43374,3.07053 11.45564,3.07113 4.05844,5e-5 7.86927,-1.05641 11.17554,-2.90731 l 0.56472,-0.32456 v 0 c 3.30627,-1.85091 7.11705,-2.90738 11.17555,-2.90732 4.0219,6e-4 7.97279,1.05986 11.45563,3.07113 l 10e-4,-0.003 c 3.48284,2.01133 7.43375,3.07053 11.45564,3.07113 4.05513,5e-5 7.86339,-1.05456 11.16779,-2.90266 l 0.54467,-0.31419 c 0.003,-0.005 0.0107,-0.006 0.016,-0.009 6.69842,-3.99909 11.18528,-11.31889 11.18536,-19.68717 v -0.001 h 10e-4 l -10e-4,-0.32401 c 0.0502,-3.78877 1.0408,-7.61747 3.0701,-11.13214 2.01147,-3.48277 4.90432,-6.37498 8.3876,-8.38554 l -0.002,-0.003 c 3.48329,-2.0105 6.37615,-4.90284 8.38761,-8.38553 2.03006,-3.51615 3.02062,-7.34652 3.07009,-11.13679 v -0.6103 c -0.10632,-7.80873 -4.2024,-15.36497 -11.45666,-19.55333 l 5.1e-4,-0.002 -0.28163,-0.16071 -0.002,-10e-4 c -3.2554,-1.93781 -6.07503,-4.70962 -8.1039,-8.22379 -2.01043,-3.48337 -3.06848,-7.43478 -3.06803,-11.45667 v -0.32653 c 0.0502,-3.78864 1.04041,-7.61689 3.06958,-11.13162 2.01147,-3.48277 4.90444,-6.37509 8.3876,-8.38553 l -0.003,-0.001 c 3.48327,-2.01043 6.37613,-4.90289 8.3876,-8.38553 2.02929,-3.51472 3.01938,-7.34337 3.06958,-11.13214 l 0.002,-0.65154 v 4e-5 c 0.0502,-3.78863 1.0408,-7.61688 3.0701,-11.13162 2.01147,-3.48276 4.90444,-6.37509 8.3876,-8.38553 l -0.003,-0.001 c 3.48328,-2.01043 6.37614,-4.90291 8.3876,-8.38553 2.03012,-3.51615 3.02063,-7.34652 3.0701,-11.13679 v -0.6103 c -0.10627,-7.80549 -4.19921,-15.35875 -11.44788,-19.54816 l -0.009,-0.005 5.2e-4,-5.1e-4 -0.27698,-0.15917 -0.005,-0.003 c -3.256,-1.93785 -6.07676,-4.71009 -8.10596,-8.22482 -2.01043,-3.48336 -3.06848,-7.43477 -3.07004,-11.4566 -0.002,-4.02184 -1.0596,-7.9735 -3.07002,-11.45673 -2.02653,-3.51017 -4.84252,-6.27955 -8.09304,-8.21707 l -0.0114,-0.007 -0.53485,-0.3085 c -8.8e-4,-4.9e-4 -0.002,-5.5e-4 -0.003,-0.002 -3.43627,-1.92143 -7.32368,-2.93382 -11.26391,-2.92696 l 5.2e-4,5.2e-4 c -3.8743,0.007 -7.79922,0.99768 -11.39517,3.07371 l -0.2826,0.1623 c -3.30627,1.85091 -7.11705,2.90737 -11.17555,2.90731 -4.02183,-6e-4 -7.97279,-1.0598 -11.45563,-3.07113 l -0.28268,-0.16247 c -3.25607,-1.93786 -6.07677,-4.70951 -8.10597,-8.22431 -2.01043,-3.48336 -3.06847,-7.43483 -3.06803,-11.45666 l -0.003,0.002 c 4.5e-4,-4.02177 -1.0576,-7.9734 -3.06803,-11.45666 -2.02821,-3.51306 -4.84677,-6.28398 -8.1008,-8.22172 l -0.56875,-0.33057 v -4.8e-4 c -3.25607,-1.93786 -6.07625,-4.70951 -8.10545,-8.22431 -2.01043,-3.48337 -3.06847,-7.43484 -3.06803,-11.45666 l -0.003,0.003 c 4.4e-4,-4.02177 -1.05761,-7.973348 -3.06803,-11.456662 -2.02653,-3.51012 -4.84252,-6.279573 -8.09304,-8.217069 l -0.0109,-0.0072 -0.53485,-0.308508 c -8.7e-4,-4.9e-4 -0.002,-5.5e-4 -0.003,-0.0016 -3.43627,-1.921418 -7.32369,-2.933814 -11.26391,-2.926954 l 0.001,5.17e-4 c -3.87418,0.007 -7.79911,0.997588 -11.39517,3.073714 l -10e-4,5.17e-4 -0.28161,0.16178 c 0.0759,-0.04299 0.0846,-0.04788 0,0 -3.30619,1.850894 -7.11712,2.907376 -11.17554,2.907316 -4.0219,-6e-4 -7.97287,-1.059816 -11.45563,-3.07113 z m -34.36947,350.571366 10e-4,5.2e-4 h -10e-4 z"/>
+                    </g>
+                </svg>
+                <h1>OpenStudy</h1>
+        
+            </a>
+        
+        <div class="searchBox">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+        </div>
+        <ul>
+            <a href="/about/"><li>About</li></a>
+            <a href="/contribute/"><li>記事を書く</li></a>
+            <a href="/tags/"><li>タグを探す</li></a>
+            <a href="" class="icon"><i class="fa-brands fa-github"></i></a>
+        </ul>
+    </nav>
+
+    <nav class="sp">
+        <input type="checkbox" id="abc">
+        <div class="topbar">
+            
+                <a href="https://openstudy.jp/" class="home-link">
+            
+                    <svg class="logo" viewbox="0 0 530 530">
+                        <g transform="matrix(1.3904055,-0.25478091,0.25478091,1.3904055,-219.99281,-26.85259)">
+                            <path d="m 300.03071,291.04162 -22.91357,-13.22917 v -26.45833 l 22.91357,-13.22917 22.91361,13.22917 v 26.45833 z"/>
+                            <path d="m 311.48641,85.991134 c -3.48272,-2.011316 -7.43374,-3.070531 -11.45563,-3.071131 -4.05838,-5e-5 -7.86938,1.05644 -11.17554,2.907316 l -0.01,0.0062 -0.51315,0.296105 c -0.002,10e-4 -0.004,0.0016 -0.006,0.0036 -6.7111,3.995879 -11.20835,11.322379 -11.23384,17.567886 -0.0255,6.2455 -1.01609,10.07414 -3.04539,13.58887 -2.01147,3.48268 -4.90381,6.37446 -8.43961,8.38758 -3.5358,2.01313 -7.34658,3.06959 -11.40508,3.06953 -4.02174,-6e-4 -7.97279,-1.0598 -11.45563,-3.07113 l 5.2e-4,0.003 c -3.48282,-2.01114 -7.43392,-3.07053 -11.45563,-3.07113 -4.05849,-5e-5 -7.86929,1.05642 -11.17555,2.90732 -0.16011,0.0939 -0.33511,0.1934 -0.48361,0.27853 l -11.25564,32.95673 22.91333,13.22917 v 26.45833 l 22.91385,13.22917 22.91333,-13.22917 V 171.97917 L 300.03078,158.75 v -26.45833 l 22.91333,-13.22917 22.91385,13.22917 V 158.75 l -22.91385,13.22917 v 26.45833 l 22.91385,13.22917 22.91333,-13.22917 22.91385,13.22917 22.91333,-13.22917 22.91384,13.22917 V 238.125 l -22.91384,13.22917 -22.91333,-13.22917 -22.91385,13.22917 v 26.45833 l 22.91385,13.22917 V 317.5 l 22.91333,13.22917 V 357.1875 L 391.68514,370.41667 368.77129,357.1875 V 330.72917 L 345.85796,317.5 322.94411,330.72917 v 26.45833 l -22.91333,13.22917 V 396.875 L 277.11694,410.10417 254.20361,396.875 V 370.41667 L 277.11694,357.1875 V 330.72917 L 254.20361,317.5 231.28976,330.72917 208.37643,317.5 185.46258,330.72917 162.54925,317.5 v -26.45833 l 22.91333,-13.22917 22.91385,13.22917 22.91333,-13.22917 V 251.35417 L 208.37643,238.125 V 211.66667 L 185.4631,198.4375 V 171.97917 L 208.37591,158.75 219.55042,125.83935 c -3.30611,1.85091 -7.1172,2.90737 -11.17554,2.90731 -4.0219,-6e-4 -7.97295,-1.0598 -11.45611,-3.06955 -3.48316,-2.00975 -7.43423,-3.06911 -11.45596,-3.06971 -4.0561,-5e-5 -7.86511,1.05535 -13.1401,4.13091 -5.27498,3.07556 -9.77392,10.40322 -9.774,18.78224 v 0.3483 c -0.054,3.78102 -1.04452,7.60099 -3.06958,11.10837 -2.01137,3.48267 -4.90432,6.37507 -8.38675,8.38712 -3.48242,2.01205 -6.37491,4.90429 -8.38638,8.38705 -2.03389,3.52254 -3.02458,7.36096 -3.07062,11.15797 v 0.53899 c 0.0894,7.8264 4.18735,15.40628 11.45719,19.60345 l -5.2e-4,5.2e-4 0.26768,0.154 0.014,0.008 0.002,0.001 c 3.25523,1.9378 6.07519,4.70957 8.10389,8.22379 2.01043,3.48319 3.06848,7.43493 3.06803,11.45666 l 0.002,0.002 -0.002,0.32505 v -7e-5 c -0.0502,3.78866 -1.04028,7.61689 -3.06958,11.13162 -1.50493,2.68979 -10.12659,9.39183 -10.12659,9.39183 -1.74157,1.00528 -4.63457,3.89751 -6.64603,7.38027 -2.02929,3.51459 -3.01938,7.34337 -3.07056,11.45783 -0.0512,4.11447 -1.04179,7.94273 -3.07109,11.45747 -2.01133,3.48262 -4.90432,6.37496 -8.3876,8.38553 l 0.003,10e-4 c -3.48315,2.01054 -6.37614,4.90278 -8.3876,8.38554 -2.03012,3.51602 -3.02063,7.34652 -3.0701,11.13679 v 0.61029 c 0.10627,7.80561 4.19922,15.35876 11.44788,19.54817 l 0.009,0.005 -5.2e-4,0.002 0.27544,0.1571 0.006,0.004 0.002,10e-4 c 3.2554,1.9378 6.07555,4.70958 8.10441,8.22379 2.01043,3.48336 3.06848,7.43426 3.06803,11.45615 l 0.004,5.1e-4 c -4.5e-4,4.02188 1.0576,7.97294 3.06803,11.45615 2.02902,3.51448 4.84938,6.28697 8.10493,8.22482 l 0.008,0.005 0.51729,0.29869 c 0.005,0.003 0.009,0.005 0.0134,0.008 6.81478,3.8095 15.40449,4.03885 22.65702,-0.14831 l 0.29765,-0.17208 c 3.30242,-1.84518 7.1074,-2.89809 11.15901,-2.89802 4.0219,5.9e-4 7.97292,1.05992 11.45563,3.07113 l 0.003,-5.1e-4 0.28064,0.16426 v 5e-4 c 3.25605,1.93786 6.07626,4.70952 8.10544,8.22431 2.01043,3.48335 3.069,7.43477 3.06855,11.45666 l 0.003,-0.004 c -4.5e-4,4.02187 1.0576,7.97331 3.06803,11.45667 2.02808,3.51293 4.84689,6.284 8.10079,8.22172 0.002,9.5e-4 0.003,0.002 0.005,0.003 l 0.56373,0.32756 c 3.25607,1.93786 6.07625,4.70952 8.10545,8.22431 1.61233,2.48847 2.59966,7.12741 2.83488,11.30194 0.23522,4.17453 1.29327,8.12558 3.3037,11.6088 2.02889,3.51448 4.84924,6.28697 8.10493,8.22482 l 0.008,0.005 0.51728,0.29869 c 0.005,0.003 0.009,0.005 0.0134,0.008 6.8148,3.8095 15.40461,4.03885 22.65701,-0.14831 l 0.002,-10e-4 0.28113,-0.16176 c 3.30627,-1.85091 7.11705,-2.90738 11.17555,-2.90732 4.02187,6e-4 7.97279,1.05983 11.45563,3.07113 l 5.1e-4,-0.003 c 3.48283,2.01133 7.43375,3.07053 11.45564,3.07113 4.05216,5e-5 7.8583,-1.05289 11.16107,-2.89853 l 0.56377,-0.32526 c 6.70025,-3.99862 11.18839,-11.31959 11.18847,-19.68924 v -5.2e-4 c -0.28711,-10.57415 5.6839,-17.20663 10.00189,-19.45845 5.04429,-2.3985 8.85514,-3.45497 12.9136,-3.45491 4.0219,6e-4 7.97283,1.05984 11.45563,3.07113 v -0.003 c 3.48283,2.01132 7.43374,3.07053 11.45564,3.07113 4.05844,5e-5 7.86927,-1.05641 11.17554,-2.90731 l 0.56472,-0.32456 v 0 c 3.30627,-1.85091 7.11705,-2.90738 11.17555,-2.90732 4.0219,6e-4 7.97279,1.05986 11.45563,3.07113 l 10e-4,-0.003 c 3.48284,2.01133 7.43375,3.07053 11.45564,3.07113 4.05513,5e-5 7.86339,-1.05456 11.16779,-2.90266 l 0.54467,-0.31419 c 0.003,-0.005 0.0107,-0.006 0.016,-0.009 6.69842,-3.99909 11.18528,-11.31889 11.18536,-19.68717 v -0.001 h 10e-4 l -10e-4,-0.32401 c 0.0502,-3.78877 1.0408,-7.61747 3.0701,-11.13214 2.01147,-3.48277 4.90432,-6.37498 8.3876,-8.38554 l -0.002,-0.003 c 3.48329,-2.0105 6.37615,-4.90284 8.38761,-8.38553 2.03006,-3.51615 3.02062,-7.34652 3.07009,-11.13679 v -0.6103 c -0.10632,-7.80873 -4.2024,-15.36497 -11.45666,-19.55333 l 5.1e-4,-0.002 -0.28163,-0.16071 -0.002,-10e-4 c -3.2554,-1.93781 -6.07503,-4.70962 -8.1039,-8.22379 -2.01043,-3.48337 -3.06848,-7.43478 -3.06803,-11.45667 v -0.32653 c 0.0502,-3.78864 1.04041,-7.61689 3.06958,-11.13162 2.01147,-3.48277 4.90444,-6.37509 8.3876,-8.38553 l -0.003,-0.001 c 3.48327,-2.01043 6.37613,-4.90289 8.3876,-8.38553 2.02929,-3.51472 3.01938,-7.34337 3.06958,-11.13214 l 0.002,-0.65154 v 4e-5 c 0.0502,-3.78863 1.0408,-7.61688 3.0701,-11.13162 2.01147,-3.48276 4.90444,-6.37509 8.3876,-8.38553 l -0.003,-0.001 c 3.48328,-2.01043 6.37614,-4.90291 8.3876,-8.38553 2.03012,-3.51615 3.02063,-7.34652 3.0701,-11.13679 v -0.6103 c -0.10627,-7.80549 -4.19921,-15.35875 -11.44788,-19.54816 l -0.009,-0.005 5.2e-4,-5.1e-4 -0.27698,-0.15917 -0.005,-0.003 c -3.256,-1.93785 -6.07676,-4.71009 -8.10596,-8.22482 -2.01043,-3.48336 -3.06848,-7.43477 -3.07004,-11.4566 -0.002,-4.02184 -1.0596,-7.9735 -3.07002,-11.45673 -2.02653,-3.51017 -4.84252,-6.27955 -8.09304,-8.21707 l -0.0114,-0.007 -0.53485,-0.3085 c -8.8e-4,-4.9e-4 -0.002,-5.5e-4 -0.003,-0.002 -3.43627,-1.92143 -7.32368,-2.93382 -11.26391,-2.92696 l 5.2e-4,5.2e-4 c -3.8743,0.007 -7.79922,0.99768 -11.39517,3.07371 l -0.2826,0.1623 c -3.30627,1.85091 -7.11705,2.90737 -11.17555,2.90731 -4.02183,-6e-4 -7.97279,-1.0598 -11.45563,-3.07113 l -0.28268,-0.16247 c -3.25607,-1.93786 -6.07677,-4.70951 -8.10597,-8.22431 -2.01043,-3.48336 -3.06847,-7.43483 -3.06803,-11.45666 l -0.003,0.002 c 4.5e-4,-4.02177 -1.0576,-7.9734 -3.06803,-11.45666 -2.02821,-3.51306 -4.84677,-6.28398 -8.1008,-8.22172 l -0.56875,-0.33057 v -4.8e-4 c -3.25607,-1.93786 -6.07625,-4.70951 -8.10545,-8.22431 -2.01043,-3.48337 -3.06847,-7.43484 -3.06803,-11.45666 l -0.003,0.003 c 4.4e-4,-4.02177 -1.05761,-7.973348 -3.06803,-11.456662 -2.02653,-3.51012 -4.84252,-6.279573 -8.09304,-8.217069 l -0.0109,-0.0072 -0.53485,-0.308508 c -8.7e-4,-4.9e-4 -0.002,-5.5e-4 -0.003,-0.0016 -3.43627,-1.921418 -7.32369,-2.933814 -11.26391,-2.926954 l 0.001,5.17e-4 c -3.87418,0.007 -7.79911,0.997588 -11.39517,3.073714 l -10e-4,5.17e-4 -0.28161,0.16178 c 0.0759,-0.04299 0.0846,-0.04788 0,0 -3.30619,1.850894 -7.11712,2.907376 -11.17554,2.907316 -4.0219,-6e-4 -7.97287,-1.059816 -11.45563,-3.07113 z m -34.36947,350.571366 10e-4,5.2e-4 h -10e-4 z"/>
+                        </g>
+                    </svg>
+                    <h1>OpenStudy</h1>
+            
+                </a>
+            
+            <button id="open-menu">
+                <svg class="menu-button" viewbox="0 0 500 500">
+                    <rect width="499.99997" height="44.642857" x="2.0396195e-05" y="67.012856" ry="22.321428"/>
+                    <rect width="499.99997" height="44.642857" x="2.0396195e-05" y="227.67857" ry="22.321428"/>
+                    <rect width="499.99997" height="44.642857" x="2.0396195e-05" y="388.3443" ry="22.321428"/>
+                </svg>
+            </button>
+        </div>
+        
+        <input type="checkbox" id="trigger-checkbox2">
+        <ul>
+            <a href="/contribute/"><li>記事を書く</li></a>
+            <a href="/about/"><li>OpenStudyとは</li></a>
+        </ul>
+    </nav>
+</header><main>
+    <nav class="tree">
+        
+        <a href="/markdown/">
+            <h3>Markdown</h3>
+        </a>
+
+    <ul>
+            <a href="/markdown/markdown-cheetsheet/">
+                    <li class="current">
+                        Markdownの記法
+                    </li>
+                
+            </a>
+            <div class="section">
+                    <li class="closed" onclick="func1(this)">Markdownを学ぶ</li>
+                
+
+    <ul>
+            <a href="/markdown/learn-markdown/article2/">
+                    <li>
+                        デフォルト引数
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/article1/">
+                    <li>
+                        アロー関数
+                    </li>
+                
+            </a>
+            <div class="section">
+                    <li class="closed" onclick="func1(this)">layer-3</li>
+                
+
+    <ul>
+            <a href="/markdown/learn-markdown/detail/1/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/19/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/2/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/20/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/21/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/22/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/3/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/4/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/5/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/6/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/7/">
+                    <li>
+                        a
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/10/">
+                    <li>
+                        b
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/8/">
+                    <li>
+                        b
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/9/">
+                    <li>
+                        b
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/11/">
+                    <li>
+                        c
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/12/">
+                    <li>
+                        c
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/13/">
+                    <li>
+                        c
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/14/">
+                    <li>
+                        d
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/15/">
+                    <li>
+                        d
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/16/">
+                    <li>
+                        d
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/17/">
+                    <li>
+                        タイトル1
+                    </li>
+                
+            </a>
+            <a href="/markdown/learn-markdown/detail/18/">
+                    <li>
+                        タイトル1
+                    </li>
+                
+            </a>
+    </ul>
+            </div>
+    </ul>
+            </div>
+    </ul>
+        </a>
+    </nav>
+
+    <div class="articleSide">
+        <div class="dates">
+            <div class="release-date">
+                <i class="fa-solid fa-earth-americas"></i>
+                <time>2023/04/01</time>
+            </div>
+            <div class="update-date">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <time>2023/04/01</time>
+            </div>
+        </div>
+        <h1>Markdownの記法</h1>
+        <div class="container">
+            <aside>
+                <div class="views-and-thanks">
+                    <div class="views">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>1.6k</span>
+                    </div>
+                    <div class="thanks">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>653</span>
+                    </div>
+                </div>
+                <div class="contributors">
+                    <div class="contributors-label">
+                        <span class="description">作成した人</span>
+                        <span class="personNum">163</span>
+                    </div>
+                    <div class="contributors-icon">
+                        <img src="/images/profileIconSample/131.jpeg" alt="">
+                        <img src="/images/profileIconSample/100.jpeg" alt="">
+                        <img src="/images/profileIconSample/38.jpeg" alt="">
+                        <img src="/images/profileIconSample/37.jpeg" alt="">
+                        <img src="/images/profileIconSample/137.jpeg" alt="">
+                        <img src="/images/profileIconSample/437.jpeg" alt="">
+                        <img src="/images/profileIconSample/487.jpeg" alt="">
+                        <img src="/images/profileIconSample/97.jpeg" alt="">
+                        
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+                <div class="button">
+                    <div class="give-thanks">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>thanks!</span>
+                    </div>
+                    <div class="link-to-repo">
+                        <i class="fa-solid fa-code-pull-request"></i>
+                        <span>編集する</span>
+                    </div>
+                </div>
+            </aside>
+
+            <ul class="tags">
+                
+                    <a href="">
+                        <li>Markdown</li>
+                    </a>
+                
+                    <a href="">
+                        <li>Python</li>
+                    </a>
+                
+                    <a href="">
+                        <li>アプリ開発</li>
+                    </a>
+                
+                </ul>
+            <div class="index">
+                <h3 class="indexTitle">目次</h3>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#大見出し">大見出し</a>
+      <ul>
+        <li><a href="#中見出し">中見出し</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#リスト">リスト</a></li>
+    <li><a href="#番号付きリスト">番号付きリスト</a></li>
+    <li><a href="#コードブロック">コードブロック</a></li>
+    <li><a href="#リンク">リンク</a></li>
+    <li><a href="#画像">画像</a></li>
+    <li><a href="#表">表</a></li>
+    <li><a href="#段落">段落</a></li>
+    <li><a href="#数式">数式</a></li>
+    <li><a href="#注釈">注釈</a></li>
+    <li><a href="#改行">改行</a></li>
+    <li><a href="#blockquotes-引用">Blockquotes 引用</a></li>
+    <li><a href="#code-コード">Code コード</a>
+      <ul>
+        <li><a href="#インラインコード">インラインコード</a></li>
+      </ul>
+    </li>
+    <li><a href="#pre-整形済みテキスト">pre 整形済みテキスト</a></li>
+    <li><a href="#hr-水平線">Hr 水平線</a></li>
+    <li><a href="#強調">強調</a>
+      <ul>
+        <li><a href="#em">em</a></li>
+        <li><a href="#strong">strong</a></li>
+        <li><a href="#em--strong">em + strong</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+
+            <article>
+                <p>OpenStudyで表示されるMarkdownのプレビューです。</p>
+<p>##　変更しました</p>
+<h2 id="大見出し">大見出し</h2>
+<h3 id="中見出し">中見出し</h3>
+<h4 id="小見出し">小見出し</h4>
+<p>アクセシビリティの関係上<code>#</code>h1タグは使用できません。使用した場合エラーになります。</p>
+<h1 id="h1タグを使った場合">h1タグを使った場合</h1>
+<h2 id="リスト">リスト</h2>
+<p>ハイフン<code>-</code>、プラス<code>+</code>、アスタリスク<code>*</code>のいずれかを先頭に記述します。スペース4つでネストできます。</p>
+<ul>
+<li>リスト1</li>
+<li>リスト2
+<ul>
+<li>リスト2.1
+<ul>
+<li>リスト2.1.1</li>
+<li>リスト2.1.2</li>
+</ul>
+</li>
+<li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト2.2</li>
+</ul>
+</li>
+<li>リスト3</li>
+<li>リスト4</li>
+</ul>
+<h2 id="番号付きリスト">番号付きリスト</h2>
+<p><code>1.</code>を先頭に記述します。ネストはタブで表現します。<br>
+番号は自動的に採番されるため、すべての行を1.と記述するのがお勧めです。</p>
+<ol>
+<li>番号付きリスト1
+<ol>
+<li>番号付きリスト1-1</li>
+<li>番号付きリスト1-2</li>
+</ol>
+</li>
+<li>番号付きリスト2</li>
+<li>番号付きリスト3</li>
+</ol>
+<h2 id="コードブロック">コードブロック</h2>
+<div class="highlight" hi_lines=""><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">helloWorld</span>(<span style="color:#a6e22e">param1</span>, <span style="color:#a6e22e">param2</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">something</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">2.0</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">something</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// comment
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#75715e">@@ -4,6 +4,5 @@
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">+    const foo = bar.baz([1, 2, 3]) + 1;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#f92672">-    let foo = bar.baz([1, 2, 3]);
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">helloWorld</span>(param1, param2) {
+</span></span><span style="display:flex;"><span>    something <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">2.0</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> something) {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>)
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> null
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># comment</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js/spHeaderMenu.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js/sideMenu.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">footer</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;copyright&#34;</span>&gt;&amp;copy; 2023 OpenStudy&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://twitter.com/openstudyjp&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noopener noreferrer&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">svg</span> <span style="color:#a6e22e">viewbox</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0 0 500 500&#34;</span>&gt;&lt;<span style="color:#f92672">path</span> <span style="color:#a6e22e">d</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;m 448.8117,148.00184 c 0.30469,4.40788 0.30469,8.81576 0.30469,13.26428 0,135.54743 -103.18911,291.87486 -291.87487,291.87486 v -0.0812 C 101.50316,453.14098 46.922615,437.17518 3e-6,407.07159 c 8.1048136,0.97501 16.250253,1.46252 24.416005,1.48283 46.191346,0.0406 91.062362,-15.45805 127.401992,-43.99757 -43.896,-0.83282 -82.388783,-29.45358 -95.835879,-71.23704 15.376802,2.96567 31.220801,2.35629 46.313229,-1.76721 -47.856996,-9.66891 -82.287223,-51.71644 -82.287223,-100.54846 0,-0.44687 0,-0.87344 0,-1.30001 14.259598,7.94231 30.225467,12.35019 46.556974,12.8377 C 21.490963,172.41792 7.5969961,112.45448 34.816171,65.572495 86.898231,129.65943 163.74162,168.61942 246.23197,172.74292 c -8.26731,-35.62867 3.02661,-72.963631 29.67703,-98.009336 41.31626,-38.838111 106.29697,-36.847454 145.13508,4.4485 22.9738,-4.52976 44.99288,-12.959575 65.14319,-24.903507 -7.65792,23.745678 -23.68474,43.916301 -45.09445,56.733693 C 461.42595,108.61536 481.2919,103.17153 500,94.863577 486.2279,115.5014 468.88075,133.47824 448.8117,148.0019 Z&#34;</span>&gt;&lt;/<span style="color:#f92672">svg</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">footer</span>&gt;
+</span></span></code></pre></div>
+
+
+<figure class="xCodeBlock">
+    
+        <figcaption class="xCodeBlock_title">sample.java</figcaption>
+    
+        <div class="xCodeBlock_code"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">...</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span></span></span></code></pre></div></div>
+</figure>
+<h2 id="リンク">リンク</h2>
+<p><code>[表示文字](URL)</code>でリンクに変換されます。</p>
+<p><a href="https://www.google.co.jp/">Google</a></p>
+<h2 id="画像">画像</h2>
+<p>画像の大きさなどの指定をする場合はimgタグを使用します。
+直後に<code>* *</code>を書くとキャプションを追加できます</p>
+<p><a href="https://openstudy.jp/"><img src="/images/OpenStudy.png" alt="OpenStudy"></a>
+<em>caption</em></p>
+<h2 id="表">表</h2>
+<p><code>-</code>と<code>|</code>を使ってtableを作成します。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左揃え</th>
+<th style="text-align:center">中央揃え</th>
+<th style="text-align:right">右揃え</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:right">6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="段落">段落</h2>
+<p>空白行を挟むことで段落となります。</p>
+<h2 id="数式">数式</h2>
+<p>ブロック数式</p>
+<p>$$
+e^{i\theta} = \cos\theta + i\sin\theta
+$$</p>
+<p>インライン数式：$e^{i\theta} = \cos\theta + i\sin\theta$</p>
+<h2 id="注釈">注釈</h2>
+<p>脚注の例<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>です。</p>
+<h2 id="改行">改行</h2>
+<p>改行の前に半角スペース<code>  </code>を2つ記述します。</p>
+<p>hoge
+fuga<br>
+piyo</p>
+<h2 id="blockquotes-引用">Blockquotes 引用</h2>
+<p>先頭に<code>&gt;</code>を記述します。ネストは<code>&gt;</code>を多重に記述します。</p>
+<blockquote>
+<p>引用<br>
+引用</p>
+<blockquote>
+<p>多重引用</p>
+</blockquote>
+</blockquote>
+<h2 id="code-コード">Code コード</h2>
+<p><code>`バッククオート`</code> 3つ、あるいはダッシュ<code>~</code>３つで囲みます。</p>
+<pre tabindex="0"><code>print &#39;hoge&#39;
+</code></pre><div class="xAccordion">
+    <label class="xAccordion_title" for="id-329857164">もっと詳しく</label>
+    <input id="id-329857164" type="checkbox">
+    <div class="xAccordion_body">
+<pre><code>この本文はデフォルトでは隠されていて、クリックで見えるようになります。
+
+- サンプルコード
+- 補足説明
+
+などに使うと便利です。
+
+&lt;/div&gt;
+</code></pre>
+</div>
+<h3 id="インラインコード">インラインコード</h3>
+<p><code>`バッククオート`</code> で単語を囲むとインラインコードになります。</p>
+<pre tabindex="0"><code>これは `インラインコード`です。
+</code></pre><p>これは <code>class Hoge</code>です。</p>
+<h2 id="pre-整形済みテキスト">pre 整形済みテキスト</h2>
+<p>半角スペース4個deコードブロックをpre表示できます</p>
+<pre><code>class Hoge
+    def hoge
+        print 'hoge'
+    end
+end
+</code></pre>
+<h2 id="hr-水平線">Hr 水平線</h2>
+<p>アンダースコア<code>_</code> 、アスタリスク<code>*</code>、ハイフン<code>-</code>などを3つ以上連続して記述します。</p>
+<hr>
+<h2 id="強調">強調</h2>
+<h3 id="em">em</h3>
+<p>アスタリスク<code>*</code>もしくはアンダースコア<code>_</code>1個で文字列を囲みます。</p>
+<p>これは <em>イタリック</em> です</p>
+<h3 id="strong">strong</h3>
+<p>アスタリスク<code>*</code>もしくはアンダースコア<code>_</code>2個で文字列を囲みます。</p>
+<p>これは <strong>ボールド</strong> です</p>
+<h3 id="em--strong">em + strong</h3>
+<p>アスタリスク<code>*</code>もしくはアンダースコア<code>_</code>3個で文字列を囲みます。</p>
+<p>これは <em><strong>イタリック＆ボールド</strong></em> です</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>脚注の内容&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+        </div>
+    </div>
+
+        </main><script src="/js/spHeaderMenu.js"></script>
+<script src="/js/sideMenu.js"></script>
+<footer>
+    <div class="container">
+        <p class="copyright">&copy; 2023 OpenStudy</p>
+        <a href="https://twitter.com/openstudyjp" target="_blank" rel="noopener noreferrer">
+            <svg viewbox="0 0 500 500">
+                <path d="m 448.8117,148.00184 c 0.30469,4.40788 0.30469,8.81576 0.30469,13.26428 0,135.54743 -103.18911,291.87486 -291.87487,291.87486 v -0.0812 C 101.50316,453.14098 46.922615,437.17518 3e-6,407.07159 c 8.1048136,0.97501 16.250253,1.46252 24.416005,1.48283 46.191346,0.0406 91.062362,-15.45805 127.401992,-43.99757 -43.896,-0.83282 -82.388783,-29.45358 -95.835879,-71.23704 15.376802,2.96567 31.220801,2.35629 46.313229,-1.76721 -47.856996,-9.66891 -82.287223,-51.71644 -82.287223,-100.54846 0,-0.44687 0,-0.87344 0,-1.30001 14.259598,7.94231 30.225467,12.35019 46.556974,12.8377 C 21.490963,172.41792 7.5969961,112.45448 34.816171,65.572495 86.898231,129.65943 163.74162,168.61942 246.23197,172.74292 c -8.26731,-35.62867 3.02661,-72.963631 29.67703,-98.009336 41.31626,-38.838111 106.29697,-36.847454 145.13508,4.4485 22.9738,-4.52976 44.99288,-12.959575 65.14319,-24.903507 -7.65792,23.745678 -23.68474,43.916301 -45.09445,56.733693 C 461.42595,108.61536 481.2919,103.17153 500,94.863577 486.2279,115.5014 468.88075,133.47824 448.8117,148.0019 Z">
+            </svg>
+        </a>
+    </div>
+</footer></body>
+</html>
