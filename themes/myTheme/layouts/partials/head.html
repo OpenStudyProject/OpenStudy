@@ -34,6 +34,12 @@
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ end }}
 
+    <!-- Section and Article Page CSS -->
+    {{ if or .IsPage .IsSection }}
+        {{ $style := resources.Get "sass/article.scss" | toCSS | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ end }}
+
     <!-- Additional CSS -->
     {{ range .Params.style }}
         {{ $path := . | printf "sass/%s" | printf "%s.scss" }}
