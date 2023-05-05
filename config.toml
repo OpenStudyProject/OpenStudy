@@ -7,6 +7,9 @@ theme = 'myTheme'
 pluralizeListTitles = false
 enableGitInfo = true
 
+[frontmatter]
+    lastmod = [":git"]
+
 # Enable syntax highlightning
 pygmentsCodeFences = true
 
