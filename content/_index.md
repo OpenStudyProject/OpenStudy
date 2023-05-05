@@ -1,5 +1,4 @@
 +++
-title = "openstudy"
+title = "" # keep empty
+descrption = ""
 +++
-
-I'm "_index.md"
