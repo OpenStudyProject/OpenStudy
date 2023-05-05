@@ -1,18 +1,18 @@
-main {
+main:has(nav.tree) {
     display: flex;
-    height: 100vh;
-    overflow: hidden;
+    // height: 100vh;
+    // overflow: hidden;
 
     nav.tree {
         // border: solid #96ffff 2px;
         width: 350px;
-        max-height: 100vh;
-        overflow: hidden;
-        flex: 1;
+        // max-height: 100vh;
+        // overflow: hidden;
+        // flex: 1;
 
-        &:hover {
-            overflow: auto;
-        }
+        // &:hover {
+        //     overflow: auto;
+        // }
 
         h3 {
             font-size: 32px;
@@ -98,9 +98,9 @@ main {
 
     .articleSide {
         width: calc(100% - 350px);
-        max-height: 100vh;
-        overflow: auto;
-        flex: 2;
+        // max-height: 100vh;
+        // overflow: auto;
+        // flex: 2;
 
         .dates {
             display: flex;
@@ -124,7 +124,7 @@ main {
         .container {
             max-width: 100%;
             padding: 0;
-            height: 150vh;
+            // height: 150vh;
 
             aside {
                 // border: solid #ffd2bf 2px;
