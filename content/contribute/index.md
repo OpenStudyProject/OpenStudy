@@ -1,6 +1,6 @@
 +++
 title = "記事を書く"
-type = "specials"
+type = "special"
 layout = "raw"
 style = ["contribute"]
 +++
