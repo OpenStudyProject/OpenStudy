@@ -1,7 +1,6 @@
 +++
 title = "アロー関数"
 date = 2022-12-08
-style = ["article"]
 +++
 
 アロー関数(arrow function)はJavaScriptの関数を作る方法のひとつです。

@@ -1,4 +1,3 @@
 +++
 title = "Hugo"
-style = ["article"]
 +++

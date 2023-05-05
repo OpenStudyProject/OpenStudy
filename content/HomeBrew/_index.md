@@ -1,4 +1,3 @@
 +++
 title = "Homebrew"
-style = ["article"]
 +++

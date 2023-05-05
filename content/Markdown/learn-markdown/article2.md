@@ -2,7 +2,6 @@
 title = "デフォルト引数"
 description = "引数の値がundefinedのとき、代わりの値を指定できるのがデフォルト引数(default parameter)です。"
 date = 2023-01-18
-style = ["article"]
 tags = []
 author = ["lin-24-ia"]
 +++

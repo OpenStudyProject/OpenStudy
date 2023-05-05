@@ -2,7 +2,6 @@
 title = "Markdownの記法"
 description = "OpenStudyで表示されるMarkdownのプレビューです。"
 date = 2023-04-05
-style = ["article"]
 tags = ["Markdown", "Python", "アプリ開発"]
 +++
 
