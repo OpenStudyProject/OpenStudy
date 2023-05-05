@@ -16,10 +16,11 @@
             </div>
             <div class="update-date">
                 <i class="fa-solid fa-arrows-rotate"></i>
-                <time>{{ .Date.Format "2006/01/02" }}</time>
+                <time>{{ .Lastmod.Format "2006/01/02" }}</time>
             </div>
         </div>
         <h1>{{ .Title }}</h1>
+        <p>{{ .GitInfo }}</p>
         <div class="container">
             <aside>
                 <div class="views-and-thanks">
