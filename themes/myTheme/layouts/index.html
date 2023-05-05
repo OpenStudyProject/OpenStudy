@@ -1,7 +1,5 @@
 {{ define "main" }}
     <h1>TOP PAGE</h1>
-    <p>{{ .Lastmod }}</p>
-    <p>{{ . }}</p>
     <ul>
         {{ range .Sections }}
             <a href="{{ .RelPermalink }}"><li>{{ .Title }}</li></a>
