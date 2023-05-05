@@ -1,0 +1,10 @@
+{{ $hierarchy := slice . }}
+
+{{ if .Parent }}
+    {{ $parentHierarchy := partial "function/fetchHierarchy" .Parent }}
+    {{ if $parentHierarchy }}
+        {{ $hierarchy = $parentHierarchy | append $hierarchy }}
+    {{ end }}
+{{ end }}
+
+{{ return $hierarchy }}
