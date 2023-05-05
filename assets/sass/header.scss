@@ -26,9 +26,27 @@ header {
             }
         }
 
+        .searchBox {
+            background-color: #eee;
+            width: 50%;
+            border-radius: 9999px;
+            margin: 6px 0;
+
+            i {
+                padding: 9px 0 9px 30px;
+                color: #999;
+            }
+
+            span {
+                padding: 9px 0;
+                color: #999;
+            }
+        }
+
         ul {
             display: flex;
             padding: 0 8px;
+            list-style-type: none;
 
             a {
                 margin: 18px 16px;
@@ -37,6 +55,15 @@ header {
                     font-size: 14px;
                     line-height: 1em;
                     font-weight: 600;
+                }
+            }
+
+            a.icon {
+                margin: 0;
+                padding: 11px;
+                
+                i {
+                    font-size: 28px;
                 }
             }
         }
@@ -136,6 +163,7 @@ header {
 
             ul {
                 display: block;
+                list-style-type: none;
                 position: absolute;
                 right: 0;
                 left: 0;
