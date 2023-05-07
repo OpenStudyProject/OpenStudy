@@ -1,4 +1,9 @@
 header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 2;
+
     nav.pc, nav.sp {
         display: flex;
         justify-content: space-between;
