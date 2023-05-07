@@ -1,103 +1,88 @@
 {{ define "main" }}
-    <nav class="tree">
-        {{ $hierarchy := partial "function/fetchHierarchy" . }}
-        <a href="{{ (index $hierarchy 1).RelPermalink }}">
-            <h3>{{ (index $hierarchy 1).Title }}</h3>
-        </a>
-            {{- template "navTree" (dict "section" (index $hierarchy 1) "current" .) }}
-        </a>
-    </nav>
-
-    <div class="articleSide">
-        <div class="dates">
-            <div class="release-date">
-                <i class="fa-solid fa-earth-americas"></i>
-                <time>{{ .Date.Format "2006/01/02" }}</time>
+    <div class="article-container">
+        <nav class="tree">
+            {{ $hierarchy := partial "function/fetchHierarchy" . }}
+            <a href="{{ (index $hierarchy 1).RelPermalink }}">
+                <h3>{{ (index $hierarchy 1).Title }}</h3>
+            </a>
+            {{ template "navTree" (dict "section" (index $hierarchy 1) "current" .) }}
+        </nav>
+        <div class="articleSide">
+            <div class="dates">
+                <div class="release-date">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <time>{{ .Date.Format "2006/01/02" }}</time>
+                </div>
+                <div class="update-date">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <time>{{ .Lastmod.Format "2006/01/02" }}</time>
+                </div>
+                <div class="views">
+                    <i class="fa-solid fa-eye"></i>
+                    <span>1.6K</span>
+                </div>
+                <div class="thanks">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>653</span>
+                </div>
             </div>
-            <div class="update-date">
-                <i class="fa-solid fa-arrows-rotate"></i>
-                <time>{{ .Lastmod.Format "2006/01/02" }}</time>
-            </div>
-        </div>
-        <h1>{{ .Title }}</h1>
-        <div class="container">
-            <aside>
-                <div class="views-and-thanks">
-                    <div class="views">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>1.6k</span>
-                    </div>
-                    <div class="thanks">
-                        <i class="fa-solid fa-heart"></i>
-                        <span>653</span>
-                    </div>
-                </div>
-                <div class="contributors">
-                    <div class="contributors-label">
-                        <span class="description">作成した人</span>
-                        <span class="personNum">163</span>
-                    </div>
-                    <div class="contributors-icon">
-                        <img src="/images/profileIconSample/131.jpeg" alt="">
-                        <img src="/images/profileIconSample/100.jpeg" alt="">
-                        <img src="/images/profileIconSample/38.jpeg" alt="">
-                        <img src="/images/profileIconSample/37.jpeg" alt="">
-                        <img src="/images/profileIconSample/137.jpeg" alt="">
-                        <img src="/images/profileIconSample/437.jpeg" alt="">
-                        <img src="/images/profileIconSample/487.jpeg" alt="">
-                        <img src="/images/profileIconSample/97.jpeg" alt="">
-                        {{ range .Params.author }}
-                            <a href="https://github.com/{{ print . }}">
-                                <img src="https://github.com/{{ print . }}.png" alt="">
-                            </a>
-                        {{ end}}
-                        <i class="fa-solid fa-plus"></i>
-                    </div>
-                </div>
-                <div class="button">
-                    <div class="give-thanks">
-                        <i class="fa-regular fa-heart"></i>
-                        <span>thanks!</span>
-                    </div>
-                    <div class="link-to-repo">
-                        <i class="fa-solid fa-code-pull-request"></i>
-                        <span>編集する</span>
-                    </div>
-                </div>
-            </aside>
-
-            <ul class="tags">
-                {{ range .Params.tags }}
-                    <a href="">
-                        <li>{{ . }}</li>
-                    </a>
-                {{ end}}
+            <h1>{{ .Title }}</h1>
+            <p class="description">{{ .Description }}</p>
+            <div class="container">
+                <ul class="tags">
+                    {{ range .Params.tags }}
+                        <a href="" class="{{ . | lower }}">
+                            <li>{{ . }}</li>
+                        </a>
+                    {{ end}}
                 </ul>
-
-            {{- with .TableOfContents }}
-            <div class="index">
-                <h3 class="indexTitle">目次</h3>
-                {{ . }}
+                <aside>
+                    <div class="contributors">
+                        <div class="contributors-label">
+                            <span class="description">作成した人</span>
+                            <span class="personNum">163</span>
+                        </div>
+                        <div class="contributors-icon">
+                            <img src="/images/profileIconSample/131.jpeg" alt="">
+                            <img src="/images/profileIconSample/100.jpeg" alt="">
+                            <img src="/images/profileIconSample/38.jpeg" alt="">
+                            <img src="/images/profileIconSample/37.jpeg" alt="">
+                            <img src="/images/profileIconSample/137.jpeg" alt="">
+                            <img src="/images/profileIconSample/437.jpeg" alt="">
+                            <img src="/images/profileIconSample/487.jpeg" alt="">
+                            <img src="/images/profileIconSample/97.jpeg" alt="">
+                            {{ with .Params.author }}
+                                {{ range . }}
+                                    <a href="https://github.com/{{ print . }}">
+                                        <img src="https://github.com/{{ print . }}.png" alt="">
+                                    </a>
+                                {{ end }}
+                            {{ end}}
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="give-thanks">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>thanks!</span>
+                        </div>
+                        <div class="link-to-repo">
+                            <i class="fa-solid fa-code-pull-request"></i>
+                            <span>編集する</span>
+                        </div>
+                    </div>
+                </aside>
+                {{ with .TableOfContents }}
+                    <div class="index">
+                        <label class="indexTitle" for="id-1">目次</label>
+                        <input id="id-1" type="checkbox">
+                        {{ . }}
+                    </div>
+                {{ end }}
+                <article>
+                    {{ .Content }}
+                </article>
             </div>
-            {{- end }}
-
-            <article>
-                {{ .Content }}
-            </article>
         </div>
     </div>
 {{ end }}
-
-{{- define "breadcrumb" }}
-    {{- if .node.Parent }}
-        {{- template "breadcrumb" (dict "node" .node.Parent "start" .start) }}
-    {{- else if not .node.IsHome }}
-        {{- template "breadcrumb" (dict "node" .node.Site.Home "start" .start) }}
-    {{- end }}
-
-    {{- if eq .node .start }}
-        <li>{{ .node.LinkTitle }}
-    {{- else }}
-        <li><a href="{{ .node.Permalink }}">{{ .node.LinkTitle }}</a>
-    {{- end }}
-{{- end }}
