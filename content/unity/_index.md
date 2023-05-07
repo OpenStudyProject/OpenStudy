@@ -1,10 +1,10 @@
 +++
-title = "Javascript"
-description = "Javascriptはすごいです！"
+title = "Unity"
+description = "Unity ha sugoi zo!"
 date = 1970-01-01
 type = "default"
 layout = "single"
-image = "94.jpeg"
+image = "135.jpeg"
 +++
 
 ## リンク
