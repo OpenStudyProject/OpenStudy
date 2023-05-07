@@ -16,4 +16,4 @@ pygmentsCodeFences = true
 
 [params]
     # Sass files that always imported
-    basicStyle = ["default", "header", "footer", "breadcrumb"]
+    basicStyle = ["default", "header", "footer"]
