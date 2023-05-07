@@ -30,10 +30,12 @@
             <p class="description">{{ .Description }}</p>
             <div class="container">
                 <ul class="tags">
-                    {{ range .Params.tags }}
-                        <a href="" class="{{ . | lower }}">
-                            <li>{{ . }}</li>
-                        </a>
+                    {{ with .Params.tags }}
+                        {{ range . | sort }}
+                            <a href="/tags/{{ . | lower }}" class="{{ . | lower }}">
+                                <li>{{ . }}</li>
+                            </a>
+                        {{ end }}
                     {{ end}}
                 </ul>
                 <aside>
