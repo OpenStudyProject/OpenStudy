@@ -1,10 +1,13 @@
-{{- $title := .Get "title" | default "例" }}
-{{- $rand := delimit (seq 9 | shuffle) "" }}
+{{ $title := .Get "title" }}
+{{ $salt := delimit (shuffle (split "0123456789abcdef" "" )) "" }}
+{{ $checksum := print .Inner $salt | md5 }}
 
-<div class="xAccordion">
-    <label class="xAccordion_title" for="id-{{ $rand }}">{{ $title }}</label>
-    <input id="id-{{ $rand }}" type="checkbox">
-    <div class="xAccordion_body">
-        {{ .Inner }}
+<div class="accordion-container">
+    <label class="accordion-title" for="checksum-{{ $checksum }}">
+        {{ $title }}
+    </label>
+    <input id="checksum-{{ $checksum }}" type="checkbox">
+    <div class="accordion-body">
+        {{ .Inner | markdownify }}
     </div>
 </div>
