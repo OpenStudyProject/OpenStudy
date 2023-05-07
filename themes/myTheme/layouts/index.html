@@ -1,8 +1,21 @@
 {{ define "main" }}
-    <h1>TOP PAGE</h1>
-    <ul>
-        {{ range .Sections }}
-            <a href="{{ .RelPermalink }}"><li>{{ .Title }}</li></a>
-        {{ end }}
-    </ul>
+    <div class="wrapper">
+        <div class="top-container">
+            <div class="image-and-title">
+                <img src="/images/OpenStudy.png" alt="">
+                <h1>強力なプラットフォーム</h1>
+            </div>
+        </div>
+        <div class="container">
+            <h1>{{ .Title }}</h1>
+            <div class="categories-container">
+                {{ range .Site.Home.Sections }}
+                <a href="{{ .RelPermalink}}">
+                    <img src="/images/profileIconSample/{{ .Params.Image }}" alt="">
+                    <p>{{ .Title }}</p>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
 {{ end }}
