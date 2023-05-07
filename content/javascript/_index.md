@@ -102,10 +102,6 @@ print 'hoge'
 Zenn ではKaTeXによる数式表示に対応しています。KaTeXのバージョンは常に最新バージョンを使用します。
 {{< /alert >}}
 
-## リンクカード
-
-{{< link "https://zenn.dev/zenn/articles/markdown-guide" >}}
-
 ## インラインコード
 
 `` `バッククオート` `` で単語を囲むとインラインコードになります。
