@@ -24,12 +24,13 @@ main {
 
         nav.tree {
             width: 350px;
-            padding-right: 20px;
+            padding-right: 22px;
             overflow-y: scroll;
             position: sticky;
             top: 50px;
             height: calc(100vh - 50px);
             z-index: 1;
+            border-right: solid 1px #ccc;
 
             a {
                 h3 {
@@ -119,11 +120,12 @@ main {
         }
 
         .articleSide {
-            width: calc(100% - 350px - 140px);
-            margin: 0 100px 0 40px;
+            width: calc(100% - 350px - 160px);
+            margin: 0 100px 0 60px;
 
             .dates {
                 display: flex;
+                margin: 6px 0;
                 
                 .release-date, .update-date, .views, .thanks {
                     font-size: 14px;
@@ -168,7 +170,6 @@ main {
             }
 
             > p.description {
-                font-size: 18px;
                 font-weight: 600;
             }
 
@@ -369,6 +370,57 @@ main {
     
                             ul, ol {
                                 margin: 0 0 0 16px;
+                            }
+                        }
+                    }
+                }
+                
+                .list-index {
+                    a {
+                        h3 {
+                            font-size: 32px;
+                            padding: 16px;
+                        }
+                    }
+
+                    ul {
+                        a {
+                            display: block;
+
+                            li {
+                                list-style-type: none;
+                                padding: 10px 12px;
+                                line-height: 1.2em;
+                            }
+                        }
+
+                        .section {
+                            > li {
+                                display: block;
+                                padding: 10px;
+                                line-height: 1.2em;
+                                word-wrap: break-word;
+                                font-weight: 600;
+                            }
+
+                            ul {
+                                .section {
+                                    > li {
+                                        padding: 10px 10px 10px 30px;
+                                    }
+
+                                    ul {
+                                        a {
+                                            padding: 0 0 0 40px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        ul {
+                            a {
+                                padding: 0 0 0 20px;
                             }
                         }
                     }
