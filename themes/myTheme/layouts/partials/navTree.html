@@ -1,11 +1,11 @@
-{{- define "navTree" }}
-    {{- $section := .section }}
-    {{- $current := .current }}
+{{ define "navTree" }}
+    {{ $section := .section }}
+    {{ $current := .current }}
 
     <ul>
-        {{- range $section.RegularPages }}
+        {{ range $section.RegularPages }}
             <a href="{{ .RelPermalink }}">
-                {{- if eq . $current }}
+                {{ if eq . $current }}
                     <li class="current">
                         {{ .LinkTitle }}
                     </li>
@@ -15,17 +15,17 @@
                     </li>
                 {{ end }}
             </a>
-        {{- end }}
+        {{ end }}
 
-        {{- range $section.Sections }}
+        {{ range $section.Sections }}
             <div class="section">
-                {{- if .IsAncestor $current }}
+                {{ if .IsAncestor $current }}
                     <li onclick="func1(this)">{{ .LinkTitle }}</li>
                 {{ else }}
                     <li class="closed" onclick="func1(this)">{{ .LinkTitle }}</li>
                 {{ end }}
-                {{- template "navTree" (dict "section" . "current" $current) }}
+                {{ template "navTree" (dict "section" . "current" $current) }}
             </div>
-        {{- end }}
+        {{ end }}
     </ul>
-{{- end }}
+{{ end }}
