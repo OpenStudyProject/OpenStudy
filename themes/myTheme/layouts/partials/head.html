@@ -42,6 +42,18 @@
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ end }}
 
+    <!-- Taxonomy Terms Page CSS -->
+    {{ if eq .Kind "taxonomy" }}
+        {{ $style := resources.Get "sass/terms.scss" | toCSS | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ end }}
+
+    <!-- Taxonomy Lists Page CSS -->
+    {{ if eq .Kind "term" }}
+        {{ $style := resources.Get "sass/taxonomy.scss" | toCSS | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ end }}
+
     <!-- Section and Article Page CSS -->
     {{ $include := slice "article" "breadcrumb" "alert" }}
     {{ if or .IsPage .IsSection }}
