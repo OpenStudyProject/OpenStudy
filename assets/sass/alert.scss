@@ -1,0 +1,53 @@
+$types: (
+    (
+        class: "notice", 
+        color: #3488ff,
+        background: #eefbff
+    ),
+
+    (
+        class: "success",
+        color: #29ce29,
+        background: #edffeb
+    ),
+
+    (
+        class: "warning",
+        color: #ff8c00,
+        background: #fffef6
+    ),
+
+    (
+        class: "error",
+        color: rgb(255, 48, 48),
+        background: #fff3f3
+    )
+);
+
+
+@each $type in $types {
+    .#{map-get($type, 'class')} {
+        background-color: map-get($type, 'background');
+        border-radius: 12px;
+        border: solid 1px map-get($type, 'color');
+        padding: 18px;
+        margin: 20px 0;
+
+        .icon-and-title {
+            display: flex;
+            align-items: center;
+
+            i {
+                color: map-get($type, 'color');
+                font-size: 24px;
+            }
+
+            span {
+                font-weight: 500;
+                color: map-get($type, 'color');
+                font-size: 18px;
+                padding: 0 8px;
+            }
+        }
+    }
+}
