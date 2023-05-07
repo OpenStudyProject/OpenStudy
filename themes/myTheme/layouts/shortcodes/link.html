@@ -1,0 +1,21 @@
+{{ $url := .Get 0 }}
+
+<div class="linkCard">
+    <p>hi</p>
+    <p>{{ $url }}</p>
+</div>
+
+<script>
+    const url = "{{ $url }}";
+
+    fetch(url).then(res => res.text()).then(text => {
+        const el = new DOMParser().parseFromString(text, "text/html")
+        const headEls = (el.head.children)
+        
+        Array.from(headEls).map(v => {
+            const prop = v.getAttribute('property')
+            if (!prop) return;
+            console.log(prop, v.getAttribute("content"))
+        })
+    })
+</script>
