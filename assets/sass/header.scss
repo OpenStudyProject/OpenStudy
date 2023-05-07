@@ -3,6 +3,8 @@ header {
     top: 0;
     background-color: #fff;
     z-index: 2;
+    border-bottom: solid 1px #ccc;
+    padding: 0 10px;
 
     nav.pc, nav.sp {
         display: flex;
@@ -21,9 +23,9 @@ header {
             }
 
             h1 {
-                font-family: 'Cookie', cursive;
-                font-size: 30px;
-                padding: 0 3px;
+                font-weight: 300;
+                font-size: 26px;
+                padding: 3px 3px;
                 letter-spacing: 0.03em;
                 line-height: 1.1em;
                 color: #000;
@@ -33,17 +35,17 @@ header {
 
         .searchBox {
             background-color: #eee;
-            width: 50%;
             border-radius: 9999px;
-            margin: 6px 0;
+            margin: 7px 0;
+            flex: 1 1 auto;
 
             i {
-                padding: 9px 0 9px 30px;
+                padding: 8px 0 8px 30px;
                 color: #999;
             }
 
             span {
-                padding: 9px 0;
+                padding: 8px 0;
                 color: #999;
             }
         }
@@ -59,16 +61,16 @@ header {
                 li {
                     font-size: 14px;
                     line-height: 1em;
-                    font-weight: 600;
+                    font-weight: 400;
                 }
             }
 
             a.icon {
                 margin: 0;
-                padding: 11px;
+                padding: 13px;
                 
                 i {
-                    font-size: 28px;
+                    font-size: 24px;
                 }
             }
         }
