@@ -1,20 +1,26 @@
 $tags: (
     (
         class: 'python',
+        description: '使いやすい言語使いやすい言語使いやすい言語使いやすい言語使いやすい言語使いやすい言語',
         color: #003fdf,
-        background: #c7edff
     ),
 
     (
         class: 'markdown',
+        description: 'いい言語',
         color: #00ca00,
-        background: #dcffdc
     ),
 
     (
         class: 'app',
+        description: 'ネイティブ',
         color: #ff2600,
-        background: #ffdeff
+    ),
+
+    (
+        class: 'three-d',
+        description: '3次元',
+        color: #ef5bff,
     ),
 );
 
@@ -309,15 +315,12 @@ main {
                             align-items: center;
                             font-size: 12px;
                             color: map-get($tag, 'color');
-                            background-color: map-get($tag, 'background');
+                            background-color: #{map-get($tag, 'color')}16;
                         }
                     }
                 }
 
                 .index {
-                    // box-shadow: 2px 4px 10px 2px #ddd;
-                    // border: solid 1px #ccc;
-
                     .indexTitle {
                         display: block;
                         padding: 12px 0;
