@@ -2,13 +2,8 @@
 title = "Markdownの記法"
 description = "OpenStudyで表示されるMarkdownのプレビューです。"
 date = 2023-04-05
-tags = ["Markdown", "Python", "アプリ開発"]
-author = [""]
+tags = ["Markdown", "Python", "App"]
 +++
-
-OpenStudyで表示されるMarkdownのプレビューです。
-
-##　変更しました
 
 ## 大見出し
 ### 中見出し
@@ -168,16 +163,40 @@ piyo
 print 'hoge'
 ```
 
-{{% accordion title="もっと詳しく" %}}
-    この本文はデフォルトでは隠されていて、クリックで見えるようになります。
+## アコーディオンメニュー
 
-    - サンプルコード
-    - 補足説明
+{{< accordion title="さらに詳しく" >}}
+この本文はデフォルトでは隠されていて、クリックで見えるようになります。
 
-    などに使うと便利です。
-{{% /accordion %}}
+- サンプルコード
+- 補足説明
 
-### インラインコード
+などに使うと便利です。
+{{< /accordion >}}
+
+## Alert カード
+
+{{< alert "notice" >}}
+一般的な情報
+{{< /alert >}}
+
+{{< alert "success" "解決策" >}}
+この形式で書いたコメントは公開されたページ上では表示されません。ただし、複数行のコメントには対応していないのでご注意ください。
+{{< /alert >}}
+
+{{< alert "warning" "v1.2以前の場合" >}}
+リプライを埋め込んだ場合、デフォルトでリプライ元のツイートも含まれて表示されます。ツイートのURL?conversation=noneのようにクエリパラメータにconversation=noneを指定すると、リプライ元のツイートが含まれなくなります。
+{{< /alert >}}
+
+{{< alert "error" "\"no such directory\" と表示される場合" >}}
+Zenn ではKaTeXによる数式表示に対応しています。KaTeXのバージョンは常に最新バージョンを使用します。
+{{< /alert >}}
+
+## リンクカード
+
+{{< link "https://zenn.dev/zenn/articles/markdown-guide" >}}
+
+## インラインコード
 
 `` `バッククオート` `` で単語を囲むとインラインコードになります。
 
