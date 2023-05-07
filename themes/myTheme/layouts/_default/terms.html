@@ -1,9 +1,17 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  <ul>
-    {{- $plural := .Data.Plural }}
-    {{- range $index, $term := .Data.Terms.Alphabetical }}
-      <li><a href="{{ $.Site.LanguagePrefix }}/{{ $plural }}/{{ $term.Name | urlize }}">{{ $term.Name }}</a> ({{ $term.Count }})
-    {{- end }}
-  </ul>
+    <div class="container">
+        <h1>タグ一覧</h1>
+        <ul class="terms">
+            {{ range $index, $term := .Site.Taxonomies.tags.ByCount }}
+                <a href="{{ .Page.RelPermalink }}">
+                    <div class="tagicon-container">
+                        <li class="{{ .Name }}">{{ .Page.Title }}</li>
+                    </div>
+                    <p class="tag-description {{ .Name }}"></p>
+                    <i class="fa-solid fa-tag"></i>
+                    <p>{{ $term.Count }}</p>
+                </a>
+            {{ end }}
+        </ul>
+    </div>
 {{ end }}
