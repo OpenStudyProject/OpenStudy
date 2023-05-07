@@ -1,0 +1,28 @@
+{{ define "main" }}
+    <div class="container">
+        <h1 class="{{ .Title | lower }}">{{ .Title }}</h1>
+        <ul class="terms">
+            {{ range .RegularPages | sort }}
+                {{ $hierarchy := partial "function/fetchHierarchy" . }}
+                    <div class="row">
+                        <a href="{{ .RelPermalink }}" class="to-article">
+                            <li>{{ .Title }}</li>
+                        </a>
+                        <div class="tags-container">
+                            {{ with .Params.tags }}
+                                {{ range . | sort }}
+                                    <a href="/tags/{{ . | lower }}" class="{{ . | lower }}">
+                                        <li>{{ . }}</li>
+                                    </a>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                        <a href="/{{ (index $hierarchy 1).Title | lower }}" class="category-container">
+                            <i class="fa-solid fa-folder"></i>
+                            <p>{{ (index $hierarchy 1).Title }}</p>
+                        </a>
+                    </div>
+            {{ end }}
+        </ul>
+    </div>
+{{ end }}

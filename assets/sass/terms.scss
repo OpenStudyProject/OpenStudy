@@ -1,0 +1,51 @@
+@import "article.scss";
+
+ul.terms {
+    margin: 30px 0;
+    
+    a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+        border-top: solid 1px #ccc;
+
+        &:last-child {
+            border-bottom: solid 1px #ccc;
+        }
+
+        @each $tag in $tags {
+            .tagicon-container {
+                width: 20%;
+                
+                li.#{map-get($tag, 'class')} {
+                    width: fit-content;
+                    padding: 2px 8px;
+                    margin-right: 6px;
+                    border: solid 1px map-get($tag, 'color');
+                    border-radius: 9999px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                    color: map-get($tag, 'color');
+                    background-color: #{map-get($tag, 'color')}16;
+                }
+            }
+
+            .tag-description.#{map-get($tag, 'class')} {
+                padding: 4px 12px;
+                overflow: hidden;
+                flex-grow: 1;
+
+                &::before {
+                    content: "#{map-get($tag, 'description')}";
+                }
+            }
+
+            p {
+                padding: 0 4px;
+            }
+        }
+    }
+}
