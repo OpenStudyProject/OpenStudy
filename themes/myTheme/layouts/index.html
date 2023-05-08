@@ -11,7 +11,7 @@
             <div class="categories-container">
                 {{ range .Site.Home.Sections }}
                 <a href="{{ .RelPermalink}}">
-                    <img src="/images/profileIconSample/{{ .Params.Image }}" alt="">
+                    <img src="/images/categoryIcon/{{ .Params.Image }}" alt="">
                     <p>{{ .Title }}</p>
                 </a>
                 {{ end }}
