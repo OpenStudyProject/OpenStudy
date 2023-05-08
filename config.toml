@@ -10,13 +10,10 @@ enableGitInfo = true
 # Enable syntax highlightning
 pygmentsCodeFences = true
 
-# Enable HTML inside Markdown
-[markup.goldmark.renderer]
-    unsafe = true
-
+# Sass files that always imported
 [params]
-    # Sass files that always imported
     basicStyle = ["default", "header", "footer"]
 
+# Enable taxonomies
 [taxonomies]
     tag = 'tags'
