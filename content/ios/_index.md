@@ -4,7 +4,7 @@ description = "iOS ha sugoi zo!"
 date = 1970-01-01
 type = "default"
 layout = "single"
-image = "392.jpeg"
+image = "4.jpeg"
 +++
 
 ## リンク

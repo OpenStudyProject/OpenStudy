@@ -4,7 +4,7 @@ description = "Docker ha sugoi zo!"
 date = 1970-01-01
 type = "default"
 layout = "single"
-image = "389.jpeg"
+image = "6.jpeg"
 +++
 
 ## リンク

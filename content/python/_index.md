@@ -4,7 +4,7 @@ description = "Python ha sugoi zo!"
 date = 1970-01-01
 type = "default"
 layout = "single"
-image = "385.jpeg"
+image = "2.jpeg"
 +++
 
 ## リンク
