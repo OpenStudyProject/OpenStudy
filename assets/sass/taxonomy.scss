@@ -1,4 +1,4 @@
-@import "article.scss";
+@import "_variables.scss";
 
 @each $tag in $tags {
     h1.#{map-get($tag, 'class')} {
