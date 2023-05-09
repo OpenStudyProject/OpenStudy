@@ -3,7 +3,11 @@
         <nav class="tree">
             {{ $hierarchy := partial "function/fetchHierarchy" . }}
             <a href="{{ (index $hierarchy 1).RelPermalink }}">
-                <h3>{{ (index $hierarchy 1).Title }}</h3>
+                {{ $class := "" }}
+                {{ if eq .RelPermalink (index $hierarchy 1).RelPermalink }}
+                    {{ $class = "current" }}
+                {{ end }}
+                <h3 class="{{ $class }}">{{ (index $hierarchy 1).Title }}</h3>
             </a>
             {{ template "navTree" (dict "section" (index $hierarchy 1) "current" .) }}
         </nav>
@@ -25,6 +29,11 @@
                     <i class="fa-solid fa-heart"></i>
                     <span>653</span>
                 </div>
+            </div>
+            <div class="top-image">
+                {{ with .Params.TopImage }}
+                    <img src="/images/categoryIcon/{{ . }}" alt="">
+                {{ end }}
             </div>
             <h1>{{ .Title }}</h1>
             <p class="description">{{ .Description }}</p>
