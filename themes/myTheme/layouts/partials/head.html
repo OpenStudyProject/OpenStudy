@@ -1,4 +1,4 @@
-<head>
+<head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,15 @@
 
     <link rel="icon" href="/favicon/favicon96.ico" size="96x96">
     <link rel="apple-touch-icon" href="images/oapple-touch-icon180.png">
+
+    <!-- Open Graph Protocol -->
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ .Description }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:image" content="/images/OpenStudy.png" />
+    <meta property="og:locale" content="ja_JP" />
 
     <!-- Google Fonts for Logo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +64,7 @@
     {{ end }}
 
     <!-- Section and Article Page CSS -->
-    {{ $include := slice "article" "breadcrumb" "alert" }}
+    {{ $include := slice "navTree" "article" "breadcrumb" "alert" }}
     {{ if or .IsPage .IsSection }}
         {{ range $include }}
             {{ $path := . | printf "sass/%s" | printf "%s.scss" }}
