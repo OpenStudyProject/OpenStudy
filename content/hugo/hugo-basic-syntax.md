@@ -1,21 +1,29 @@
 +++
-title = "Hugoの基本的な文法"
+title = "Partial, Template, Shortcodeのまとめ"
 description = "Hugoの基本的な文法について解説します。"
 date = 2023-04-05
 tags = ["Hugo"]
 author = ["lin-24-ia"]
 +++
 
-## Hugoの文法のまとめ
+混乱しやすのでまとめました。
 
-### Partial
+# Partial
 
-- `{{ partial "foo.html" . }}` で呼び出す
+## 呼び出し方
+
+`{{ partial "foo.html" . }}`
+
+## 定義の仕方
+
+`layout/partials`に置く
+
+## 注意点
+
 - mdの中では使用できない
 - 引数は使用できない
-- `layout/partials` に保存する
 
-### Template
+# Template
 
 - `{{ template "foo" . }}` で呼び出す
 - 本来はHugo内部で決められたものを呼び出すもの
@@ -25,7 +33,7 @@ author = ["lin-24-ia"]
 - 最初に `{{ $x := .x }}`、`{{ $y := .y }}` と書いておく慣習がある
 - `{{ return $z }}` と定義して `{{ $result := partial "foo" 100 }}` と呼び出すと値を返すことができる
 
-### ShortCode
+# ShortCode
 
 - `{{</* foo key="value" */>}}` と呼び出すと中身をそのまま出力する
 - `{{%/* foo key="value" */%}}` と呼び出すと中身をMarkdownとしてパースする
