@@ -1,135 +1,8 @@
-$tags: (
-    (
-        class: 'python',
-        description: '使いやすい言語使いやすい言語使いやすい言語使いやすい言語使いやすい言語使いやすい言語',
-        color: #003fdf,
-    ),
-
-    (
-        class: 'markdown',
-        description: 'いい言語',
-        color: #00ca00,
-    ),
-
-    (
-        class: 'app',
-        description: 'ネイティブ',
-        color: #ff2600,
-    ),
-
-    (
-        class: 'three-d',
-        description: '3次元',
-        color: #ef5bff,
-    ),
-
-    (
-        class: 'hugo',
-        description: '世界最速のウェブサイト構築フレームワーク',
-        color: #FF4088,
-    ),
-);
+@import '_variables.scss';
 
 main {
     .article-container {
         display: flex;
-
-        nav.tree {
-            width: 350px;
-            padding-right: 22px;
-            overflow-y: scroll;
-            position: sticky;
-            top: 50px;
-            height: calc(100vh - 50px);
-            z-index: 1;
-            border-right: solid 1px #ccc;
-
-            a {
-                h3 {
-                    font-size: 32px;
-                    padding: 16px;
-                }
-            }
-
-            ul {
-                a {
-                    display: block;
-
-                    li {
-                        list-style-type: none;
-                        padding: 10px 12px;
-                        line-height: 1.2em;
-                    }
-
-                    &:has(li.current) {
-                        background-color: #e6faff;
-                        color: #0062ff;
-                        font-weight: 500;
-                        border-radius: 0 12px 12px 0;
-                    }
-                }
-
-                .section {
-                    > li.closed {
-                        &::before {
-                            display: inline-block;
-                            font-family: "Font Awesome 5 Free";
-                            content: "\f054";
-                            width: 16px;
-                            text-align: center;
-                            padding-right: 6px;
-                        }
-
-                        & + ul {
-                            display: none;
-                        }
-                    }
-
-                    > li:not(.closed) {
-                        &::before {
-                            display: inline-block;
-                            font-family: "Font Awesome 5 Free";
-                            content: "\f078";
-                            width: 16px;
-                            text-align: center;
-                            padding-right: 6px;
-                        }
-                    }
-
-                    > li {
-                        display: block;
-                        padding: 10px;
-                        line-height: 1.2em;
-                        word-wrap: break-word;
-                        font-weight: 600;
-                    }
-
-                    ul {
-                        .section {
-                            > li {
-                                padding: 10px 10px 10px 30px;
-                            }
-
-                            ul {
-                                a {
-                                    padding: 0 0 0 40px;
-                                }
-                            }
-                        }
-
-                        &.closed {
-                            display: none;
-                        }
-                    }
-                }
-
-                ul {
-                    a {
-                        padding: 0 0 0 20px;
-                    }
-                }
-            }
-        }
 
         .articleSide {
             width: calc(100% - 350px - 160px);
@@ -156,22 +29,6 @@ main {
                     color: #666;
                     padding: 4px 12px 4px 0;
                 }
-
-                // margin: 0 20px;
-                // display: flex;
-                // justify-content: center;
-                // align-items: end;
-
-                // .views {
-                //     font-size: 22px;
-                //     padding: 6px 12px;
-                // }
-
-                // .thanks {
-                //     font-size: 22px;
-                //     color: red;
-                //     padding: 6px 12px;
-                // }
             }
 
             > h1 {
@@ -186,24 +43,12 @@ main {
             }
 
             .top-image {
+                margin: 40px 0;
+
                 img {
-                    display: block;
-                    margin: 40px auto 0;
-                    height: 80px;
-                    width: 80px;
-                }
-
-                h1 {
-                    font-size: 38px;
-                    text-align: center;
-                    padding: 20px 0;
-                    margin: 10px 20px;
-                }
-
-                > p.description {
-                    font-size: 18px;
-                    font-weight: 600;
-                    text-align: center;
+                    width: 80%;
+                    height: 200px;
+                    object-fit: contain;
                 }
             }
 
@@ -364,20 +209,31 @@ main {
 
                     nav#TableOfContents {
                         display: none;
-                        // background-color: #f8f8f8;
+                        background-color: #f4f4f4;
+                        border-radius: 16px;
                         padding: 12px 18px;
 
-                        > ul, ol {
-                            margin: 20px 0;
-                            padding: 0 30px 0 10px;
+                        > ul {
+                            // margin: 20px 0;
+                            list-style-type: none;
+
+                            & > li > a {
+                                font-weight: 500;
+                            }
                         }
     
-                        ul li, ol li {
-                            margin: 8px;
+                        ul li {
+                            margin: 8px 0;
                             line-height: 1.2em;
                             word-wrap: break-word;
+                            list-style-type: none;
+                            color: #555;
+
+                            a {
+                                color: #666;
+                            }
     
-                            ul, ol {
+                            ul {
                                 margin: 0 0 0 16px;
                             }
                         }
@@ -453,17 +309,18 @@ main {
                     }
 
                     h2 {
-                        margin: 40px 0 20px;
                         font-size: 28px;
+                        margin: 40px 0 30px;
                     }
 
                     h3 {
-                        font-size: 24px;
-                        margin: 30px 0 10px;
+                        font-size: 22px;
+                        margin: 30px 0 20px;
                     }
 
-                    > h4 {
-                        font-size: 20px;
+                    h4 {
+                        font-size: 16px;
+                        margin: 20px 0 10px;
                     }
 
                     p {
