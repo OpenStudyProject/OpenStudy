@@ -17,3 +17,9 @@ pygmentsCodeFences = true
 # Enable taxonomies
 [taxonomies]
     tag = 'tags'
+
+# Create h1 and h2's table of contents
+[markup]
+    [markup.tableOfContents]
+        startLevel = 1
+        endLevel = 2
