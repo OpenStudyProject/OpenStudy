@@ -49,20 +49,35 @@ WordPressなどのCMSは、サーバーにユーザーからアクセスされ�
 - [Gatsby](https://www.gatsbyjs.com)
 - [jekyll](https://jekyllrb.com)
 
-# Hugoでできること
+# Hugoの特徴とできること
+
+Go言語の知識は不要です。
 
 ### ビルドが高速
 
 他の静的サイトジェネレーターに比べてビルドが非常に速いです。平均的なサイトであれば1秒未満でビルドが完了します。
 
-### 柔軟性が高い
+### 編集内容が即座に反映される
 
-コンテンツのカテゴライズやタグ管理、動的なAPIも利用できます。
+LiveReload機能がある
 
-## 複数の言語に対応できる
-
-## たくさんのテーマから選べる
+### たくさんのテーマから選べる
 
 オープンソースのHugoテーマがあり、簡単に始められます。
 
-Markdownで書ける
+### 簡単にサイトを公開できる
+
+Netlify、Heroku、GoDaddy、DreamHost、GitHub Pages、GitLab Pages、Surge、Firebase、Google Cloud Storage、Amazon S3、Rackspace、Azure、CloudFrontなどの有名なCDNへ簡単にデプロイできます。
+
+## 柔軟性が高い
+
+- それぞれの記事のURLを指定できる
+- カテゴリやタグで分類できる
+- レイアウトをカスタマイズできる
+- 目次を自動生成できる
+- リダイレクト機能
+- Markdownで書ける
+- コードブロックのハイライト
+- 変数の使用
+- 動的なAPIが利用できる
+- 複数の言語に対応できる
