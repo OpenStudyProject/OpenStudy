@@ -328,11 +328,12 @@ main {
                         font-size: 16px;
 
                         code {
-                            font-family: 'Roboto Mono', monospace;
                             background-color: #eee;
-                            padding: 0 6px;
+                            padding: 1px 6px;
                             margin: 0 4px;
                             border-radius: 3px;
+                            font-family: 'Roboto Mono', monospace;
+                            font-size: 14px;
                         }
                     }
 
@@ -375,42 +376,36 @@ main {
                         }
                     }
 
-                    > .highlight {
-                        > pre {
-                            padding: 24px;
-                            margin: 0 0 10px;
-                            border-radius: 14px;
-                            overflow: auto;
+                    .codeBlock {
+                        margin: 20px 0;
 
-                            code {
-                                font-family: 'Roboto Mono', monospace;
-                                font-size: 14px;
-                            }
-                        }
-                    }
-
-                    figure.xCodeBlock {
-                        margin: 14px 0 0;
-
-                        .xCodeBlock_title {
+                        .codeBlockCaption {
                             display: inline-block;
-                            font-size: 14px;
-                            border-radius: 6px 6px 0 0;
-                            padding: 8px 14px;
+                            padding: 6px 12px;
                             background: #444;
+                            border-radius: 6px 6px 0 0;
+                            font-family: 'Roboto Mono', monospace;
+                            font-size: 12px;
                             color: white;
                         }
 
-                        .xCodeBlock_code {
+                        .highlight {
                             pre {
                                 padding: 24px;
-                                margin: 0 0 10px;
-                                border-radius: 0 14px 14px 14px;
-        
+                                border-radius: 14px;
+                                overflow: auto;
+
                                 code {
                                     font-family: 'Roboto Mono', monospace;
                                     font-size: 14px;
-                                    background-color: blue;
+                                }
+                            }
+                        }
+
+                        &.withCaption {
+                            .highlight {
+                                pre {
+                                    border-radius: 0 14px 14px 14px;
                                 }
                             }
                         }
