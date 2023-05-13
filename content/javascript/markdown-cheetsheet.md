@@ -34,7 +34,7 @@ tags = ["Markdown", "Python", "App"]
 
 # コードブロック
 
-```js {hi_lines=[2, 4]}
+```js { hello }
 function helloWorld(param1, param2) {
     var something = 0;
 
