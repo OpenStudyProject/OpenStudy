@@ -1,0 +1,20 @@
+{{ if len .Attributes | eq 1 }}
+    <div class="codeBlock withCaption">
+        {{ with .Attributes.title }}
+            <div class="codeBlockCaption">
+                {{ . }}
+            </div>
+        {{ else }}
+            {{ errorf "No attribute except 'title' is allowed in code block. %s" .Position }}
+        {{ end }}
+        {{ highlight (.Inner | safeHTML) .Type }}
+    </div>
+
+{{ else if len .Attributes | eq 0 }}
+    <div class="codeBlock">
+        {{ highlight (.Inner | safeHTML) .Type }}
+    </div>
+    
+{{ else }}
+    {{ errorf "Two or more attributes are not allowed in code block. %s" .Position }}
+{{ end }}
