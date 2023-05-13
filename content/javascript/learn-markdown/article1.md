@@ -9,7 +9,7 @@ tags = ["Python", "Markdown"]
 
 JavaScriptのアロー関数は短く書けるのが特徴的です。カッコに引数のリスト、アロー記号`=>`、中カッコに処理内容を書きます。
 
-```js　{.myclass}
+```js { title="functions/arrows.js" }
 (引数) => {
   // 処理内容
 };
@@ -43,7 +43,7 @@ const increment = (n) => {
 
 JavaScriptのアロー関数は、引数が1つだけの場合、引数のカッコが省略できます。
 
-```js twoslash
+```js 
 // prettier-ignore
 const increment = n => { /* ... */ };
 //                ^カッコの省略
@@ -51,7 +51,7 @@ const increment = n => { /* ... */ };
 
 引数がない場合は、引数のカッコは省略できません。
 
-```js twoslash
+```js 
 const getOne = () => {
   return 1;
 };
@@ -59,7 +59,7 @@ const getOne = () => {
 
 さらに、関数内のコードが式1つだけの場合は、中カッコ`{}`と`return`が省略できます。この省略形は簡潔文体(concise body)、非省略形はブロック文体(block body)と呼びわけます。
 
-```js twoslash
+```js 
 // prettier-ignore
 const increment = n => n + 1;
 //                     ^^^^^returnと中括弧の省略
@@ -67,7 +67,7 @@ const increment = n => n + 1;
 
 戻り値が[オブジェクトリテラル](../values-types-variables/object/object-literal.md)の場合は要注意です。簡潔文体では、オブジェクトリテラルをカッコ`()`で囲む必要があります。
 
-```js twoslash
+```js 
 // prettier-ignore
 (n) => { foo: n + 1 }; // 誤り
 (n) => ({ foo: n + 1 }); // 正しい
@@ -79,14 +79,14 @@ const increment = n => n + 1;
 
 TypeScriptのアロー関数では、引数に型注釈が書けます。
 
-```ts twoslash
+```ts 
 const increment = (num: number) => num + 1;
 //                    ^^^^^^^^引数の型注釈
 ```
 
 戻り値の型注釈も書けます。
 
-```ts twoslash
+```ts 
 const increment = (num: number): number => num + 1;
 //                             ^^^^^^^^戻り値の型注釈
 ```
@@ -94,7 +94,7 @@ const increment = (num: number): number => num + 1;
 引数のカッコを省略した場合は、**引数と戻り値のどちらも型注釈を書けません。**
 
 <!--prettier-ignore-->
-```ts twoslash
+```ts 
 // @noImplicitAny: false
 const increment = num => num + 1;
 ```
@@ -102,7 +102,7 @@ const increment = num => num + 1;
 暗黙のanyを禁ずるコンパイラオプション`noImplicitAny`が有効の場合、引数カッコを省略したアロー関数がコンパイルエラーになる場合があります。
 
 <!--prettier-ignore-->
-```ts twoslash
+```ts 
 // @errors: 7006
 const increment = num => num + 1;
 ```
@@ -111,7 +111,7 @@ const increment = num => num + 1;
 
 `noImplicitAny`が有効でも、引数の型が推論できる場合は、引数カッコが省略できます。たとえば、他の関数の引数にアロー関数を直接書く場合です。次の`map`関数は第1引数に関数を取ります。第1引数の型情報、引数の型がついているので、渡されるアロー関数の型注釈は省略できます。
 
-```ts twoslash
+```ts 
 [1, 2, 3].map((num) => num + 1); // 型注釈が省略可
 ```
 

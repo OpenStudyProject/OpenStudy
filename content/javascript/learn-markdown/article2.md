@@ -10,7 +10,7 @@ author = ["lin-24-ia"]
 
 JavaScriptのデフォルト引数は、引数の右に`=`とデフォルト値を書きます。
 
-```js twoslash
+```js 
 // 関数宣言
 function 関数名(引数 = デフォルト値) {}
 // アロー関数
@@ -33,7 +33,7 @@ function 関数名(引数: 型 = デフォルト値) {}
 
 JavaScriptの引数は省略すると`undefined`になります。
 
-```js twoslash
+```js 
 function foo(x) {
   console.log(x);
 }
@@ -43,7 +43,7 @@ foo();
 
 デフォルト引数は、引数が`undefined`のときに、その値が変わりに代入されます。たとえば、次の例の関数呼び出しは、引数を渡していないので`x`は`undefined`です。そのため、デフォルト値`1`が代入されます。
 
-```ts twoslash
+```ts 
 function foo(x = 1) {
   console.log(x);
 }
@@ -53,7 +53,7 @@ foo();
 
 次のように、引数に`undefined`を渡す場合も、デフォルト値が代入されます。
 
-```ts twoslash
+```ts 
 function foo(x = 1) {
   console.log(x);
 }
@@ -64,7 +64,7 @@ foo(undefined);
 
 引数が`null`のときは、デフォルト引数は適用されません。ご注意ください。
 
-```js twoslash {4}
+```js {4}
 function foo(x = 1) {
   console.log(x);
 }
@@ -76,7 +76,7 @@ foo(null);
 
 JavaScriptのデフォルト引数は、デフォルト値を持たない引数の前に書くこともできます。
 
-```js twoslash
+```js 
 function foo(x, y = 2, z) {
   console.log(x, y, z);
 }
@@ -88,13 +88,13 @@ foo(1, undefined, 3);
 
 JavaScriptのデフォルト値には式が書けます。
 
-```js twoslash
+```js 
 function foo(x = 2 * 2) {}
 ```
 
 式が書けるので、関数呼び出しも書けます。
 
-```js twoslash
+```js 
 function foo(x = parseInt("1.5")) {}
 ```
 
@@ -102,7 +102,7 @@ function foo(x = parseInt("1.5")) {}
 
 ただし、`await`を使って、非同期関数を呼び出すような処理は書けません。
 
-```ts twoslash
+```ts 
 // @errors: 2524
 async function foo(x = await Promise.resolve(1)) {}
 ```
@@ -111,7 +111,7 @@ async function foo(x = await Promise.resolve(1)) {}
 
 TypeScriptでは、デフォルト引数があると、引数の型推論が効きます。そのため、デフォルト引数が型注釈を省略することもできます。
 
-```ts twoslash
+```ts 
 function foo(x = 1) {}
 //           ^?
 ```
