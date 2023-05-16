@@ -1,202 +1,132 @@
 header {
     position: sticky;
     top: 0;
-    background-color: #fff;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #fff;
     border-bottom: solid 1px #ccc;
     padding: 0 10px;
 
-    nav.pc, nav.sp {
+    .logo-and-openstudy {
         display: flex;
-        justify-content: space-between;
+        justify-content: left;
+        align-items: center;
+        padding: 0 12px;
 
-        a.home-link, div.home-link {
-            display: flex;
-            justify-content: left;
-            padding: 8px;
+        svg {
+            width: 32px;
+            height: 32px;
+            fill: #31beff;
+        }
 
-            svg.logo {
-                width: 32px;
-                height: 32px;
-                margin: 1px 0;
-                fill: #31beff;
+        h1 {
+            font-size: 26px;
+            font-weight: 300;
+            letter-spacing: 1.2px;
+            padding: 0 2px;
+        }
+    }
+
+    .search-box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-grow: 1;
+        background-color: #eee;
+        border-radius: 9999px;
+        padding: 8px 18px;
+        
+        i {
+            color: #999;
+        }
+
+        span {
+            color: #999;
+            padding: 0 4px;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style-type: none;
+        padding: 0 12px;
+
+        li {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+        }
+
+        i {
+            font-size: 22px;
+            padding: 4px 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 799px) {
+    header {
+        position: static;
+        height: 44px;
+
+        .logo-and-openstudy {
+            padding: 0;
+
+            svg {
+                width: 28px;
+                height: 28px;
             }
 
             h1 {
-                font-weight: 300;
-                font-size: 26px;
-                padding: 3px 3px;
-                letter-spacing: 0.03em;
-                line-height: 1.1em;
-                color: #000;
-                transition: 0.5s;
+                font-size: 20px;
+                letter-spacing: 0.6px;
             }
         }
 
-        .searchBox {
-            background-color: #eee;
-            border-radius: 9999px;
-            margin: 7px 0;
-            flex: 1 1 auto;
+        .search-box {
+            padding: 6px 14px;
+            margin: 0 6px;
 
             i {
-                padding: 8px 0 8px 30px;
-                color: #999;
+                font-size: 12px;
             }
 
             span {
-                padding: 8px 0;
-                color: #999;
+                font-size: 12px;
             }
         }
 
         ul {
-            display: flex;
-            padding: 0 8px;
-            list-style-type: none;
+            padding: 0;
 
-            a {
-                margin: 18px 16px;
-
-                li {
-                    font-size: 14px;
-                    line-height: 1em;
-                    font-weight: 400;
-                }
+            li {
+                font-size: 12px;
+                padding: 6px 6px;
             }
 
-            a.icon {
-                margin: 0;
-                padding: 13px;
-                
-                i {
-                    font-size: 24px;
-                }
+            i {
+                font-size: 20px;
+                padding: 6px;
             }
         }
-
-        a.sp-menu {
-            display: none;
-        }
-    }
-
-    nav.sp {
-        display: none;
     }
 }
 
-@media screen and (max-width: 599px) {
-    main {
-        padding: 44px 0 0;
-    }
-
+@media screen and (max-width: 369px) {
     header {
-        nav.pc {
-            display: none;
-        }
+        padding: 0 8px;
 
-        nav.sp {
-            display: block;
-            position: fixed;
-            right: 0;
-            left: 0;
+        .search-box {
+            padding: 6px 10px;
+            margin: 0 4px;
 
-            .topbar {
-                display: flex;
-                position: relative;
-                background-color: #fff;
-                justify-content: space-between;
-                z-index: 2;
-                transition: 0.5s;
-
-                .home-link {
-                    transition: 0.5s;
-                    padding: 7px;
-
-                    svg.logo {
-                        width: 28px;
-                        height: 28px;
-                    }
-
-                    h1 {
-                        font-size: 22px;
-                        padding: 3px 3px;
-                    }
-                }
-
-                button#open-menu {
-                    border: 0;
-                    background-color: transparent;
-                    height: fit-content;
-
-                    &:active {
-                        background-color: transparent;
-                    }
-
-                    svg.menu-button {
-                        display: block;
-                        width: 18px;
-                        height: 18px;
-                        margin: 12px;
-                        fill: black;
-                        transition: 0.5s;
-                        line-height: 0;
-                    }
-                }
-            }
-
-            // #abc:checked + div.topbar {
-            //     background-color: #1d1d1f;
-            //     transition: 0.5s;
-
-            //     .home-link {
-            //         h1 {
-            //             color: #fff;
-            //             transition: 0.5s 0.01s  ease-in-out;
-            //         }
-            //     }
-
-            //     button {
-            //         svg.menu-button {
-            //             fill: #fff;
-            //             transition: 0.5s ease-in-out;
-            //         }
-            //     }
-            // }
-
-            input {
+            span {
                 display: none;
-            }
-
-            ul {
-                display: block;
-                list-style-type: none;
-                position: absolute;
-                right: 0;
-                left: 0;
-                transform: translate(0, -100%);
-                transition: 0.5s ease-in-out;
-                z-index: 1;
-                padding: 24px 0 calc(100vh - 44px - 48px * 2 - 24px);
-                background-color: #fff;
-
-                a {
-                    display: block;
-                    margin: 0;
-                    color: transparent;
-                    transition: 0.5s;
-                    padding: 12px 40px;
-                }
-            }
-
-            #trigger-checkbox2:checked + ul {
-                transform: translate(0, 0);
-                transition: 0.5s ease-in-out;
-
-                a {
-                    color: #000;
-                    transition: 0.5s 0.2s;
-                }
             }
         }
     }
