@@ -1,6 +1,6 @@
 {{ define "main" }}
     <div class="container">
-        <h1>タグ一覧</h1>
+        <h1>すべてのタグ</h1>
         <ul class="terms">
             {{ range $index, $term := .Site.Taxonomies.tags.ByCount }}
                 <a href="{{ .Page.RelPermalink }}">
