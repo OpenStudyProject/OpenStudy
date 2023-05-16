@@ -1,108 +1,123 @@
-nav.tree {
-    width: 350px;
-    padding-right: 22px;
-    overflow-y: scroll;
-    position: sticky;
-    top: 50px;
-    height: calc(100vh - 50px);
-    z-index: 1;
-    border-right: solid 1px #ccc;
+.navTree-article-container {
+    nav.navTree {
+        width: 350px;
+        padding-right: 22px;
+        overflow-y: scroll;
+        position: sticky;
+        top: 50px;
+        height: calc(100vh - 50px);
+        z-index: 1;
+        border-right: solid 1px #ccc;
 
-    a {
-        h3 {
-            font-size: 32px;
-            padding: 16px;
-
-            // &.current {
-                // background: linear-gradient(90deg, #fff, #fff);
-                // background: -webkit-linear-gradient(0deg, #6200ff, #ff007b);
-                // -webkit-background-clip: text;
-                // -webkit-text-fill-color: transparent;
-                // border-bottom: solid 2px #ff35f2;
-                // border-width: 2px;
-                // border-bottom-style: solid;
-                // border-image-source: linear-gradient(to right, #ff35f2, transparent);
-                // border-image-slice: 1;
-            // }
-        }
-    }
-
-    ul {
         a {
-            display: block;
+            h3 {
+                font-size: 32px;
+                padding: 16px;
 
-            li {
-                list-style-type: none;
-                padding: 10px 12px;
-                line-height: 1.2em;
-            }
-
-            &:has(li.current) {
-                background-color: #e6faff;
-                color: #0062ff;
-                font-weight: 500;
-                border-radius: 0 12px 12px 0;
-            }
-        }
-
-        .section {
-            > li.closed {
-                &::before {
-                    display: inline-block;
-                    font-family: "Font Awesome 5 Free";
-                    content: "\f054";
-                    width: 16px;
-                    text-align: center;
-                    padding-right: 6px;
-                }
-
-                & + ul {
-                    display: none;
-                }
-            }
-
-            > li:not(.closed) {
-                &::before {
-                    display: inline-block;
-                    font-family: "Font Awesome 5 Free";
-                    content: "\f078";
-                    width: 16px;
-                    text-align: center;
-                    padding-right: 6px;
-                }
-            }
-
-            > li {
-                display: block;
-                padding: 10px;
-                line-height: 1.2em;
-                word-wrap: break-word;
-                font-weight: 600;
-            }
-
-            ul {
-                .section {
-                    > li {
-                        padding: 10px 10px 10px 30px;
-                    }
-
-                    ul {
-                        a {
-                            padding: 0 0 0 40px;
-                        }
-                    }
-                }
-
-                &.closed {
-                    display: none;
-                }
+                // &.current {
+                    // background: linear-gradient(90deg, #fff, #fff);
+                    // background: -webkit-linear-gradient(0deg, #6200ff, #ff007b);
+                    // -webkit-background-clip: text;
+                    // -webkit-text-fill-color: transparent;
+                    // border-bottom: solid 2px #ff35f2;
+                    // border-width: 2px;
+                    // border-bottom-style: solid;
+                    // border-image-source: linear-gradient(to right, #ff35f2, transparent);
+                    // border-image-slice: 1;
+                // }
             }
         }
 
         ul {
             a {
-                padding: 0 0 0 20px;
+                display: block;
+
+                li {
+                    list-style-type: none;
+                    padding: 10px 12px;
+                    line-height: 1.2em;
+                }
+
+                &:has(li.current) {
+                    background-color: #e6faff;
+                    color: #0062ff;
+                    font-weight: 500;
+                    border-radius: 0 12px 12px 0;
+                }
             }
+
+            .section {
+                > li.closed {
+                    &::before {
+                        display: inline-block;
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f054";
+                        width: 16px;
+                        text-align: center;
+                        padding-right: 6px;
+                    }
+
+                    & + ul {
+                        display: none;
+                    }
+                }
+
+                > li:not(.closed) {
+                    &::before {
+                        display: inline-block;
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f078";
+                        width: 16px;
+                        text-align: center;
+                        padding-right: 6px;
+                    }
+                }
+
+                > li {
+                    display: block;
+                    padding: 10px;
+                    line-height: 1.2em;
+                    word-wrap: break-word;
+                    font-weight: 600;
+                }
+
+                ul {
+                    .section {
+                        > li {
+                            padding: 10px 10px 10px 30px;
+                        }
+
+                        ul {
+                            a {
+                                padding: 0 0 0 40px;
+                            }
+                        }
+                    }
+
+                    &.closed {
+                        display: none;
+                    }
+                }
+            }
+
+            ul {
+                a {
+                    padding: 0 0 0 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .navTree-article-container {
+        nav.navTree {
+            position: static;
+            overflow-y: visible;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            border: none;
         }
     }
 }

@@ -1,19 +1,19 @@
 {{ define "main" }}
-    <div class="article-container">
-        <nav class="tree">
+    <div class="navTree-article-container">
+        <nav class="navTree">
             {{ $hierarchy := partial "function/fetchHierarchy" . }}
             <a href="{{ (index $hierarchy 1).RelPermalink }}">
                 <h3>{{ (index $hierarchy 1).Title }}</h3>
             </a>
-            {{ template "navTree" (dict "section" (index $hierarchy 1) "current" .) }}
+            {{ template "treeGenerator" (dict "section" (index $hierarchy 1) "current" .) }}
         </nav>
-        <div class="articleSide">
+        <div class="article-container">
             <h1>{{ .Title }}</h1>
             <p class="description">{{ .Description }}</p>
             <div class="container">
                 <div class="list-index">
                     {{ $hierarchy := partial "function/fetchHierarchy" . }}
-                    {{ template "navTree" (dict "section" . "current" .) }}
+                    {{ template "treeGenerator" (dict "section" . "current" .) }}
                 </div>
             </div>
         </div>
