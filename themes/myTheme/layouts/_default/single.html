@@ -1,17 +1,10 @@
 {{ define "main" }}
-    <div class="article-container">
-        <nav class="tree">
-            {{ $hierarchy := partial "function/fetchHierarchy" . }}
-            <a href="{{ (index $hierarchy 1).RelPermalink }}">
-                {{ $class := "" }}
-                {{ if eq .RelPermalink (index $hierarchy 1).RelPermalink }}
-                    {{ $class = "current" }}
-                {{ end }}
-                <h3 class="{{ $class }}">{{ (index $hierarchy 1).Title }}</h3>
-            </a>
-            {{ template "navTree" (dict "section" (index $hierarchy 1) "current" .) }}
-        </nav>
-        <div class="articleSide">
+    <div class="navTree-article-container">
+
+        {{/*  Navigation Tree  */}}
+        {{ partial "navTree.html" . }}
+        
+        <div class="article-container">
             <div class="dates">
                 <div class="release-date">
                     <i class="fa-solid fa-earth-americas"></i>
