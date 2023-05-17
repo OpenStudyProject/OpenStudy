@@ -4,17 +4,18 @@
     display: flex;
 
     .article-container {
-        width: calc(100% - 350px - 160px);
-        margin: 0 100px 0 60px;
+        width: calc(100% - 320px - 100px);
+        max-width: 900px;
+        margin: 0 50px;
 
         .dates {
             display: flex;
             margin: 6px 0;
             
             .release-date, .update-date, .views, .thanks {
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 500;
-                color: #666;
+                color: #888;
                 padding: 4px 12px 4px 0;
             }
         }
@@ -32,9 +33,7 @@
 
         > h1 {
             font-size: 38px;
-            // text-align: center;
-            padding: 20px 0;
-            margin: 20px 0;
+            padding: 20px 0 10px;
         }
 
         > p.description {
@@ -57,7 +56,6 @@
 
             aside {
                 border-radius: 12px;
-                padding: 10px 0;
                 margin: 12px 0;
                 display: flex;
                 justify-content: space-between;
@@ -151,7 +149,7 @@
 
             ul.tags {
                 display: flex;
-                margin: 14px 0;
+                margin: 28px 0;
                 list-style-type: none;
                 
                 @each $tag in $tags {
@@ -173,7 +171,8 @@
             .index {
                 .indexTitle {
                     display: block;
-                    padding: 12px 0;
+                    text-align: center;
+                    padding: 22px 0;
                     cursor: pointer;
 
                     &::before {
@@ -258,7 +257,7 @@
                         }
                     }
 
-                    .section {
+                    .nav-section {
                         > li {
                             display: block;
                             padding: 10px;
@@ -268,7 +267,7 @@
                         }
 
                         ul {
-                            .section {
+                            .nav-section {
                                 > li {
                                     padding: 10px 10px 10px 30px;
                                 }
@@ -504,7 +503,7 @@
     }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 999px) {
     .container {
         padding: 20px;
     }
@@ -514,8 +513,12 @@
 
         .article-container {
             width: 100%;
-            padding: 0 26px;
+            padding: 0 32px;
             margin: 0;
+
+            .dates, .views-and-thanks {
+                display: none;
+            }
         }
     }
 }
