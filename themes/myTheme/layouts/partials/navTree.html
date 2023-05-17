@@ -4,16 +4,19 @@
 {{/*  Navigation Tree  */}}
 <nav class="navTree">
 
-    {{/*  Link to the top level category of current page  */}}
-    <a href="{{ (index $hierarchy 1).RelPermalink }}">
+    <div class="category-link-container">
+        {{/*  Link to the top level category of current page  */}}
+        <a href="{{ (index $hierarchy 1).RelPermalink }}">
+            <h3>{{ (index $hierarchy 1).Title }}</h3>
+        </a>
 
-        {{/*  If current page is top level category, add class "current"  */}}
-        {{ $class := "" }}
-        {{ if eq .RelPermalink (index $hierarchy 1).RelPermalink }}
-            {{ $class = "current" }}
-        {{ end }}
-        <h3 class="{{ $class }}">{{ (index $hierarchy 1).Title }}</h3>
-    </a>
+        {{/*  navTree button  */}}
+        <label for="navTree-checkbox">
+            <i class="fa-solid fa-plus"></i>
+        </label>
+    </div>
+
+    <input type="checkbox" id="navTree-checkbox">
 
     {{/*  <ul> navigation tree comes here  */}}
     {{ template "treeGenerator" (dict "section" (index $hierarchy 1) "current" .) }}
