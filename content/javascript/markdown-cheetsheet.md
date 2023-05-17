@@ -3,6 +3,7 @@ title = "Markdownの記法"
 description = "OpenStudyで表示されるMarkdownのプレビューです。"
 date = 2023-04-05
 tags = ["Markdown", "Python", "App"]
+author = ["lin-24-ia"]
 +++
 
 # リスト
@@ -81,13 +82,13 @@ def helloWorld(param1, param2) {
 </footer>
 ```
 
-{{< code lang="java" title="sample.java" >}}
+```java {title="sample.java"}
 public class Main {
     public static void main(String... args) {
         System.out.println("Hello");
     }
 }
-{{< /code >}}
+```
 
 # リンク
 
