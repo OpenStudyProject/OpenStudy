@@ -23,11 +23,11 @@
                     <span>653</span>
                 </div>
             </div>
-            <div class="top-image">
-                {{ with .Params.TopImage }}
+            {{ with .Params.TopImage }}
+                <div class="top-image">
                     <img src="/images/categoryIcon/{{ . }}" alt="">
-                {{ end }}
-            </div>
+                </div>
+            {{ end }}
             <h1>{{ .Title }}</h1>
             <p class="description">{{ .Description }}</p>
             <div class="container">
