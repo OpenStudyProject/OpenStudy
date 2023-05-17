@@ -1,0 +1,210 @@
+article {
+    margin: 34px 0;
+
+    h1 {
+        font-size: 36px;
+        color: red;
+        padding: 8px 12px;
+        
+        &::before {
+            content: "#DO NOT USE <h1> INSIDE ARTICLE# <!--";
+        }
+
+        &::after {
+            content: "-->";
+        }
+    }
+
+    h2 {
+        font-size: 28px;
+        margin: 40px 0 30px;
+    }
+
+    h3 {
+        font-size: 22px;
+        margin: 30px 0 20px;
+    }
+
+    h4 {
+        font-size: 16px;
+        margin: 20px 0 10px;
+    }
+
+    p {
+        padding: 16px 0;
+        font-size: 16px;
+
+        code {
+            background-color: #eee;
+            padding: 1px 6px;
+            margin: 0 4px;
+            border-radius: 3px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 14px;
+        }
+    }
+
+    a {
+        color: #0066cc;
+        font-weight: 600;
+        transition: 5s;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+
+    > ul, ol {
+        margin: 20px 0;
+        padding: 0 30px 0 10px;
+    }
+
+    ul li, ol li {
+        margin: 8px;
+        line-height: 1.2em;
+        word-wrap: break-word;
+
+        ul, ol {
+            margin: 0 0 0 16px;
+        }
+    }
+
+    > pre {
+        background-color: #eee;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px 0;
+
+        code {
+            font-family: 'Roboto Mono', monospace;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .codeBlock {
+        margin: 20px 0;
+
+        .codeBlockCaption {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #444;
+            border-radius: 6px 6px 0 0;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 12px;
+            color: white;
+        }
+
+        .highlight {
+            pre {
+                padding: 24px;
+                border-radius: 14px;
+                overflow: auto;
+
+                code {
+                    font-family: 'Roboto Mono', monospace;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &.withCaption {
+            .highlight {
+                pre {
+                    border-radius: 0 14px 14px 14px;
+                }
+            }
+        }
+    }
+
+    p:has(img) {
+        width: 60%;
+
+        img {
+            width: 100%;
+        }
+
+        em {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    blockquote {
+        border-left: solid 4px #ccc;
+        padding-left: 8px;
+        margin: 12px 0;
+
+        p {
+            padding: 4px 0;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        margin: 20px 0;
+
+        thead {
+            tr {
+                th {
+                    border: solid 1px #888;
+                    padding: 10px 14px;
+                    font-weight: 600;
+                    background-color: #f6f6f6;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    border: solid 1px #888;
+                    padding: 10px 14px;
+                }
+            }
+        }
+    }
+
+    .accordion-container {
+        box-shadow: 2px 4px 10px 2px #ddd;
+
+        .accordion-title {
+            display: block;
+            padding: 12px;
+            cursor: pointer;
+
+            &::before {
+                font-family: "Font Awesome 5 Free";
+                content: "\2b";
+                font-weight: 600;
+                font-size: 16px;
+            }
+
+            &:hover {
+                background: #fff;
+            }
+        }
+        
+        .accordion-body {
+            display: none;
+            background-color: #f8f8f8;
+            padding: 12px 18px;
+        }
+        
+        input {
+            display: none;
+            
+            &:checked + .accordion-body {
+                display: block;
+            }
+        }
+
+        &:has(input:checked) .accordion-title::before {
+            font-family: "Font Awesome 5 Free";
+            font-size: 16px;
+            content: "\f068";
+            font-weight: 600;
+        }
+    }
+}
