@@ -5,92 +5,91 @@
         {{ partial "navTree.html" . }}
         
         <div class="article-container">
-            <div class="dates">
-                <div class="release-date">
-                    <i class="fa-solid fa-earth-americas"></i>
-                    <time>{{ .Date.Format "2006/01/02" }}</time>
-                </div>
-                <div class="update-date">
-                    <i class="fa-solid fa-arrows-rotate"></i>
-                    <time>{{ .Lastmod.Format "2006/01/02" }}</time>
-                </div>
-                <div class="views">
-                    <i class="fa-solid fa-eye"></i>
-                    <span>1.6K</span>
-                </div>
-                <div class="thanks">
-                    <i class="fa-solid fa-heart"></i>
-                    <span>653</span>
-                </div>
-            </div>
-            {{ with .Params.TopImage }}
-                <div class="top-image">
-                    <img src="/images/categoryIcon/{{ . }}" alt="">
+            {{ with .Params.CategoryEyecatch }}
+                <div class="category-eyecatch">
+                    <img src="/images/categoryIcon/{{ . }}" alt="Category-Eyecatch">
                 </div>
             {{ end }}
-            <h1>{{ .Title }}</h1>
+
+            <h1 class="title">{{ .Title }}</h1>
             <p class="description">{{ .Description }}</p>
-            <div class="container">
+
+            <div class="views-thanks-tags-container">
+                <div class="views-thanks-inner">
+                    <div class="views">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>1.6K</span>
+                    </div>
+                    <div class="thanks">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>653</span>
+                    </div>
+                </div>
                 <ul class="tags">
                     {{ with .Params.tags }}
                         {{ range . | sort }}
-                            <a href="/tags/{{ . | lower }}" class="{{ . | lower }}">
-                                <li>{{ . }}</li>
+                            <a href="/tags/{{ . | lower }}">
+                                <li class="{{ . | lower }}">{{ . }}</li>
                             </a>
                         {{ end }}
                     {{ end}}
                 </ul>
-                <aside>
-                    <div class="contributors">
-                        <div class="contributors-label">
-                            <span class="description">作成した人</span>
-                            {{ with .Params.author }}
-                                <span class="personNum">{{ . | len }}</span>
-                            {{ end }}
-                        </div>
-                        <div class="contributors-icon">
-                            {{ with .Params.author }}
-                                {{ range . }}
-                                    <a href="https://github.com/{{ . }}" target="_blank" rel="noopener noreferrer">
-                                        <img src="https://github.com/{{ . }}.png" alt="">
-                                    </a>
-                                {{ end }}
-                                {{ if gt (. | len) 9}}
-                                    <i class="fa-solid fa-plus"></i>
-                                {{ end }}
-                            {{ end}}
-                        </div>
-                    </div>
-                    <div class="button">
-                        <div class="give-thanks">
-                            <i class="fa-regular fa-heart"></i>
-                            <span>thanks!</span>
-                        </div>
-                        {{ $path := "" }}
-                        {{ if .IsSection }}
-                            {{ $path = print (.RelPermalink | path.Clean) "/_index.md" }}
-                        {{ else }}
-                            {{ $path = print (.RelPermalink | path.Clean) ".md" }}
-                        {{ end }}
-                        <a href="https://github.com/lin-24-ia/OpenStudy/tree/main/content{{ $path }}" target="_blank" rel="noopener noreferrer">
-                            <div class="link-to-repo">
-                                <i class="fa-solid fa-code-pull-request"></i>
-                                <span>編集する</span>
-                            </div>
-                        </a>
-                    </div>
-                </aside>
-                {{ with .TableOfContents }}
-                    <div class="index">
-                        <label class="indexTitle" for="id-1">目次</label>
-                        <input id="id-1" type="checkbox">
-                        {{ . }}
-                    </div>
-                {{ end }}
-                <article>
-                    {{ .Content }}
-                </article>
             </div>
+
+            <div class="contributors-container">
+                <div class="contributors">
+                    <div class="contributors-label">
+                        <span>作成した人</span>
+                        {{ with .Params.author }}
+                            <span class="person-count">{{ . | len }}</span>
+                        {{ end }}
+                    </div>
+                    <div class="contributors-icon">
+                        {{ with .Params.author }}
+                            {{ range . }}
+                                <a href="https://github.com/{{ . }}" target="_blank" rel="noopener noreferrer">
+                                    <img src="https://github.com/{{ . }}.png" alt="Contributors-icon">
+                                </a>
+                            {{ end }}
+                            {{ if gt (. | len) 9}}
+                                <i class="fa-solid fa-plus"></i>
+                            {{ end }}
+                        {{ end}}
+                    </div>
+                </div>
+
+                <div class="thanks-repo-button">
+                    <div class="give-thanks">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>thanks!</span>
+                    </div>
+
+                    {{ $path := "" }}
+                    {{ if .IsSection }}
+                        {{ $path = print (.RelPermalink | path.Clean) "/_index.md" }}
+                    {{ else }}
+                        {{ $path = print (.RelPermalink | path.Clean) ".md" }}
+                    {{ end }}
+                    <a href="https://github.com/lin-24-ia/OpenStudy/tree/main/content{{ $path }}" target="_blank" rel="noopener noreferrer">
+                        <div class="repository">
+                            <i class="fa-solid fa-code-pull-request"></i>
+                            <span>編集する</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            {{ with .TableOfContents }}
+                <div class="table-of-contents">
+                    <label for="table-of-contents-checkbox">目次</label>
+                    <input type="checkbox" id="table-of-contents-checkbox">
+                    {{ . }}
+                </div>
+            {{ end }}
+
+            <article>
+                {{ .Content }}
+            </article>
         </div>
     </div>
 {{ end }}
