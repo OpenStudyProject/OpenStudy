@@ -2,6 +2,7 @@ $myColor: hsl(306, 100%, 50%);
 
 nav.navTree {
     position: sticky;
+    background-color: #fff;
     top: 0;
     height: 100vh;
     overflow-y: scroll;
@@ -12,6 +13,7 @@ nav.navTree {
 
     .category-link-container {
         background: -webkit-linear-gradient(0deg, $myColor, adjust-color($myColor, $hue: -20));;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border-bottom-style: solid;
@@ -21,7 +23,7 @@ nav.navTree {
         padding: 10px 12px;
 
         h3 {
-            font-size: 30px;
+            font-size: 24px;
         }
 
         label {
@@ -34,7 +36,7 @@ nav.navTree {
     }
 
     > ul {
-        margin: 4px 0;
+        margin: 6px 0;
     }
 
     ul {
@@ -110,43 +112,73 @@ nav.navTree {
     }
 }
 
+
+
 @media screen and (max-width: 999px) {
     nav.navTree {
-        position: static;
-        overflow-y: visible;
         width: auto;
         height: auto;
-        padding: 0 24px;
+        padding: 0;
         margin: 0;
-        border: none;
+        border-bottom: solid 2px #ccc;
+
+        &:has(#navTree-checkbox:not(:checked)) {
+            border: none;
+
+            .category-link-container {
+                label {
+                    .navTree-button::before {
+                        font-family: "Font Awesome 5 Free";
+                        font-size: 16px;
+                        content: "\2b";
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
 
         #navTree-checkbox:not(:checked) + ul {
             display: none;
+        }
+
+        > ul {
+            max-height: 60vh;
+            overflow-y: scroll;
+        }
+
+        ul {
+            li {
+                padding: 4px 12px;
+
+                &.current {
+                    border-radius: 0;
+                }
+            }
         }
 
         .category-link-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 6px;
+            padding: 0 10px;
 
             h3 {
-                font-size: 24px;
+                font-size: 18px;
+                padding: 6px;
             }
 
             label {
                 display: block;
+                padding: 7px 10px;
                 line-height: 1em;
-                font-size: 20px;
+                font-size: 18px;
                 cursor: pointer;
-            }
-        }
 
-        ul {
-
-            li {
-                &.current {
-                    border-radius: 12px;
+                .navTree-button::before {
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 16px;
+                    content: "\f068";
+                    font-weight: 600;
                 }
             }
         }
