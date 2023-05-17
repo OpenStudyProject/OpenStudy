@@ -18,7 +18,7 @@
         {{ end }}
 
         {{ range $section.Sections }}
-            <div class="section">
+            <div class="nav-section">
                 {{ if .IsAncestor $current }}
                     <li onclick="func1(this)">{{ .LinkTitle }}</li>
                 {{ else }}
