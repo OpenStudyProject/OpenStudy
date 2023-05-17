@@ -1,0 +1,54 @@
+.navTree-article-container {
+    .article-container {
+        .list-index {
+            a {
+                h3 {
+                    font-size: 32px;
+                    padding: 16px;
+                }
+            }
+
+            ul {
+                a {
+                    display: block;
+
+                    li {
+                        list-style-type: none;
+                        padding: 10px 12px;
+                        line-height: 1.2em;
+                    }
+                }
+
+                .nav-section {
+                    > li {
+                        display: block;
+                        padding: 10px;
+                        line-height: 1.2em;
+                        word-wrap: break-word;
+                        font-weight: 600;
+                    }
+
+                    ul {
+                        .nav-section {
+                            > li {
+                                padding: 10px 10px 10px 30px;
+                            }
+
+                            ul {
+                                a {
+                                    padding: 0 0 0 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                ul {
+                    a {
+                        padding: 0 0 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
