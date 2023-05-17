@@ -1,4 +1,5 @@
 @import '_variables.scss';
+@import '_markdown.scss';
 
 .navTree-article-container {
     display: flex;
@@ -8,39 +9,7 @@
         max-width: 900px;
         margin: 0 50px;
 
-        .dates {
-            display: flex;
-            margin: 6px 0;
-            
-            .release-date, .update-date, .views, .thanks {
-                font-size: 12px;
-                font-weight: 500;
-                color: #888;
-                padding: 4px 12px 4px 0;
-            }
-        }
-
-        .views-and-thanks {
-            display: flex;
-            
-            .views, .thanks {
-                font-size: 14px;
-                font-weight: 500;
-                color: #666;
-                padding: 4px 12px 4px 0;
-            }
-        }
-
-        > h1 {
-            font-size: 32px;
-            padding: 20px 0 10px;
-        }
-
-        > p.description {
-            font-weight: 600;
-        }
-
-        .top-image {
+        .category-eyecatch {
             margin: 40px 0;
 
             img {
@@ -50,450 +19,203 @@
             }
         }
 
-        .container {
-            max-width: 100%;
-            padding: 0;
+        h1.title {
+            font-size: 32px;
+            padding: 12px 0;
+        }
 
-            aside {
-                border-radius: 12px;
-                margin: 12px 0;
+        p.description {
+            font-weight: 600;
+        }
+
+        .views-thanks-tags-container {
+            margin: 24px 0;
+
+            .views-thanks-inner {
                 display: flex;
-                justify-content: space-between;
-
-                .contributors {
-                    .contributors-label {
-                        font-size: 16px;
-                        font-weight: 600;
-                        margin: 4px 0;
-                        color: #666;
-
-                        .personNum {
-                            color: #000;
-                            padding: 2px 6px;
-                            background-color: #f3f3f3;
-                            border-radius: 9999px;
-                            font-family: 'Roboto Mono', monospace;
-                        }
-                    }
-
-                    .contributors-icon {
-                        display: flex;
-
-                        img {
-                            display: block;
-                            width: 42px;
-                            height: 42px;
-                            margin: 0 -6px 0 0;
-                            border-radius: 50%;
-                            border: solid 1px #fff;
-                        }
-
-                        i {
-                            display: block;
-                            padding: 7px 8.75px;
-                            font-size: 28px;
-                            margin: 0 0 0 6px;
-                        }
-                    }
-                }
-
-                .button {
-                    display: flex;
-                    align-items: end;
-
-                    .give-thanks {
-                        padding: 8px 10px;
-                        color: red;
-                        margin: 0 6px;
-                        border-radius: 8px;
-                        box-shadow: 1px 1px 10px 1px #ddd;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        i {
-                            padding-right: 4px;
-                        }
-
-                        &:hover {
-                            box-shadow: 1px 1px 10px 1px #bbb;
-                            transition: 0.2s;
-                        }
-                    }
-
-                    .link-to-repo {
-                        padding: 8px 10px;
-                        margin: 0 6px;
-                        border-radius: 8px;
-                        box-shadow: 1px 1px 10px 1px #ddd;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        i {
-                            padding-right: 6px;
-                        }
-
-                        &:hover {
-                            box-shadow: 1px 1px 10px 1px #bbb;
-                            transition: 0.2s;
-                        }
-
-                        span {
-                            line-height: 1.2em;
-                        }
-                    }
+                margin: 8px 0;
+                
+                .views, .thanks {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: #888;
+                    padding: 0 10px;
+                    padding-left: 0;
                 }
             }
 
             ul.tags {
                 display: flex;
-                margin: 28px 0;
                 list-style-type: none;
+                margin: 8px 0;
                 
                 @each $tag in $tags {
-                    > a.#{map-get($tag, 'class')} {
-                        padding: 1px 6px;
-                        margin-right: 6px;
-                        border: solid 1px map-get($tag, 'color');
-                        border-radius: 9999px;
+                    li.#{map-get($tag, 'class')} {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        font-size: 12px;
+                        padding: 1px 6px;
+                        margin-right: 6px;
                         color: map-get($tag, 'color');
                         background-color: #{map-get($tag, 'color')}16;
+                        border: solid 1px map-get($tag, 'color');
+                        border-radius: 9999px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .contributors-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 14px 0;
+
+            .contributors {
+                .contributors-label {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #666;
+
+                    .person-count {
+                        color: #000;
+                        padding: 1px 6px;
+                        background-color: #f3f3f3;
+                        border-radius: 9999px;
+                        font-family: 'Roboto Mono', monospace;
+                    }
+                }
+
+                .contributors-icon {
+                    display: flex;
+
+                    img {
+                        display: block;
+                        width: 38px;
+                        height: 38px;
+                        margin: 0 -6px 0 0;
+                        border-radius: 50%;
+                        border: solid 1px #fff;
+                    }
+
+                    i {
+                        display: block;
+                        padding: 7px 8.75px;
+                        font-size: 28px;
+                        margin: 0 0 0 6px;
                     }
                 }
             }
 
-            .index {
-                .indexTitle {
-                    display: block;
-                    text-align: center;
-                    padding: 22px 0;
-                    cursor: pointer;
+            .thanks-repo-button {
+                display: flex;
+                align-items: end;
+                font-size: 14px;
 
-                    &::before {
-                        font-family: "Font Awesome 5 Free";
-                        content: "\2b";
-                        font-weight: 600;
-                        font-size: 16px;
-                        padding-right: 4px;
+                .give-thanks {
+                    padding: 8px 10px;
+                    color: red;
+                    margin-left: 6px;
+                    border-radius: 8px;
+                    box-shadow: 1px 1px 10px 1px #ddd;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    i {
+                        padding-right: 6px;
                     }
 
                     &:hover {
-                        background: #fff;
-                    }
-                }
-                
-                input {
-                    display: none;
-                    
-                    &:checked + #TableOfContents {
-                        display: block;
+                        box-shadow: 1px 1px 10px 1px #bbb;
+                        transition: 0.2s;
                     }
                 }
 
-                &:has(input:checked) .indexTitle::before {
-                    font-family: "Font Awesome 5 Free";
-                    width: 16px;
-                    text-align: center;
-                    font-size: 16px;
-                    content: "\f068";
-                    font-weight: 600;
-                }
+                .repository {
+                    padding: 8px 10px;
+                    margin-left: 6px;
+                    border-radius: 8px;
+                    box-shadow: 1px 1px 10px 1px #ddd;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-                nav#TableOfContents {
-                    display: none;
-                    background-color: #f4f4f4;
-                    border-radius: 16px;
-                    padding: 12px 18px;
-
-                    > ul {
-                        list-style-type: none;
-
-                        & > li > a {
-                            font-weight: 500;
-                        }
+                    i {
+                        padding-right: 6px;
                     }
 
-                    ul li {
-                        margin: 8px 0;
+                    &:hover {
+                        box-shadow: 1px 1px 10px 1px #bbb;
+                        transition: 0.2s;
+                    }
+
+                    span {
                         line-height: 1.2em;
-                        word-wrap: break-word;
-                        list-style-type: none;
-                        color: #555;
-
-                        a {
-                            color: #666;
-                        }
-
-                        ul {
-                            margin: 0 0 0 16px;
-                        }
                     }
+                }
+            }
+        }
+
+        .table-of-contents {
+            label {
+                display: block;
+                padding: 10px 0;
+                cursor: pointer;
+
+                &::before {
+                    font-family: "Font Awesome 5 Free";
+                    content: "\2b";
+                    font-weight: 600;
+                    font-size: 16px;
+                    padding-right: 4px;
                 }
             }
             
-            .list-index {
-                a {
-                    h3 {
-                        font-size: 32px;
-                        padding: 16px;
-                    }
-                }
-
-                ul {
-                    a {
-                        display: block;
-
-                        li {
-                            list-style-type: none;
-                            padding: 10px 12px;
-                            line-height: 1.2em;
-                        }
-                    }
-
-                    .nav-section {
-                        > li {
-                            display: block;
-                            padding: 10px;
-                            line-height: 1.2em;
-                            word-wrap: break-word;
-                            font-weight: 600;
-                        }
-
-                        ul {
-                            .nav-section {
-                                > li {
-                                    padding: 10px 10px 10px 30px;
-                                }
-
-                                ul {
-                                    a {
-                                        padding: 0 0 0 40px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    ul {
-                        a {
-                            padding: 0 0 0 20px;
-                        }
-                    }
+            input {
+                display: none;
+                
+                &:not(:checked) + #TableOfContents {
+                    display: none;
                 }
             }
 
-            article {
-                margin: 34px 0;
+            &:has(input:checked) label::before {
+                font-family: "Font Awesome 5 Free";
+                width: 16px;
+                text-align: center;
+                font-size: 16px;
+                content: "\f068";
+                font-weight: 600;
+            }
 
-                h1 {
-                    font-size: 36px;
-                    color: red;
-                    padding: 8px 12px;
-                    
-                    &::before {
-                        content: "#DO NOT USE <h1> INSIDE ARTICLE# <!--";
-                    }
+            #TableOfContents {
+                background-color: #f4f4f4;
+                border-radius: 12px;
+                padding: 14px 24px;
 
-                    &::after {
-                        content: "-->";
-                    }
-                }
+                > ul {
+                    list-style-type: none;
 
-                h2 {
-                    font-size: 28px;
-                    margin: 40px 0 30px;
-                }
-
-                h3 {
-                    font-size: 22px;
-                    margin: 30px 0 20px;
-                }
-
-                h4 {
-                    font-size: 16px;
-                    margin: 20px 0 10px;
-                }
-
-                p {
-                    padding: 16px 0;
-                    font-size: 16px;
-
-                    code {
-                        background-color: #eee;
-                        padding: 1px 6px;
-                        margin: 0 4px;
-                        border-radius: 3px;
-                        font-family: 'Roboto Mono', monospace;
-                        font-size: 14px;
+                    & > li > a {
+                        font-weight: 600;
                     }
                 }
 
-                a {
-                    color: #0066cc;
-                    font-weight: 600;
-                    transition: 5s;
-
-                    &:hover {
-                        text-decoration: underline;
-                        text-underline-offset: 3px;
-                    }
-                }
-
-                > ul, ol {
-                    margin: 20px 0;
-                    padding: 0 30px 0 10px;
-                }
-
-                ul li, ol li {
-                    margin: 8px;
+                ul li {
+                    margin: 8px 0;
                     line-height: 1.2em;
                     word-wrap: break-word;
+                    list-style-type: none;
+                    color: #555;
 
-                    ul, ol {
-                        margin: 0 0 0 16px;
-                    }
-                }
-
-                > pre {
-                    background-color: #eee;
-                    border-radius: 10px;
-                    padding: 20px;
-                    margin: 10px 0;
-
-                    code {
-                        font-family: 'Roboto Mono', monospace;
-                        padding: 0;
-                        margin: 0;
-                    }
-                }
-
-                .codeBlock {
-                    margin: 20px 0;
-
-                    .codeBlockCaption {
-                        display: inline-block;
-                        padding: 6px 12px;
-                        background: #444;
-                        border-radius: 6px 6px 0 0;
-                        font-family: 'Roboto Mono', monospace;
-                        font-size: 12px;
-                        color: white;
+                    a {
+                        color: #666;
                     }
 
-                    .highlight {
-                        pre {
-                            padding: 24px;
-                            border-radius: 14px;
-                            overflow: auto;
-
-                            code {
-                                font-family: 'Roboto Mono', monospace;
-                                font-size: 14px;
-                            }
-                        }
-                    }
-
-                    &.withCaption {
-                        .highlight {
-                            pre {
-                                border-radius: 0 14px 14px 14px;
-                            }
-                        }
-                    }
-                }
-
-                p:has(img) {
-                    width: 60%;
-
-                    img {
-                        width: 100%;
-                    }
-
-                    em {
-                        display: block;
-                        text-align: center;
-                    }
-                }
-
-                blockquote {
-                    border-left: solid 4px #ccc;
-                    padding-left: 8px;
-                    margin: 12px 0;
-
-                    p {
-                        padding: 4px 0;
-                    }
-                }
-
-                table {
-                    border-collapse: collapse;
-                    margin: 20px 0;
-
-                    thead {
-                        tr {
-                            th {
-                                border: solid 1px #888;
-                                padding: 10px 14px;
-                                font-weight: 600;
-                                background-color: #f6f6f6;
-                            }
-                        }
-                    }
-
-                    tbody {
-                        tr {
-                            td {
-                                border: solid 1px #888;
-                                padding: 10px 14px;
-                            }
-                        }
-                    }
-                }
-
-                .accordion-container {
-                    box-shadow: 2px 4px 10px 2px #ddd;
-
-                    .accordion-title {
-                        display: block;
-                        padding: 12px;
-                        cursor: pointer;
-
-                        &::before {
-                            font-family: "Font Awesome 5 Free";
-                            content: "\2b";
-                            font-weight: 600;
-                            font-size: 16px;
-                        }
-
-                        &:hover {
-                            background: #fff;
-                        }
-                    }
-                    
-                    .accordion-body {
-                        display: none;
-                        background-color: #f8f8f8;
-                        padding: 12px 18px;
-                    }
-                    
-                    input {
-                        display: none;
-                        
-                        &:checked + .accordion-body {
-                            display: block;
-                        }
-                    }
-
-                    &:has(input:checked) .accordion-title::before {
-                        font-family: "Font Awesome 5 Free";
-                        font-size: 16px;
-                        content: "\f068";
-                        font-weight: 600;
+                    ul {
+                        margin: 0 0 0 28px;
                     }
                 }
             }
@@ -504,10 +226,6 @@
 
 
 @media screen and (max-width: 999px) {
-    .container {
-        padding: 20px;
-    }
-
     .navTree-article-container {
         display: block;
 
@@ -518,10 +236,6 @@
 
             > h1 {
                 font-size: 28px;
-            }
-
-            .dates, .views-and-thanks {
-                display: none;
             }
         }
     }
