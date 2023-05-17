@@ -1,7 +1,4 @@
 header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,10 +37,12 @@ header {
         padding: 8px 18px;
         
         i {
+            font-size: 14px;
             color: #999;
         }
 
         span {
+            font-size: 14px;
             color: #999;
             padding: 0 4px;
         }
@@ -69,9 +68,8 @@ header {
     }
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 999px) {
     header {
-        position: static;
         height: 44px;
 
         .logo-and-openstudy {
