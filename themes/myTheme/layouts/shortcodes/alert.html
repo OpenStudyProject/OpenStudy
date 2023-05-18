@@ -17,6 +17,6 @@
         <span>{{ $title }}</span>
     </div>
     <p>
-        {{ .Inner }}
+        {{ .Inner | markdownify}}
     </p>
 </div>
