@@ -15,7 +15,7 @@
             <p class="description">{{ .Description }}</p>
 
             <div class="views-thanks-tags-container">
-                <div class="views-thanks-inner">
+                {{/*  <div class="views-thanks-inner">
                     <div class="views">
                         <i class="fa-solid fa-eye"></i>
                         <span>1.6K</span>
@@ -24,7 +24,7 @@
                         <i class="fa-solid fa-heart"></i>
                         <span>653</span>
                     </div>
-                </div>
+                </div>  */}}
                 <ul class="tags">
                     {{ with .Params.tags }}
                         {{ range . | sort }}
@@ -59,10 +59,10 @@
                 </div>
 
                 <div class="thanks-repo-button">
-                    <div class="give-thanks">
+                    {{/*  <div class="give-thanks">
                         <i class="fa-regular fa-heart"></i>
                         <span>thanks!</span>
-                    </div>
+                    </div>  */}}
 
                     {{ $path := "" }}
                     {{ if .IsSection }}
