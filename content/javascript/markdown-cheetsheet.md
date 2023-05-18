@@ -1,10 +1,20 @@
 +++
-title = "Markdownの記法"
-description = "OpenStudyで表示されるMarkdownのプレビューです。"
+title = "Markdownの書き方"
+description = "一般的な記法に加えて、OpenStudyで使える記法を説明します。記事を作成する際の参考にしてください。"
 date = 2023-04-05
-tags = ["Markdown", "Python", "App"]
+tags = ["Markdown"]
 author = ["lin-24-ia"]
 +++
+
+# 見出し
+
+```text
+# 大見出し
+## 見出し
+### 小見出し
+```
+
+OpenStudyでは、HTMLにレンダリングされるとそれぞれが`<h2>`、`<h3>`、`<h4>`に対応します。目次に表示されるのは大見出しと見出しのみです。
 
 # リスト
 
@@ -12,222 +22,421 @@ author = ["lin-24-ia"]
 
 ハイフン`-`、プラス`+`、アスタリスク`*`のいずれかを先頭に記述します。スペース4つでネストできます。
 
-- リスト1
-- リスト2
-    - リスト2.1
-        - リスト2.1.1
-        - リスト2.1.2
-    - テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト2.2
-- リスト3
-- リスト4
-
-## 番号付きリスト
-
-`1.`を先頭に記述します。ネストはタブで表現します。  
-番号は自動的に採番されるため、すべての行を1.と記述するのがお勧めです。
-
-1. 番号付きリスト1
-    1. 番号付きリスト1-1
-    1. 番号付きリスト1-2
-1. 番号付きリスト2
-1. 番号付きリスト3
-
-
-# コードブロック
-
-```js { hello }
-function helloWorld(param1, param2) {
-    var something = 0;
-
-    if (2.0 % 2 == something) {
-        console.log('Hello, world!');
-    } else {
-        return null;
-    }
-
-    // comment
-}
+```text
+* パン
+* ハム
+* 野菜
+    - レタス
+    - トマト
+    - 卵
+* 調味料
+    - 砂糖
+    - 塩こしょう
+    + マヨネーズ
+        - 卵
+        - 塩
+        - サラダ油
+        - お酢
 ```
 
-```diff js
-@@ -4,6 +4,5 @@
-+    const foo = bar.baz([1, 2, 3]) + 1;
--    let foo = bar.baz([1, 2, 3]);
+* パン
+* ハム
+* 野菜
+    - レタス
+    - トマト
+    - 卵
+* 調味料
+    - 砂糖
+    - 塩こしょう
+    + マヨネーズ
+        - 卵
+        - 塩
+        - サラダ油
+        - お酢
+
+## 番号つきリスト
+
+`1.`を先頭に記述します。スペース4つでネストできます。
+
+```text
+1. パン
+1. ハム
+1. 野菜
+    1. レタス
+    1. トマト
+    1. 卵
+1. 調味料
+    1. 砂糖
+    1. 塩こしょう
+    1. マヨネーズ
+        1. 卵
+        1. 塩
+        1. サラダ油
+        1. お酢
 ```
 
-```py
-def helloWorld(param1, param2) {
-    something = 0
-
-    if (2.0 % 2 == something) {
-        print('Hello, world!')
-    } else {
-        return null
-    }
-
-    # comment
-}
-```
-
-```html
-<script src="/js/spHeaderMenu.js"></script>
-<script src="/js/sideMenu.js"></script>
-<footer>
-    <div class="container">
-        <p class="copyright">&copy; 2023 OpenStudy</p>
-        <a href="https://twitter.com/openstudyjp" target="_blank" rel="noopener noreferrer">
-            <svg viewbox="0 0 500 500"><path d="m 448.8117,148.00184 c 0.30469,4.40788 0.30469,8.81576 0.30469,13.26428 0,135.54743 -103.18911,291.87486 -291.87487,291.87486 v -0.0812 C 101.50316,453.14098 46.922615,437.17518 3e-6,407.07159 c 8.1048136,0.97501 16.250253,1.46252 24.416005,1.48283 46.191346,0.0406 91.062362,-15.45805 127.401992,-43.99757 -43.896,-0.83282 -82.388783,-29.45358 -95.835879,-71.23704 15.376802,2.96567 31.220801,2.35629 46.313229,-1.76721 -47.856996,-9.66891 -82.287223,-51.71644 -82.287223,-100.54846 0,-0.44687 0,-0.87344 0,-1.30001 14.259598,7.94231 30.225467,12.35019 46.556974,12.8377 C 21.490963,172.41792 7.5969961,112.45448 34.816171,65.572495 86.898231,129.65943 163.74162,168.61942 246.23197,172.74292 c -8.26731,-35.62867 3.02661,-72.963631 29.67703,-98.009336 41.31626,-38.838111 106.29697,-36.847454 145.13508,4.4485 22.9738,-4.52976 44.99288,-12.959575 65.14319,-24.903507 -7.65792,23.745678 -23.68474,43.916301 -45.09445,56.733693 C 461.42595,108.61536 481.2919,103.17153 500,94.863577 486.2279,115.5014 468.88075,133.47824 448.8117,148.0019 Z"></svg>
-        </a>
-    </div>
-</footer>
-```
-
-```java {title="sample.java"}
-public class Main {
-    public static void main(String... args) {
-        System.out.println("Hello");
-    }
-}
-```
+1. パン
+1. ハム
+1. 野菜
+    1. レタス
+    1. トマト
+    1. 卵
+1. 調味料
+    1. 砂糖
+    1. 塩こしょう
+    1. マヨネーズ
+        1. 卵
+        1. 塩
+        1. サラダ油
+        1. お酢
 
 # リンク
 
-`[表示文字](URL)`でリンクに変換されます。
+`[表示文字](画像のURL)`と書きます。URLのベタ書きもできます。
 
+```text
+[Google](https://www.google.co.jp/)
+```
 
 [Google](https://www.google.co.jp/)
 
 # 画像
 
-画像の大きさなどの指定をする場合はimgタグを使用します。
-直後に`* *`を書くとキャプションを追加できます
+## リンクなしの画像
 
-[![OpenStudy](/images/OpenStudy.png)](https://openstudy.jp/)
-*caption*
+`![代替文字](画像のURL)`と書きます。空白行を開けることなく`**`で囲むと、キャプションを追加できます。OpenStudyでは角丸で表示されます。
 
-## 表
+```text
+![Sandwitch](/images/sandwitch.jpg)
+**by Luis Covarrubias from Unsplash**
+```
 
-`-`と`|`を使ってtableを作成します。
+![Sandwitch](/images/sandwitch.jpg)
+**by Luis Covarrubias from Unsplash**
 
-| 左揃え | 中央揃え | 右揃え |
-|:---|:---:|---:|
-|1 |2 |3 |
-|4 |5 |6 |
+## リンクつきの画像
 
-# 段落
+`[![代替文字](画像のURL)](サイトのURL)`と書きます。
 
-空白行を挟むことで段落となります。
+```text
+[![Sandwitch](/images/sandwitch.jpg)](https://unsplash.com/ja/@eledeluis)
+**by Luis Covarrubias from Unsplash**
+```
+
+[![Sandwitch](/images/sandwitch.jpg)](https://unsplash.com/ja/@eledeluis)
+**by Luis Covarrubias from Unsplash**
+
+# コード
+
+## タイトルなしのコードブロック
+
+バッククオート`` ` `` またはダッシュ`~`３つで囲みます。直後に言語を指定することで、シンタックスハイライトできます。
+
+````text
+```js
+function helloWorld(param1, param2) {
+    let count = 0;
+
+    if (param2 == count - param1) {
+        console.log('Hello, World!');
+    } else {
+        return null;
+    }
+}
+```
+````
+
+```js
+function helloWorld(param1, param2) {
+    let count = 0;
+
+    if (param2 == count - param1) {
+        console.log('Hello, World!');
+    } else {
+        return null;
+    }
+}
+```
+
+## タイトルつきのコードブロック
+
+言語に続く波かっこ`{}`の中に`title="foo"`と書くことで、コードブロックの左上にタイトルを付けることができます。
+
+````text
+```html {title="sample.html"}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sample</title>
+    </head>
+
+    <body>
+        <h1>Hello, World!</h1>
+    </body>
+</html>
+```
+````
+
+```html {title="sample.html"}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sample</title>
+    </head>
+
+    <body>
+        <h1>Hello, World!</h1>
+    </body>
+</html>
+```
+
+## インラインコード
+
+バッククオート`` ` `` で単語を囲みます。
+
+```text
+`takoyaki.png`があらわれた
+```
+
+`takoyaki.png`があらわれた
+
+## 整形済みテキスト
+
+通常は複数のスペースや改行は無視されますが、半角スペース4個でインデントすることでそのまま表示することができます。
+
+```text
+    party/
+    ┗ images/
+        ┣ sushi.jpg
+        ┣ yakiniku.svg
+        ┗ pizza.ico
+```
+
+    party/
+    ┗ images/
+        ┣ sushi.jpg
+        ┣ yakiniku.svg
+        ┗ pizza.ico
+
+# アコーディオンメニュー
+
+````text
+{{</* accordion title="さらに詳しく" */>}}
+
+## 使い方
+
+波かっこ`{}`2つと角かっこ`<>`の中に`accordion title="foo"`と記述します。最後に`/accordion`で閉じる必要があるので注意してください。
+
+* リストも
+* 作成できます
+
+{{</* /accordion */>}}
+````
+
+{{< accordion title="さらに詳しく" >}}
+
+## 使い方
+
+波かっこ`{}`2つと角かっこ`<>`の中に`accordion title="foo"`と記述します。最後に`/accordion`で閉じる必要があるので注意してください。
+
+* リストも
+* 作成できます
+
+{{< /accordion >}}
+
+# アラート
+
+4種類あります。
+
+* Notice
+* Success
+* Warning
+* Error
+
+最初の引数には4種のいずれかを指定します。2つ目の引数は任意で、タイトルを指定できます。中身はMarkdownで書くことができます。
+
+## Notice
+
+````text
+{{</* alert "notice" */>}}
+`foo`は`bar`です。
+{{</* /alert */>}}
+````
+
+{{< alert "notice" >}}
+`foo`は`bar`です。
+{{< /alert >}}
+
+## Success
+
+````text
+{{</* alert "success" "新機能" */>}}
+`foo`を`bar`に置換します。
+{{</* /alert */>}}
+````
+
+{{< alert "success" "新機能" >}}
+`foo`を`bar`に置換します。
+{{< /alert >}}
+
+## Warning
+
+````text
+{{</* alert "warning" */>}}
+`foobar`は使用できなくなりました。
+{{</* /alert */>}}
+````
+
+{{< alert "warning" >}}
+`foobar`は使用できなくなりました。
+{{< /alert >}}
+
+## Error
+
+````text
+{{</* alert "error" "v2.0以降の場合" */>}}
+`foobar`を使用するとエラーになります。
+{{</* /alert */>}}
+````
+
+{{< alert "error" "v2.0以降の場合" >}}
+`foobar`を使用するとエラーになります。
+{{< /alert >}}
 
 # 数式
 
-ブロック数式
+## ブロック数式
+
+ドル記号`$`2つで囲みます。
+
+```text
+$$
+e^{i\theta} = \cos\theta + i\sin\theta
+$$
+```
 
 $$
 e^{i\theta} = \cos\theta + i\sin\theta
 $$
 
-インライン数式：$e^{i\theta} = \cos\theta + i\sin\theta$
+## インライン数式
 
-# 注釈
+ドル記号`$`1つで囲みます。
 
-脚注の例[^1]です。
-
-[^1]: 脚注の内容
-
-# 改行
-
-改行の前に半角スペース`  `を2つ記述します。
-
-hoge
-fuga  
-piyo
-
-# Blockquotes 引用
-
-先頭に`>`を記述します。ネストは`>`を多重に記述します。
-
-> 引用  
-> 引用
->> 多重引用
-
-# Code コード
-
-`` `バッククオート` `` 3つ、あるいはダッシュ`~`３つで囲みます。
-
-```
-print 'hoge'
+```text
+$e^{i\theta}$ は $\cos\theta$ と $i\sin\theta$ の和です。
 ```
 
-# アコーディオンメニュー
+$e^{i\theta}$ は $\cos\theta$ と $i\sin\theta$ の和です。
 
-{{< accordion title="さらに詳しく" >}}
-この本文はデフォルトでは隠されていて、クリックで見えるようになります。
+詳しい数式の書き方は以下のドキュメントを参照してください。
 
-- サンプルコード
-- 補足説明
+[Katex.org](https://katex.org/docs/supported.html)
 
-などに使うと便利です。
-{{< /accordion >}}
+# テーブル
 
-# Alert カード
+パイプ`|`とハイフン`-`を使ってテーブルを作成できます。また、コロン`:`を使って左右揃えを指定できます。
 
-{{< alert "notice" >}}
-一般的な情報
-{{< /alert >}}
-
-{{< alert "success" "解決策" >}}
-この形式で書いたコメントは公開されたページ上では表示されません。ただし、複数行のコメントには対応していないのでご注意ください。
-{{< /alert >}}
-
-{{< alert "warning" "v1.2以前の場合" >}}
-リプライを埋め込んだ場合、デフォルトでリプライ元のツイートも含まれて表示されます。ツイートのURL?conversation=noneのようにクエリパラメータにconversation=noneを指定すると、リプライ元のツイートが含まれなくなります。
-{{< /alert >}}
-
-{{< alert "error" "\"no such directory\" と表示される場合" >}}
-Zenn ではKaTeXによる数式表示に対応しています。KaTeXのバージョンは常に最新バージョンを使用します。
-{{< /alert >}}
-
-## インラインコード
-
-`` `バッククオート` `` で単語を囲むとインラインコードになります。
-
-```
-これは `インラインコード`です。
+```text
+| 左揃え | 中央揃え | 右揃え |
+|:---|:---:|---:|
+| .topLeading | .top | .topTrailing |
+| .leading | .center | .trailing |
+| .bottomLeading | .bottom | .bottomTrailing |
 ```
 
-これは `class Hoge`です。
+| 左揃え | 中央揃え | 右揃え |
+|:---|:---:|---:|
+| .topLeading | .top | .topTrailing |
+| .leading | .center | .trailing |
+| .bottomLeading | .bottom | .bottomTrailing |
 
-# pre 整形済みテキスト
+# 引用
 
-半角スペース4個deコードブロックをpre表示できます
+先頭に`>`を付けます。`>`を複数付けることでネストすることもできます。1行空けたのちに先頭に`>`を付け、その後`*`で囲むことで引用元を記述できます。
 
-    class Hoge
-        def hoge
-            print 'hoge'
-        end
-    end
+```text
+> Be a yardstick of quality. Some people aren’t used to an environment where excellence is expected.
 
-# Hr 水平線
+> *Steve Jobs*
+```
 
-アンダースコア`_` 、アスタリスク`*`、ハイフン`-`などを3つ以上連続して記述します。
+> Be a yardstick of quality. Some people aren’t used to an environment where excellence is expected.
+
+> *Steve Jobs*
+
+# その他の記法
+
+## 段落
+
+```text
+空白行を挟むことで段落となります。
+
+空白行を挟むことで段落となります。
+```
+
+空白行を挟むことで段落となります。
+
+空白行を挟むことで段落となります。
+
+## 改行
+
+わかりやすくするためにスペース` `をドット`.`に書き替えています。
+
+```text
+スペースを2つ記述してから改行すると..
+改行されます。
+```
+
+スペースを2つ記述してから改行すると  
+改行されます。
+
+## 脚注
+
+角かっこ`[]`とハット`^`に続けてインデックスの数字を書きます。その後にその脚注の説明を書きます。
+
+```text
+脚注[^1]です。
+
+[^1]: 脚注とは、言葉の意味、文章の解釈、本文の補足、文献の出典（典拠・引用文献・参考文献）などを明らかにするために付される文をいう。
+```
+
+脚注[^1]です。
+
+[^1]: 脚注とは、言葉の意味、文章の解釈、本文の補足、文献の出典（典拠・引用文献・参考文献）などを明らかにするために付される文をいう。
+
+## 水平線
+
+アンダースコア`_`、アスタリスク`*`、ハイフン`-`のいずれかを3つ以上連続して記述します。
+
+```text
+---
+```
 
 ---
 
-# 強調
-## em
+## イタリック
 
-アスタリスク`*`もしくはアンダースコア`_`1個で文字列を囲みます。
+```text
+*アスタリスク* か _アンダースコア_ 1個で囲みます。前後にスペースが必要です。
+```
 
-これは *イタリック* です
+*アスタリスク* か _アンダースコア_ 1個で囲みます。前後にスペースが必要です。
 
-## strong
+## 太字
 
-アスタリスク`*`もしくはアンダースコア`_`2個で文字列を囲みます。
+```text
+**アスタリスク** か __アンダースコア__ 2個で囲みます。前後にスペースが必要です。
+```
 
-これは **ボールド** です
+**アスタリスク** か __アンダースコア__ 2個で囲みます。前後にスペースが必要です。
 
-## em + strong
+## 太字イタリック
 
-アスタリスク`*`もしくはアンダースコア`_`3個で文字列を囲みます。
+```text
+***アスタリスク*** か ___アンダースコア___ 3個で囲みます。前後にスペースが必要です。
+```
 
-これは ***イタリック＆ボールド*** です
+***アスタリスク*** か ___アンダースコア___ 3個で囲みます。前後にスペースが必要です。
