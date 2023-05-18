@@ -25,6 +25,7 @@
         }
 
         p.description {
+            color: #666;
             font-weight: 600;
         }
 
@@ -69,7 +70,7 @@
         .contributors-container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: end;
             margin: 14px 0;
 
             .contributors {
@@ -160,7 +161,9 @@
 
         .table-of-contents {
             label {
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
                 padding: 10px 0;
                 cursor: pointer;
 
@@ -168,7 +171,7 @@
                     font-family: "Font Awesome 5 Free";
                     content: "\2b";
                     font-weight: 600;
-                    font-size: 16px;
+                    font-size: 18px;
                     padding-right: 4px;
                 }
             }
@@ -211,6 +214,8 @@
                     color: #555;
 
                     a {
+                        display: block;
+
                         color: #666;
                     }
 
@@ -231,11 +236,53 @@
 
         .article-container {
             width: 100%;
-            padding: 0 20px;
-            margin: 0;
+            padding: 0 16px;
+            margin: 0 auto;
 
-            > h1 {
+            h1.title {
                 font-size: 28px;
+                padding: 8px 0;
+            }
+
+            p.description {
+                font-size: 14px;
+            }
+
+            .views-thanks-tags-container {
+                margin: 14px 0;
+            }
+
+            .contributors-container {
+                margin: 10px 0;
+
+                .contributors {
+                    .contributors-label {
+                        font-size: 14px;
+                    }
+                }
+
+                .thanks-repo-button {
+                    .repository {
+                        font-size: 12px;
+                        padding: 6px 8px;
+                    }
+                }
+            }
+
+            .table-of-contents {
+                label {
+                    font-size: 14px;
+                    padding: 6px 0;
+                }
+
+                #TableOfContents {
+                    font-size: 14px;
+                    padding: 8px 16px;
+
+                    ul li ul {
+                        margin: 0 18px;
+                    }
+                }
             }
         }
     }
