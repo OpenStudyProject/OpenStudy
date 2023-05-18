@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     position: relative;
@@ -33,6 +37,6 @@ span {
     display: inline-block;
 }
 
-*:not(.katex *, pre code *) {
+*:not(.katex *, code, code *) {
     font-family: 'Inter', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
