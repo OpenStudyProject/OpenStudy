@@ -1,53 +1,143 @@
 .wrapper {
-    .top-container {
-        height: 50vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    background: linear-gradient(to bottom, #fff, hsl(200, 10%, 90%));
 
-        .image-and-title {
-            img {
+    &.top {
+        background: linear-gradient(to bottom, #fff, hsl(200, 100%, 96%));
+
+        .container {
+            position: relative;
+            height: 540px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            svg {
                 display: block;
-                width: 220px;
-                height: 220px;
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                stroke: #fff;
+                stroke-width: 6px;
+                rotate: 240deg;
+                fill: none;
+                filter: drop-shadow(0 0 8px hsl(200, 100%, 70%));
                 margin: 0 auto;
             }
 
             h1 {
+                position: absolute;
                 text-align: center;
-                font-size: 34px;
-                font-weight: 500;
+                font-size: 50px;
+                font-weight: 600;
+                color: hsl(200, 90%, 8%);
+
+                span {
+                    background: -webkit-linear-gradient(0deg, hsl(200, 100%, 50%), hsl(195, 100%, 50%));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
             }
         }
     }
+
     .container {
-        max-width: 1000px;
+        max-width: 1200px;
+        padding: 40px;
+        margin: 0 auto;
         
-        .categories-container {
+        .category-container {
             display: flex;
+            justify-content: flex-start;
+            align-items: center;
             flex-wrap: wrap;
-            margin: 0 auto;
-    
-            a {
+
+            a.category-item {
                 display: block;
-                width: 160px;
-                height: 120px;
-                padding: 12px;
-                margin: 16px;
-                border: solid 1px #cce;
-                border-radius: 18px;
+                width: calc(100% / 8);
+                padding: 18px 0;
     
                 img {
                     display: block;
                     margin: 0 auto;
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
                 }
     
                 p {
+                    color: #666;
+                    font-weight: 500;
+                    font-size: 12px;
                     text-align: center;
                     padding: 8px 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 999px) {
+    .wrapper {
+        &.top {
+            .container {
+                height: 400px;
+
+                svg {
+                    height: 300px;
+                    width: 300px;
+                }
+
+                h1 {
+                    font-size: 38px;
+                }
+            }
+        }
+
+        .container {
+            padding: 30px 16px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 799px) {
+    .wrapper {
+        .container {
+            .category-container {
+                a.category-item {
+                    width: calc(100% / 6);
+                    padding: 14px 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 499px) {
+    .wrapper {
+        &.top {
+            .container {
+                svg {
+                    height: 250px;
+                    width: 250px;
+                }
+
+                h1 {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .container {
+            .category-container {
+                a.category-item {
+                    width: calc(100% / 4);
+                    padding: 12px 0;
                 }
             }
         }
