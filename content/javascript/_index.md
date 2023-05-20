@@ -4,7 +4,6 @@ description = "Javascriptはすごいです！"
 date = 1970-01-01
 type = "default"
 layout = "single"
-image = "3.jpeg"
 +++
 
 ## リンク

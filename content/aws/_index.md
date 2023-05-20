@@ -4,7 +4,6 @@ description = "AWS ha sugoi zo!"
 date = 1970-01-01
 type = "default"
 layout = "single"
-image = "7.jpeg"
 +++
 
 ## リンク
