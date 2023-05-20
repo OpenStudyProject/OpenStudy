@@ -42,4 +42,37 @@ $tags: (
     ),
 );
 
-$myColor: hsl(306, 100%, 50%);
+$category: (
+    (
+        type: 'red',
+        color: hsl(0, 100%, 50%),
+    ),
+    (
+        type: 'orange',
+        color: hsl(30, 100%, 50%),
+    ),
+    (
+        type: 'yellow',
+        color: hsl(50, 100%, 50%),
+    ),
+    (
+        type: 'green',
+        color: hsl(130, 100%, 50%),
+    ),
+    (
+        type: 'lightblue',
+        color: hsl(100, 100%, 50%),
+    ),
+    (
+        type: 'blue',
+        color: hsl(240, 100%, 50%),
+    ),
+    (
+        type: 'purple',
+        color: hsl(270, 100%, 50%),
+    ),
+    (
+        type: 'pink',
+        color: hsl(300, 100%, 50%),
+    ),
+);

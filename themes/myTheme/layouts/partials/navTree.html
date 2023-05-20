@@ -2,7 +2,7 @@
 {{ $hierarchy := partial "function/fetchHierarchy" . }}
 
 {{/*  Navigation Tree  */}}
-<nav class="navTree">
+<nav class="navTree {{ (index $hierarchy 1).Params.Color }} ">
 
     <div class="category-link-container">
         {{/*  Link to the top level category of current page  */}}

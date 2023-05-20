@@ -4,6 +4,7 @@ description = "Python ha sugoi zo!"
 date = 1970-01-01
 type = "default"
 layout = "single"
+color = "blue"
 +++
 
 ## リンク
