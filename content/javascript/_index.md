@@ -4,7 +4,7 @@ description = "Javascriptはすごいです！"
 date = 1970-01-01
 type = "default"
 layout = "single"
-color = "hsl(220, 100%, 50%)"
+color = "hsl(55, 90%, 55%)"
 +++
 
 ## リンク

@@ -4,7 +4,7 @@ description = "Git ha sugoi zo!"
 date = 1970-01-01
 type = "default"
 layout = "single"
-color = "hsl(10, 100%, 50%)"
+color = "hsl(20, 100%, 50%)"
 +++
 
 ## リンク

@@ -4,7 +4,7 @@ description = "Unity ha sugoi zo!"
 date = 1970-01-01
 type = "default"
 layout = "single"
-color = "hsl(0, 100%, 50%)"
+color = "hsl(190, 10%, 50%)"
 +++
 
 ## リンク
