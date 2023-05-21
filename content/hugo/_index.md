@@ -4,7 +4,7 @@ description = "世界最速の静的サイトジェネレーター"
 date = 2023-03-27
 type = "default"
 layout = "single"
-color = "pink"
+color = "hsl(80, 100%, 50%)"
 categoryEyecatch = "hugo_original.svg"
 author = ["lin-24-ia"]
 +++
