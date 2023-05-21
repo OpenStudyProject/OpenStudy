@@ -67,7 +67,7 @@
     {{ $include := slice "navTree" "article" "alert" }}
 
     {{ $hierarchy := partial "function/fetchHierarchy" . }}
-    {{ $vars := dict "category_color" ((index $hierarchy 1).Params.Color | string) }}
+    {{ $vars := dict "category_title" ((index $hierarchy 1).Title | lower) "category_color" ((index $hierarchy 1).Params.Color | string) }}
     {{ $opts := dict "vars" $vars }}
 
     {{ if or .IsPage .IsSection }}
