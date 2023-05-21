@@ -1,10 +1,11 @@
 +++
-title = "Git"
+title = "Others"
 description = "Git ha sugoi zo!"
 date = 1970-01-01
 type = "default"
 layout = "single"
 color = "hsl(0, 100%, 50%)"
+weight = 100
 +++
 
 ## リンク
