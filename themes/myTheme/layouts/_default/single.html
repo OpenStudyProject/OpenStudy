@@ -28,13 +28,11 @@
                     </div>
                 </div>  */}}
                 <ul class="tags">
-                    {{ with .Params.tags }}
-                        {{ range . | append ((index $hierarchy 1).Title) | sort }}
-                            <a href="/tags/{{ . | lower }}">
-                                <li class="{{ . | lower }}">{{ . }}</li>
-                            </a>
-                        {{ end }}
-                    {{ end}}
+                    {{ range .Params.tags | append ((index $hierarchy 1).Title) | sort }}
+                        <a href="/tags/{{ . | lower }}">
+                            <li class="{{ . | lower }}">{{ . }}</li>
+                        </a>
+                    {{ end }}
                 </ul>
             </div>
 
