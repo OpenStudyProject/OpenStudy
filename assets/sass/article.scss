@@ -2,6 +2,14 @@
 @import '_variables.scss';
 @import '_markdown.scss';
 
+$categories: ();
+
+@for $i from 1 through length($category-title) {
+    $t: nth($category-title, $i);
+    $c: nth($category-color, $i);
+    $categories: append($categories, (("class": $t, "color": #{$c})));
+}
+
 .navTree-article-container {
     display: flex;
 
@@ -61,19 +69,19 @@
                     font-size: 12px;
                 }
                 
+                @each $category in $categories {
+                    li.#{map-get($category, 'class')} {
+                        color: map-get($category, 'color');
+                        background-color: #{map-get($category, 'color')}16;
+                        border: solid 1px map-get($category, 'color');
+                    }
+                }
+                
                 @each $tag in $tags {
                     li.#{map-get($tag, 'class')} {
                         color: map-get($tag, 'color');
                         background-color: #{map-get($tag, 'color')}16;
                         border: solid 1px map-get($tag, 'color');
-                    }
-                }
-
-                @if type-of($category-color) == color {
-                    li.#{$category-title} {
-                        color: $category-color;
-                        background-color: #{$category-color}16;
-                        border: solid 1px $category-color;
                     }
                 }
             }

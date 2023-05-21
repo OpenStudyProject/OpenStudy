@@ -65,9 +65,16 @@
 
     <!-- Section and Article Page CSS -->
     {{ $include := slice "navTree" "article" "alert" }}
-
     {{ $hierarchy := partial "function/fetchHierarchy" . }}
-    {{ $vars := dict "category_title" ((index $hierarchy 1).Title | lower) "category_color" ((index $hierarchy 1).Params.Color | string) }}
+    {{ $categories := slice }}
+    {{ $categoryColor := slice }}
+
+    {{ range .Site.Sections }}
+        {{ $categories = $categories | append (.Title | lower) }}
+        {{ $categoryColor = $categoryColor | append .Params.Color }}
+    {{ end }}
+
+    {{ $vars := dict "current_category_title" ((index $hierarchy 1).Title | lower) "current_category_color" ((index $hierarchy 1).Params.Color | string) "category_title" $categories "category_color" $categoryColor }}
     {{ $opts := dict "vars" $vars }}
 
     {{ if or .IsPage .IsSection }}

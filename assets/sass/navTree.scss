@@ -12,10 +12,10 @@ nav.navTree {
     padding-right: 20px;
     border-right: solid 1px #ccc;
 
-    @if type-of($category-color) == color {
+    @if type-of($current-category-color) == color {
         .category-link-container {
-            background: -webkit-linear-gradient(0deg, $category-color, adjust-color($category-color, $hue: -20));;
-            border-image-source: linear-gradient(to right, $category-color, transparent);
+            background: -webkit-linear-gradient(0deg, $current-category-color, adjust-color($current-category-color, $hue: -20));;
+            border-image-source: linear-gradient(to right, $current-category-color, transparent);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -49,10 +49,10 @@ nav.navTree {
             font-size: 14px;
             padding: 6px 12px;
 
-            @if type-of($category-color) == color {
+            @if type-of($current-category-color) == color {
                 &.current {
-                    background-color: rgba($category-color, 0.08);
-                    color: adjust-color($category-color, $lightness: -10%);
+                    background-color: rgba($current-category-color, 0.08);
+                    color: adjust-color($current-category-color, $lightness: -10%);
                     font-weight: 500;
                     border-radius: 0 10px 10px 0;
                 }
