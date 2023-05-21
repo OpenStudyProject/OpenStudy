@@ -52,8 +52,22 @@
     {{ end }}
 
     <!-- Taxonomy Terms Page CSS -->
+    {{ $hierarchy := partial "function/fetchHierarchy" . }}
+    {{ $categoryTitle := slice }}
+    {{ $categoryColor := slice }}
+    {{ $categoryDescription := slice }}
+
+    {{ range .Site.Sections }}
+        {{ $categoryTitle = $categoryTitle | append (.Title | lower) }}
+        {{ $categoryColor = $categoryColor | append .Params.Color }}
+        {{ $categoryDescription = $categoryDescription | append .Params.Description }}
+    {{ end }}
+
+    {{ $vars := dict "category_title" $categoryTitle "category_color" $categoryColor "category_description" $categoryDescription }}
+    {{ $opts := dict "vars" $vars }}
+
     {{ if eq .Kind "taxonomy" }}
-        {{ $style := resources.Get "sass/terms.scss" | toCSS | minify | fingerprint }}
+        {{ $style := resources.Get "sass/terms.scss" | toCSS $opts | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ end }}
 
@@ -65,7 +79,6 @@
 
     <!-- Section and Article Page CSS -->
     {{ $include := slice "navTree" "article" "alert" }}
-    {{ $hierarchy := partial "function/fetchHierarchy" . }}
     {{ $categories := slice }}
     {{ $categoryColor := slice }}
 
