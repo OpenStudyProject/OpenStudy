@@ -1,3 +1,4 @@
+@import 'hugo:vars';
 @import '_variables.scss';
 @import '_markdown.scss';
 
@@ -49,19 +50,30 @@
                 display: flex;
                 list-style-type: none;
                 margin: 8px 0;
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1px 6px;
+                    margin-right: 6px;
+                    border-radius: 9999px;
+                    font-size: 12px;
+                }
                 
                 @each $tag in $tags {
                     li.#{map-get($tag, 'class')} {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 1px 6px;
-                        margin-right: 6px;
                         color: map-get($tag, 'color');
                         background-color: #{map-get($tag, 'color')}16;
                         border: solid 1px map-get($tag, 'color');
-                        border-radius: 9999px;
-                        font-size: 12px;
+                    }
+                }
+
+                @if type-of($category-color) == color {
+                    li.#{$category-title} {
+                        color: $category-color;
+                        background-color: #{$category-color}16;
+                        border: solid 1px $category-color;
                     }
                 }
             }
