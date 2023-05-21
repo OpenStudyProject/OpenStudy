@@ -18,15 +18,15 @@
     <div class="wrapper">
         <div class="container">
             <div class="category-container">
-                {{ range shuffle (.Site.Home.Sections) }}
-                <a href="{{ .RelPermalink }}" class="category-item">
-                    {{ if fileExists ((.Title | lower) | printf "static/thumbnails/%s" | printf "%s.svg") }}
-                        <img src="/thumbnails/{{ .Title | lower }}.svg" alt="Category-Thumbnail">
-                    {{ else if fileExists (.Title | lower) | printf "static/thumbnails/%s" | printf "%s.png" }}
-                        <img src="/thumbnails/{{ .Title | lower }}.png" alt="Category-Thumbnail">
-                    {{ end }}
-                    <p>{{ .Title }}</p>
-                </a>
+                {{ range .Site.Sections.ByTitle }}
+                    <a href="{{ .RelPermalink }}" class="category-item">
+                        {{ if fileExists ((.Title | lower) | printf "static/thumbnails/%s" | printf "%s.svg") }}
+                            <img src="/thumbnails/{{ .Title | lower }}.svg" alt="Category-Thumbnail">
+                        {{ else if fileExists (.Title | lower) | printf "static/thumbnails/%s" | printf "%s.png" }}
+                            <img src="/thumbnails/{{ .Title | lower }}.png" alt="Category-Thumbnail">
+                        {{ end }}
+                        <p>{{ .Title }}</p>
+                    </a>
                 {{ end }}
         </div>
     </div>
