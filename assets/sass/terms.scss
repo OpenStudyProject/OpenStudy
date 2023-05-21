@@ -1,4 +1,14 @@
+@import 'hugo:vars';
 @import "_variables.scss";
+
+$categories: ();
+
+@for $i from 1 through length($category-title) {
+    $t: nth($category-title, $i);
+    $c: nth($category-color, $i);
+    $d: nth($category-description, $i);
+    $categories: append($categories, (("class": $t, "color": #{$c}, "description": #{$d})));
+}
 
 ul.terms {
     margin: 30px 0;
@@ -14,37 +24,60 @@ ul.terms {
             border-bottom: solid 1px #ccc;
         }
 
+        .tagicon-container {
+            width: 20%;
+            
+            li {
+                width: fit-content;
+                padding: 2px 8px;
+                margin-right: 6px;
+                border-radius: 9999px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+            }
+        }
+
+        .tag-description {
+            padding: 4px 12px;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+
+        p {
+            padding: 0 4px;
+        }
+
+        @each $category in $categories {
+            .tagicon-container {
+                li.#{map-get($category, 'class')} {
+                    border: solid 1px map-get($category, 'color');
+                    color: map-get($category, 'color');
+                    // background-color: $c;
+                }
+            }
+
+            .tag-description.#{map-get($category, 'class')} {
+                &::before {
+                    content: "#{map-get($category, 'description')}";
+                }
+            }
+        }
+
         @each $tag in $tags {
             .tagicon-container {
-                width: 20%;
-                
                 li.#{map-get($tag, 'class')} {
-                    width: fit-content;
-                    padding: 2px 8px;
-                    margin-right: 6px;
                     border: solid 1px map-get($tag, 'color');
-                    border-radius: 9999px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 14px;
                     color: map-get($tag, 'color');
                     background-color: #{map-get($tag, 'color')}16;
                 }
             }
 
             .tag-description.#{map-get($tag, 'class')} {
-                padding: 4px 12px;
-                overflow: hidden;
-                flex-grow: 1;
-
                 &::before {
                     content: "#{map-get($tag, 'description')}";
                 }
-            }
-
-            p {
-                padding: 0 4px;
             }
         }
     }
