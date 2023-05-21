@@ -24,9 +24,9 @@ article {
             margin: 20px 0;
         }
 
-        @if type-of($category-color) == color {
+        @if type-of($current-category-color) == color {
             a {
-                color: $category-color;
+                color: $current-category-color;
             }
         }
     }
