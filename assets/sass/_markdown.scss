@@ -1,3 +1,4 @@
+@import 'hugo:vars';
 @import '_variables.scss';
 
 article {
@@ -21,6 +22,12 @@ article {
 
         &:first-child, & + h3 {
             margin: 20px 0;
+        }
+
+        @if type-of($category-color) == color {
+            a {
+                color: $category-color;
+            }
         }
     }
 
@@ -236,16 +243,6 @@ article {
 
         hr {
             display: none;
-        }
-    }
-}
-
-@each $c in $category {
-    article.#{map-get($c, 'type')} {
-        h2 {
-            a {
-                color: map-get($c, 'color');
-            }
         }
     }
 }
