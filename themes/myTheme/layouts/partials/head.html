@@ -64,11 +64,16 @@
     {{ end }}
 
     <!-- Section and Article Page CSS -->
-    {{ $include := slice "navTree" "article" "breadcrumb" "alert" }}
+    {{ $include := slice "navTree" "article" "alert" }}
+
+    {{ $hierarchy := partial "function/fetchHierarchy" . }}
+    {{ $vars := dict "category_color" ((index $hierarchy 1).Params.Color | string) }}
+    {{ $opts := dict "vars" $vars }}
+
     {{ if or .IsPage .IsSection }}
         {{ range $include }}
             {{ $path := . | printf "sass/%s" | printf "%s.scss" }}
-            {{ $style := resources.Get $path | toCSS | minify | fingerprint }}
+            {{ $style := resources.Get $path | toCSS $opts | minify | fingerprint }}
             <link rel="stylesheet" href="{{ $style.Permalink }}">
         {{ end }}
     {{ end }}
