@@ -8,8 +8,10 @@
                         <li class="{{ .Name }}">{{ .Page.Title }}</li>
                     </div>
                     <p class="tag-description {{ .Name }}"></p>
-                    <i class="fa-solid fa-tag"></i>
-                    <p>{{ $term.Count }}</p>
+                    <div class="item-container">
+                        <i class="fa-solid fa-tag"></i>
+                        <p class="count">{{ $term.Count }}</p>
+                    </div>
                 </a>
             {{ end }}
         </ul>

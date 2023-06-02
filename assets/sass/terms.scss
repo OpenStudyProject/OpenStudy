@@ -1,5 +1,6 @@
 @import 'hugo:vars';
-@import "_variables.scss";
+@import '_variables.scss';
+@import '_functions.scss';
 
 $categories: ();
 
@@ -10,112 +11,112 @@ $categories: ();
     $categories: append($categories, (("class": $t, "color": #{$c}, "description": #{$d})));
 }
 
-@function string2hsl($string) {
-    $len: str-length($string);
-    $s1: str-index($string, "(");
-    $s2: str-index($string, ",");
-    $h: str-slice($string, $s1 + 1, $s2 - 1);
-    $h: str2num($h);
+.container {
+    max-width: 1200px;
+    padding: 0 16px;
 
-    $string: str-slice($string, $s2 + 1, $len);
-    $s3: str-index($string, ",");
-    $s: str-slice($string, 2, $s3 - 2);
-    $s: str2num($s);
-
-    $len: str-length($string);
-    $string: str-slice($string, $s3 + 1, $len);
-    $s4: str-index($string, ")");
-    $l: str-slice($string, 2, $s4 - 2);
-    $l: str2num($l);
-
-    @return hsl($h, $s, $l);
-}
-
-@function str2num($string) {
-    $result: 0;
-    $len: str-length($string);
-
-    $map: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
-
-    @for $i from 1 through $len {
-        $char: str-slice($string, $i, $i);
-        $number: map-get($map, $char);
-        $result: $result * 10 + $number;
+    h1 {
+        margin: 20px 0;
     }
 
-    @return $result;
-}
+    ul.terms {
+        margin: 20px 0;
+        
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-top: solid 1px #ddd;
 
-@debug string2hsl("hsl(120, 100%, 50%)");
+            &:last-child {
+                border-bottom: solid 1px #ddd;
+            }
 
-ul.terms {
-    margin: 30px 0;
-    
-    a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 14px 0;
-        border-top: solid 1px #ccc;
+            .tagicon-container {
+                width: 180px;
+                flex-shrink: 0;
+                
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: fit-content;
+                    padding: 2px 8px;
+                    margin-right: 6px;
+                    border-radius: 9999px;
+                    font-size: 12px;
+                }
+            }
 
-        &:last-child {
-            border-bottom: solid 1px #ccc;
-        }
+            p.tag-description {
+                padding: 0 12px;
+                overflow: hidden;
+                flex-grow: 1;
+                white-space: nowrap;
+                font-size: 12px;
+            }
 
-        .tagicon-container {
-            width: 20%;
-            
-            li {
-                width: fit-content;
-                padding: 2px 8px;
-                margin-right: 6px;
-                border-radius: 9999px;
+            .item-container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 14px;
-            }
-        }
+                flex-shrink: 0;
+                padding: 0 8px;
 
-        .tag-description {
-            padding: 4px 12px;
-            overflow: hidden;
-            flex-grow: 1;
-        }
+                i {
+                    font-size: 12px;
+                }
 
-        p {
-            padding: 0 4px;
-        }
-
-        @each $category in $categories {
-            .tagicon-container {
-                li.#{map-get($category, 'class')} {
-                    border: solid 1px map-get($category, 'color');
-                    color: map-get($category, 'color');
-                    background-color: adjust-color(string2hsl(map-get($category, 'color')), $alpha: -0.9375);
-                    // background-color: string2hsl(map-get($category, 'color'))16;
+                p.count {
+                    font-size: 12px;
+                    padding-left: 4px;
                 }
             }
 
-            .tag-description.#{map-get($category, 'class')} {
-                &::before {
-                    content: "#{map-get($category, 'description')}";
+            @each $category in $categories {
+                .tagicon-container {
+                    li.#{map-get($category, 'class')} {
+                        border: solid 1px map-get($category, 'color');
+                        color: map-get($category, 'color');
+                        background-color: adjust-color(string2hsl(map-get($category, 'color')), $alpha: -0.9375);
+                    }
+                }
+
+                .tag-description.#{map-get($category, 'class')} {
+                    &::before {
+                        content: "#{map-get($category, 'description')}";
+                    }
+                }
+            }
+
+            @each $tag in $tags {
+                .tagicon-container {
+                    li.#{map-get($tag, 'class')} {
+                        border: solid 1px map-get($tag, 'color');
+                        color: map-get($tag, 'color');
+                        background-color: #{map-get($tag, 'color')}16;
+                    }
+                }
+
+                .tag-description.#{map-get($tag, 'class')} {
+                    &::before {
+                        content: "#{map-get($tag, 'description')}";
+                    }
                 }
             }
         }
+    }
+}
 
-        @each $tag in $tags {
-            .tagicon-container {
-                li.#{map-get($tag, 'class')} {
-                    border: solid 1px map-get($tag, 'color');
-                    color: map-get($tag, 'color');
-                    background-color: #{map-get($tag, 'color')}16;
-                }
-            }
 
-            .tag-description.#{map-get($tag, 'class')} {
-                &::before {
-                    content: "#{map-get($tag, 'description')}";
+
+@media screen and (max-width: 599px) {
+    .container {
+        ul.terms {
+            a {
+                p.tag-description {
+                    display: none;
                 }
             }
         }

@@ -72,8 +72,20 @@
     {{ end }}
 
     <!-- Taxonomy Lists Page CSS -->
+    {{ $hierarchy := partial "function/fetchHierarchy" . }}
+    {{ $categoryTitle := slice }}
+    {{ $categoryColor := slice }}
+
+    {{ range .Site.Sections }}
+        {{ $categoryTitle = $categoryTitle | append (.Title | lower) }}
+        {{ $categoryColor = $categoryColor | append .Params.Color }}
+    {{ end }}
+
+    {{ $vars := dict "category_title" $categoryTitle "category_color" $categoryColor }}
+    {{ $opts := dict "vars" $vars }}
+
     {{ if eq .Kind "term" }}
-        {{ $style := resources.Get "sass/taxonomy.scss" | toCSS | minify | fingerprint }}
+        {{ $style := resources.Get "sass/taxonomy.scss" | toCSS $opts | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ end }}
 

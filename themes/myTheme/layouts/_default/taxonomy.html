@@ -1,30 +1,28 @@
 {{ define "main" }}
-    <div class="taxonomy-container">
-        <ul class="tags-breadcrumb">
-            <a href="/tags/"><li>< すべてのタグ</li></a>
-        </ul>
+    <div class="container">
+        <a href="/tags/"><p class="tag-root">すべてのタグ</p></a>
         <h1 class="{{ .Title | lower }}">{{ .Title }}</h1>
         <ul class="terms">
             {{ range .RegularPages | sort }}
                 {{ $hierarchy := partial "function/fetchHierarchy" . }}
-                    <div class="row">
-                        <a href="{{ .RelPermalink }}" class="to-article">
-                            <li>{{ .Title }}</li>
-                        </a>
-                        <div class="tags-container">
-                            {{ with .Params.tags }}
-                                {{ range . | sort }}
-                                    <a href="/tags/{{ . | lower }}" class="{{ . | lower }}">
-                                        <li>{{ . }}</li>
-                                    </a>
-                                {{ end }}
+                <div class="row">
+                    <a href="{{ .RelPermalink }}">
+                        <li class="to-article">{{ .Title }}</li>
+                    </a>
+                    {{/*  <div class="tags-container">
+                        {{ with .Params.tags }}
+                            {{ range . | sort }}
+                                <a href="/tags/{{ . | lower }}" class="{{ . | lower }}">
+                                    <li>{{ . }}</li>
+                                </a>
                             {{ end }}
-                        </div>
-                        <a href="/{{ (index $hierarchy 1).Title | lower }}" class="category-container">
-                            <i class="fa-solid fa-folder"></i>
-                            <p>{{ (index $hierarchy 1).Title }}</p>
-                        </a>
-                    </div>
+                        {{ end }}
+                    </div>  */}}
+                    {{/*  <a href="/{{ (index $hierarchy 1).Title | lower }}" class="category-container">
+                        <i class="fa-solid fa-folder"></i>
+                        <p>{{ (index $hierarchy 1).Title }}</p>
+                    </a>  */}}
+                </div>
             {{ end }}
         </ul>
     </div>

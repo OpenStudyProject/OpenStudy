@@ -28,7 +28,7 @@
                     </div>
                 </div>  */}}
                 <ul class="tags">
-                    {{ range .Params.tags | append ((index $hierarchy 1).Title) | sort }}
+                    {{ range .Params.tags }}
                         <a href="/tags/{{ . | lower }}">
                             <li class="{{ . | lower }}">{{ . }}</li>
                         </a>
