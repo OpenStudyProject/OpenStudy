@@ -1,0 +1,35 @@
+@function string2hsl($string) {
+    $len: str-length($string);
+    $s1: str-index($string, "(");
+    $s2: str-index($string, ",");
+    $h: str-slice($string, $s1 + 1, $s2 - 1);
+    $h: str2num($h);
+
+    $string: str-slice($string, $s2 + 1, $len);
+    $s3: str-index($string, ",");
+    $s: str-slice($string, 2, $s3 - 2);
+    $s: str2num($s);
+
+    $len: str-length($string);
+    $string: str-slice($string, $s3 + 1, $len);
+    $s4: str-index($string, ")");
+    $l: str-slice($string, 2, $s4 - 2);
+    $l: str2num($l);
+
+    @return hsl($h, $s, $l);
+}
+
+@function str2num($string) {
+    $result: 0;
+    $len: str-length($string);
+
+    $map: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
+
+    @for $i from 1 through $len {
+        $char: str-slice($string, $i, $i);
+        $number: map-get($map, $char);
+        $result: $result * 10 + $number;
+    }
+
+    @return $result;
+}
