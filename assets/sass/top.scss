@@ -1,5 +1,6 @@
 .wrapper {
-    background: linear-gradient(to bottom, #fff, hsl(200, 10%, 90%));
+    // background: linear-gradient(to bottom, #fff, hsl(200, 10%, 90%));
+    background-image: conic-gradient(from 90deg at -10% 100%, #fff 0deg, hsl(200, 50%, 80%) 90deg, #fff 1turn);
 
     &.top {
         background: linear-gradient(to bottom, #fff, hsl(200, 100%, 96%));
@@ -30,8 +31,9 @@
                 font-size: 50px;
                 font-weight: 600;
                 color: hsl(200, 90%, 8%);
+                padding: 0 12px;
 
-                span {
+                span.crystal {
                     background: -webkit-linear-gradient(0deg, hsl(200, 100%, 50%), hsl(195, 100%, 50%));
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -40,9 +42,9 @@
         }
     }
 
-    .container {
+    .container.category {
         max-width: 1200px;
-        padding: 40px;
+        padding: 60px 20px;
         margin: 0 auto;
         
         .category-container {
@@ -73,6 +75,102 @@
             }
         }
     }
+
+    .container {
+        padding: 80px 20px;
+
+        h2 {
+            font-size: 34px;
+            text-align: center;
+            margin: 36px 0;
+        }
+
+        h3 {
+            font-size: 24px;
+            padding: 10px 0;
+            margin: 30px 0 0;
+        }
+
+        ul {
+            width: fit-content;
+            margin: 0 auto;
+
+            li {
+                padding: 4px 0;
+                font-size: 20px;
+            }
+        }
+
+        p {
+            padding: 20px 0;
+            font-size: 16px;
+        }
+
+        a.contribute {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+            font-weight: 800;
+            color: #0066cc;
+        }
+
+        .person-text-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .person-text {
+                i {
+                    display: block;
+                    font-size: 50px;
+                    width: 60px;
+                    text-align: center;
+                    padding: 12px 6px;
+                }
+            }
+        }
+
+        .openstudy-github {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 4px #000;
+            border-radius: 18px;
+            margin: 14px 0;
+
+            svg {
+                width: 100px;
+                margin: 10px 10px;
+            }
+
+            i.fa-xmark {
+                font-size: 60px;
+            }
+
+            i.fa-github {
+                font-size: 90px;
+                margin: 10px 20px;
+            }
+        }
+
+        i.fa-arrow-down {
+            display: block;
+            font-size: 50px;
+            width: 60px;
+            text-align: center;
+            padding: 12px;
+            margin: 0 auto;
+        }
+
+        i.fa-file-lines {
+            display: block;
+            font-size: 50px;
+            width: 60px;
+            text-align: center;
+            padding: 12px;
+            margin: 0 auto;
+        }
+    }
 }
 
 
@@ -89,12 +187,12 @@
                 }
 
                 h1 {
-                    font-size: 38px;
+                    font-size: 36px;
                 }
             }
         }
 
-        .container {
+        .container.category {
             padding: 30px 16px;
         }
     }
@@ -104,7 +202,7 @@
 
 @media screen and (max-width: 799px) {
     .wrapper {
-        .container {
+        .container.category {
             .category-container {
                 a.category-item {
                     width: calc(100% / 6);
@@ -132,7 +230,7 @@
             }
         }
 
-        .container {
+        .container.category {
             .category-container {
                 a.category-item {
                     width: calc(100% / 4);
