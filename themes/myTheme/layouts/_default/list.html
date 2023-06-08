@@ -1,21 +1,20 @@
 {{ define "main" }}
+    {{ $hierarchy := partial "function/fetchHierarchy" . }}
+
     <div class="navTree-article-container">
-        <nav class="navTree">
-            {{ $hierarchy := partial "function/fetchHierarchy" . }}
-            <a href="{{ (index $hierarchy 1).RelPermalink }}">
-                <h3>{{ (index $hierarchy 1).Title }}</h3>
-            </a>
-            {{ template "treeGenerator" (dict "section" (index $hierarchy 1) "current" .) }}
-        </nav>
+
+        {{/*  Navigation Tree  */}}
+        {{ partial "navTree.html" . }}
+        
         <div class="article-container">
-            <h1>{{ .Title }}</h1>
+            <h1 class="title">{{ .Title }}</h1>
             <p class="description">{{ .Description }}</p>
-            <div class="container">
-                <div class="list-index">
-                    {{ $hierarchy := partial "function/fetchHierarchy" . }}
-                    {{ template "treeGenerator" (dict "section" . "current" .) }}
-                </div>
-            </div>
+
+            <ul class="list-index">
+                {{ range .RegularPages }}
+                    <a href="{{ .RelPermalink }}"><li>{{ .Title }}</li></a>
+                {{ end }}
+            </ul>
         </div>
     </div>
 {{ end }}
