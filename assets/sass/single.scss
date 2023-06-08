@@ -31,7 +31,8 @@ $categories: ();
 
         h1.title {
             font-size: 32px;
-            margin: 20px 0;
+            // text-align: center;
+            margin: 40px 0;
         }
 
         p.description {
@@ -181,6 +182,9 @@ $categories: ();
         }
 
         .table-of-contents {
+            margin: 30px 0;
+            color: #777;
+
             label {
                 display: flex;
                 align-items: center;
@@ -244,6 +248,18 @@ $categories: ();
                         margin: 0 0 0 28px;
                     }
                 }
+            }
+        }
+
+        // for non-first section page
+        ul.list-index {
+            margin: 30px 0;
+
+            li {
+                list-style-type: none;
+                padding: 6px 0;
+                line-height: 1.2em;
+                color: #0066cc;
             }
         }
     }
