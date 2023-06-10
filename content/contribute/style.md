@@ -69,7 +69,7 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
     title = ""
     description = ""
     color = "hsl(321, 100%, 50%)"
-    categoryEyecatch = ""
+    categoryImage = ""
     type = "default"
     layout = "single"
     author = []
@@ -80,7 +80,7 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
 
 カテゴリのテーマカラーです。hsl形式で書いてください。hueは0から360まで、`saturation: 100%`、`e: 50%`にすると一番明るい色になります。
 
-### categoryEyecatch
+### categoryImage
 
 カテゴリのアイキャッチ画像のファイル名を指定します。カテゴリの直下に置いてください。できればsvgがいいです。高画質で余白の小さいものを使用してください。
 

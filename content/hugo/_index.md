@@ -5,7 +5,7 @@ date = 2023-03-27
 type = "default"
 layout = "single"
 color = "hsl(321, 100%, 50%)"
-categoryEyecatch = "hugo_original.svg"
+categoryImage = "hugo_original.svg"
 author = ["lin-24-ia"]
 +++
 
