@@ -10,10 +10,6 @@ enableGitInfo = true
 # Enable syntax highlightning
 pygmentsCodeFences = true
 
-# Sass files that always imported
-[params]
-    basicStyle = ["default", "header", "footer"]
-
 # Enable taxonomies
 [taxonomies]
     tag = 'tag'
