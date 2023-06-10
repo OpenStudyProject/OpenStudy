@@ -45,24 +45,28 @@
                     </div>
                     <div class="contributors-icon">
                         {{ with .Params.contributor }}
-                            {{ range . }}
+
+                            {{/*  Limit and shuffle contributor icons  */}}
+
+                            {{ $displayIconNum := 6 }}
+                            {{ range shuffle (first $displayIconNum .) }}
                                 <a href="https://github.com/{{ . }}" target="_blank" rel="noopener noreferrer">
                                     <img src="https://github.com/{{ . }}.png" alt="Contributors-icon">
                                 </a>
                             {{ end }}
-                            {{ if gt (. | len) 9}}
+
+                            {{/*  If there are hidden contributor icon, show plus mark  */}}
+
+                            {{ if gt (. | len) $displayIconNum}}
                                 <i class="fa-solid fa-plus"></i>
                             {{ end }}
                         {{ end}}
                     </div>
                 </div>
 
-                <div class="thanks-repo-button">
-                    {{/*  <div class="give-thanks">
-                        <i class="fa-regular fa-heart"></i>
-                        <span>thanks!</span>
-                    </div>  */}}
+                {{/*  Link to the file on GitHub  */}}
 
+                <div class="repo-container">
                     {{ $path := "" }}
                     {{ if .IsSection }}
                         {{ $path = print (.RelPermalink | path.Clean) "/_index.md" }}
@@ -86,7 +90,7 @@
                 </div>
             {{ end }}
 
-            <article class="{{ (index $hierarchy 1).Params.Color }}">
+            <article>
                 {{ .Content }}
             </article>
         </div>
