@@ -4,6 +4,10 @@ description = "OpenStudyで統一している書き方を説明します。"
 contributor = ["lin-24-ia"]
 +++
 
+# 書き方
+
+- サイト内リンクは相対パスを使用する、そうしないと別タブが開いてしまう
+
 # FrontMatter
 
 FrontMatter とは記事のメタデータを記したものです。記事の最初に書きます。toml形式です。
