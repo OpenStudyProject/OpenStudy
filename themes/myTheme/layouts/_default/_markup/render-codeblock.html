@@ -1,3 +1,7 @@
+{{/*  Markdown codeblock renderer  */}}
+
+{{/*  If there is "title" attribute, add caption at top-left  */}}
+
 {{ if len .Attributes | eq 1 }}
     <div class="codeBlock withCaption">
         {{ with .Attributes.title }}
@@ -9,6 +13,8 @@
         {{ end }}
         {{ highlight (.Inner | safeHTML) .Type }}
     </div>
+
+{{/*  If there is no attribute  */}}
 
 {{ else if len .Attributes | eq 0 }}
     <div class="codeBlock">

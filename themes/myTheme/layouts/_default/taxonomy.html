@@ -1,27 +1,19 @@
+{{/*  Template for index pages of each tag  */}}
+
 {{ define "main" }}
     <div class="container">
         <a href="/tag/"><p class="tag-root">すべてのタグ</p></a>
         <h1 class="{{ .Title | lower }}">{{ .Title }}</h1>
         <ul class="terms">
             {{ range .RegularPages | sort }}
+
+                {{/*  Fetch hierarchy of current page  */}}
+
                 {{ $hierarchy := partial "function/fetchHierarchy" . }}
                 <div class="row">
                     <a href="{{ .RelPermalink }}">
                         <li class="to-article">{{ .Title }}</li>
                     </a>
-                    {{/*  <div class="tag-container">
-                        {{ with .Params.tag }}
-                            {{ range . | sort }}
-                                <a href="/tag/{{ . | lower }}" class="{{ . | lower }}">
-                                    <li>{{ . }}</li>
-                                </a>
-                            {{ end }}
-                        {{ end }}
-                    </div>  */}}
-                    {{/*  <a href="/{{ (index $hierarchy 1).Title | lower }}" class="category-container">
-                        <i class="fa-solid fa-folder"></i>
-                        <p>{{ (index $hierarchy 1).Title }}</p>
-                    </a>  */}}
                 </div>
             {{ end }}
         </ul>

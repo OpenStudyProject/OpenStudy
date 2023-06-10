@@ -1,7 +1,12 @@
+{{/*  Template for top pages of tag  */}}
+
 {{ define "main" }}
     <div class="container">
         <h1>すべてのタグ</h1>
         <ul class="terms">
+
+            {{/*  Fetch hierarchy of current page  */}}
+
             {{ range $index, $term := .Site.Taxonomies.tag.ByCount }}
                 <a href="{{ .Page.RelPermalink }}">
                     <div class="tagicon-container">

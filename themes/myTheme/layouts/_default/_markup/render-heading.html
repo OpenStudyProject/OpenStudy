@@ -1,3 +1,10 @@
+{{/*  
+    Markdown heading renderer
+    # -> <h2>
+    ## -> <h3>
+    ### -> <h4>
+*/}}
+
 <h{{ add .Level 1 }} id="{{ .Anchor | safeURL }}">
     {{ if eq .Level 1}}
         <a href="#{{ .Anchor | safeURL }}">
