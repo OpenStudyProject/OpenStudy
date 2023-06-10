@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>
         {{ if .Page.IsHome }}
             OpenStudy
@@ -9,11 +10,13 @@
             {{ .Title }} - OpenStudy
         {{ end }}
     </title>
+    
     <meta name="description" content="{{ .Description }}">
     <meta name="format-detection" content="telephone=no">
 
     <link rel="icon" href="/favicon/favicon96.ico" size="96x96">
     <link rel="apple-touch-icon" href="images/oapple-touch-icon180.png">
+
 
     <!-- Open Graph Protocol -->
     <meta property="og:url" content="{{ .Permalink }}" />
@@ -24,16 +27,19 @@
     <meta property="og:image" content="/images/OpenStudy.png" />
     <meta property="og:locale" content="ja_JP" />
 
+
     <!-- Google Fonts for Logo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- text -->
+    <!-- for text -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- code -->
+    <!-- for code block -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 
+    
     <!-- Basic CSS -->
-    {{ range .Site.Params.basicStyle }}
+    {{ $s := slice "default" "header" "footer" }}
+    {{ range $s }}
         {{ $path := . | printf "sass/%s" | printf "%s.scss" }}
         {{ $style := resources.Get $path | toCSS | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
@@ -50,6 +56,7 @@
         {{ $style := resources.Get "sass/404.scss" | toCSS | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ end }}
+
 
     <!-- Taxonomy Terms Page CSS -->
     {{ $hierarchy := partial "function/fetchHierarchy" . }}
@@ -71,6 +78,7 @@
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ end }}
 
+
     <!-- Taxonomy Lists Page CSS -->
     {{ $hierarchy := partial "function/fetchHierarchy" . }}
     {{ $categoryTitle := slice }}
@@ -88,6 +96,7 @@
         {{ $style := resources.Get "sass/taxonomy.scss" | toCSS $opts | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ end }}
+
 
     <!-- Section and Article Page CSS -->
     {{ $include := slice "navTree" "single" "alert" }}
@@ -110,18 +119,14 @@
         {{ end }}
     {{ end }}
 
-    <!-- Additional CSS -->
-    {{ range .Params.style }}
-        {{ $path := . | printf "sass/%s" | printf "%s.scss" }}
-        {{ $style := resources.Get $path | toCSS | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ $style.Permalink }}">
-    {{ end }}
-
+    
     <!-- Google Search Console -->
     <meta name="google-site-verification" content="rYJHGR_uUcxmqkD9mSn79HxxWq4ikIz755zQGjaf87A" />
 
+
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/973e7a8373.js" crossorigin="anonymous"></script>
+
 
     <!-- Katex -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
