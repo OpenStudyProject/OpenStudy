@@ -1,32 +1,31 @@
+{{/*  Template for article pages  */}}
+
 {{ define "main" }}
+
+    {{/*  Fetch hierarchy of current page  */}}
+    
     {{ $hierarchy := partial "function/fetchHierarchy" . }}
 
     <div class="navTree-article-container">
 
-        {{/*  Navigation Tree  */}}
+        {{/*  Navigation tree  */}}
+
         {{ partial "navTree.html" . }}
         
         <div class="article-container">
-            {{ with .Params.CategoryEyecatch }}
-                <div class="category-eyecatch">
-                    <img src="{{ . }}" alt="Category-Eyecatch">
+            {{ with .Params.categoryImage }}
+                <div class="category-image">
+
+                    {{/*  Category image must be placed right under its directory  */}}
+
+                    <img src="{{ . }}" alt="category-image-of-{{ $.Title }}">
                 </div>
             {{ end }}
 
             <h1 class="title">{{ .Title }}</h1>
             <p class="description">{{ .Description }}</p>
 
-            <div class="views-thanks-tags-container">
-                {{/*  <div class="views-thanks-inner">
-                    <div class="views">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>1.6K</span>
-                    </div>
-                    <div class="thanks">
-                        <i class="fa-solid fa-heart"></i>
-                        <span>653</span>
-                    </div>
-                </div>  */}}
+            <div class="tag-container">
                 <ul class="tags">
                     {{ range .Params.tags }}
                         <a href="/tags/{{ . | lower }}">

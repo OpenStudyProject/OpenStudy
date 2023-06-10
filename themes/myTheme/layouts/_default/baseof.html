@@ -1,3 +1,5 @@
+{{/*  This applies to all pages.  */}}
+
 <!DOCTYPE html>
 <html>
     {{ partial "head.html" . }}
@@ -5,6 +7,7 @@
         {{ partial "header.html" . }}
         <main>
             {{ block "main" . }}
+                {{/*  blocks with "define main" come here  */}}
             {{ end }}
         </main>
         {{ partial "footer.html" . }}
