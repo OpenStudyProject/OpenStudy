@@ -59,6 +59,7 @@
 
 
     <!-- Section and Article Page CSS -->
+    {{ $hierarchy := partial "function/fetchHierarchy" . }}
     {{ $include := slice "navTree" "single" "alert" }}
     {{ $categories := slice }}
     {{ $categoryColor := slice }}
@@ -81,7 +82,6 @@
 
 
     <!-- Taxonomy Terms Page CSS -->
-    {{ $hierarchy := partial "function/fetchHierarchy" . }}
     {{ $categoryTitle := slice }}
     {{ $categoryColor := slice }}
     {{ $categoryDescription := slice }}
