@@ -58,6 +58,28 @@
     {{ end }}
 
 
+    <!-- Section and Article Page CSS -->
+    {{ $include := slice "navTree" "single" "alert" }}
+    {{ $categories := slice }}
+    {{ $categoryColor := slice }}
+
+    {{ range .Site.Sections }}
+        {{ $categories = $categories | append (.Title | lower) }}
+        {{ $categoryColor = $categoryColor | append .Params.Color }}
+    {{ end }}
+    <!-- Parameter that passed to scss -->
+    {{ $vars := dict "current_category_title" ((index $hierarchy 1).Title | lower) "current_category_color" ((index $hierarchy 1).Params.Color | string) "category_title" $categories "category_color" $categoryColor }}
+    {{ $opts := dict "vars" $vars }}
+
+    {{ if or .IsPage .IsSection }}
+        {{ range $include }}
+            {{ $path := . | printf "sass/%s" | printf "%s.scss" }}
+            {{ $style := resources.Get $path | toCSS $opts | minify | fingerprint }}
+            <link rel="stylesheet" href="{{ $style.Permalink }}">
+        {{ end }}
+    {{ end }}
+
+
     <!-- Taxonomy Terms Page CSS -->
     {{ $hierarchy := partial "function/fetchHierarchy" . }}
     {{ $categoryTitle := slice }}
@@ -95,28 +117,6 @@
     {{ if eq .Kind "term" }}
         {{ $style := resources.Get "sass/taxonomy.scss" | toCSS $opts | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
-    {{ end }}
-
-
-    <!-- Section and Article Page CSS -->
-    {{ $include := slice "navTree" "single" "alert" }}
-    {{ $categories := slice }}
-    {{ $categoryColor := slice }}
-
-    {{ range .Site.Sections }}
-        {{ $categories = $categories | append (.Title | lower) }}
-        {{ $categoryColor = $categoryColor | append .Params.Color }}
-    {{ end }}
-
-    {{ $vars := dict "current_category_title" ((index $hierarchy 1).Title | lower) "current_category_color" ((index $hierarchy 1).Params.Color | string) "category_title" $categories "category_color" $categoryColor }}
-    {{ $opts := dict "vars" $vars }}
-
-    {{ if or .IsPage .IsSection }}
-        {{ range $include }}
-            {{ $path := . | printf "sass/%s" | printf "%s.scss" }}
-            {{ $style := resources.Get $path | toCSS $opts | minify | fingerprint }}
-            <link rel="stylesheet" href="{{ $style.Permalink }}">
-        {{ end }}
     {{ end }}
 
     
