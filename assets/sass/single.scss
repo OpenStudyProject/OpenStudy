@@ -18,7 +18,7 @@ $categories: ();
         max-width: 900px;
         margin: 0 auto;
 
-        .category-eyecatch {
+        .category-image {
             margin: 20px 0;
 
             img {
@@ -40,7 +40,7 @@ $categories: ();
             font-weight: 600;
         }
 
-        .views-thanks-tags-container {
+        .tag-container {
             margin: 24px 0;
 
             .views-thanks-inner {
@@ -285,7 +285,7 @@ $categories: ();
                 font-size: 14px;
             }
 
-            .views-thanks-tags-container {
+            .tag-container {
                 margin: 14px 0;
             }
 
