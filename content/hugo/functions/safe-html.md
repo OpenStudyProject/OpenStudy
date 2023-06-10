@@ -2,7 +2,7 @@
 title = "SafeHTML"
 description = "HTMLタグをエスケープせずに表示するためのものです。"
 date = 1970-01-01
-tags = ["Hugo"]
+tag = ["Hugo"]
 author = ["lin-24-ia"]
 +++
 

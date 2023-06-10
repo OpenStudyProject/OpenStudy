@@ -56,7 +56,7 @@ $categories: ();
                 }
             }
 
-            ul.tags {
+            ul.tag {
                 display: flex;
                 list-style-type: none;
                 margin: 8px 0;
@@ -79,11 +79,11 @@ $categories: ();
                     }
                 }
                 
-                @each $tag in $tags {
-                    li.#{map-get($tag, 'class')} {
-                        color: map-get($tag, 'color');
-                        background-color: #{map-get($tag, 'color')}16;
-                        border: solid 1px map-get($tag, 'color');
+                @each $t in $tag {
+                    li.#{map-get($t, 'class')} {
+                        color: map-get($t, 'color');
+                        background-color: #{map-get($t, 'color')}16;
+                        border: solid 1px map-get($t, 'color');
                     }
                 }
             }

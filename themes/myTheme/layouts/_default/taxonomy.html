@@ -1,6 +1,6 @@
 {{ define "main" }}
     <div class="container">
-        <a href="/tags/"><p class="tag-root">すべてのタグ</p></a>
+        <a href="/tag/"><p class="tag-root">すべてのタグ</p></a>
         <h1 class="{{ .Title | lower }}">{{ .Title }}</h1>
         <ul class="terms">
             {{ range .RegularPages | sort }}
@@ -9,10 +9,10 @@
                     <a href="{{ .RelPermalink }}">
                         <li class="to-article">{{ .Title }}</li>
                     </a>
-                    {{/*  <div class="tags-container">
-                        {{ with .Params.tags }}
+                    {{/*  <div class="tag-container">
+                        {{ with .Params.tag }}
                             {{ range . | sort }}
-                                <a href="/tags/{{ . | lower }}" class="{{ . | lower }}">
+                                <a href="/tag/{{ . | lower }}" class="{{ . | lower }}">
                                     <li>{{ . }}</li>
                                 </a>
                             {{ end }}

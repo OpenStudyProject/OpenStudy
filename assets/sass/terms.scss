@@ -90,7 +90,7 @@ $categories: ();
                 }
             }
 
-            @each $tag in $tags {
+            @each $tag in $tag {
                 .tagicon-container {
                     li.#{map-get($tag, 'class')} {
                         border: solid 1px map-get($tag, 'color');

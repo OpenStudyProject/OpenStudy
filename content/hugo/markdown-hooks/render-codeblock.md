@@ -2,7 +2,7 @@
 title = "Render Codeblock"
 description = "コードブロックのハイライト"
 date = 1970-01-01
-tags = ["Hugo", "GoldMark", "Highlight"]
+tag = ["Hugo", "GoldMark", "Highlight"]
 author = ["lin-24-ia"]
 +++
 

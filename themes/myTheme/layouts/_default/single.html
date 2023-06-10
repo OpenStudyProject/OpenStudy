@@ -26,9 +26,9 @@
             <p class="description">{{ .Description }}</p>
 
             <div class="tag-container">
-                <ul class="tags">
-                    {{ range .Params.tags }}
-                        <a href="/tags/{{ . | lower }}">
+                <ul class="tag">
+                    {{ range .Params.tag }}
+                        <a href="/tag/{{ . | lower }}">
                             <li class="{{ . | lower }}">{{ . }}</li>
                         </a>
                     {{ end }}

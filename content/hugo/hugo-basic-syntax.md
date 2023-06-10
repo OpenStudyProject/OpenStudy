@@ -2,7 +2,7 @@
 title = "Partial, Template, Shortcodeのまとめ"
 description = "Hugoの基本的な文法について解説します。"
 date = 2023-04-05
-tags = ["Hugo"]
+tag = ["Hugo"]
 author = ["lin-24-ia"]
 +++
 

@@ -29,17 +29,17 @@ $categories: ();
         }
     }
 
-    @each $tag in $tags {
-        h1.#{map-get($tag, 'class')} {
+    @each $t in $tag {
+        h1.#{map-get($t, 'class')} {
             width: fit-content;
             padding: 2px 12px;
             margin: 10px 0;
-            border: solid 1px map-get($tag, 'color');
+            border: solid 1px map-get($t, 'color');
             border-radius: 9999px;
             font-size: 22px;
             font-weight: 600;
-            color: map-get($tag, 'color');
-            background-color: #{map-get($tag, 'color')}16;
+            color: map-get($t, 'color');
+            background-color: #{map-get($t, 'color')}16;
         }
     }
 
@@ -77,40 +77,6 @@ $categories: ();
                 white-space: nowrap;
                 overflow: hidden;
             }
-
-            // .tags-container {
-            //     display: flex;
-            //     justify-content: flex-start;
-            //     align-items: center;
-            //     flex-grow: 1;
-                
-            //     @each $tag in $tags {
-            //         a.#{map-get($tag, 'class')} {
-            //             list-style-type: none;
-            //             width: fit-content;
-            //             padding: 1px 6px;
-            //             margin: 12px 4px;
-            //             border: solid 1px map-get($tag, 'color');
-            //             border-radius: 9999px;
-            //             font-size: 12px;
-            //             font-weight: 600;
-            //             color: map-get($tag, 'color');
-            //             background-color: #{map-get($tag, 'color')}16;
-            //         }
-            //     }
-            // }
-
-            // a.category-container {
-            //     width: 14%;
-            //     display: block;
-            //     display: flex;
-            //     justify-content: flex-start;
-            //     align-items: center;
-
-            //     p {
-            //         padding: 0 6px;
-            //     }
-            // }
         }
     }
 }

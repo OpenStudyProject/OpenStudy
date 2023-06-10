@@ -2,7 +2,7 @@
 title = "Templateについて"
 description = "HugoのTemplate"
 date = 2023-04-05
-tags = ["Hugo"]
+tag = ["Hugo"]
 author = ["lin-24-ia"]
 +++
 

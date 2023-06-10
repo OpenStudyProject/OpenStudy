@@ -17,7 +17,7 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
     +++
     title = ""
     description = ""
-    tags = []
+    tag = []
     weight
     author = []
     draft = true
@@ -31,7 +31,7 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
 
 タイトルの下に表示される見出し文です。
 
-### tags (optional)
+### tag (optional)
 
 記事にタグを追加できます。配列です。新規にタグを作成する際は、`assets/sass/_variables.scss`を編集する必要があります。
 

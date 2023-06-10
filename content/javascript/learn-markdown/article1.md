@@ -2,7 +2,7 @@
 title = "アロー関数"
 description = "アロー関数(arrow function)はJavaScriptの関数を作る方法のひとつです。"
 date = 1970-01-01
-tags = ["Python", "Markdown", "Unity", "Swift", "Hugo"]
+tag = ["Python", "Markdown", "Unity", "Swift", "Hugo"]
 +++
 
 # アロー関数の構文
