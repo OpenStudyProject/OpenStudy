@@ -3,7 +3,7 @@ title = "デフォルト引数"
 description = "引数の値がundefinedのとき、代わりの値を指定できるのがデフォルト引数(default parameter)です。"
 date = 2023-01-18
 tag = ["App", "Markdown", "Python"]
-author = ["lin-24-ia"]
+contributor = ["lin-24-ia"]
 +++
 
 ## デフォルト引数の構文

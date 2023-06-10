@@ -3,7 +3,7 @@ title = "SafeHTML"
 description = "HTMLタグをエスケープせずに表示するためのものです。"
 date = 1970-01-01
 tag = ["Hugo"]
-author = ["lin-24-ia"]
+contributor = ["lin-24-ia"]
 +++
 
 通常、HTMLのコードをパラメータとして渡すと、自動的にタグがエスケープされます。

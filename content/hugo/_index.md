@@ -6,7 +6,7 @@ type = "default"
 layout = "single"
 color = "hsl(321, 100%, 50%)"
 categoryImage = "hugo_original.svg"
-author = ["lin-24-ia"]
+contributor = ["lin-24-ia"]
 +++
 
 Hugoは、Go言語で書かれたオープンソースの静的サイトジェネレーターです。

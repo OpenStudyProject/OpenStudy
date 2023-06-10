@@ -1,7 +1,7 @@
 +++
 title = "書き方"
 description = "OpenStudyで統一している書き方を説明します。"
-author = ["lin-24-ia"]
+contributor = ["lin-24-ia"]
 +++
 
 # FrontMatter
@@ -19,7 +19,7 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
     description = ""
     tag = []
     weight
-    author = []
+    contributor = []
     draft = true
     +++
 
@@ -49,7 +49,7 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
 
 カテゴリ内の記事の順番を指定する際に使います。数値が小さいほど上位に表示されます。負の数も指定できます。ただし0は特別で、`0`を指定すると`weight`を指定していないことと同じになります。
 
-### author
+### contributor
 
 記事にコミットしていただいた方のGitHubのユーザーIDを書きます。
 
@@ -72,7 +72,7 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
     categoryImage = ""
     type = "default"
     layout = "single"
-    author = []
+    contributor = []
     draft = true
     +++
 

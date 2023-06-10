@@ -39,12 +39,12 @@
                 <div class="contributors">
                     <div class="contributors-label">
                         <span>作成した人</span>
-                        {{ with .Params.author }}
+                        {{ with .Params.contributor }}
                             <span class="person-count">{{ . | len }}</span>
                         {{ end }}
                     </div>
                     <div class="contributors-icon">
-                        {{ with .Params.author }}
+                        {{ with .Params.contributor }}
                             {{ range . }}
                                 <a href="https://github.com/{{ . }}" target="_blank" rel="noopener noreferrer">
                                     <img src="https://github.com/{{ . }}.png" alt="Contributors-icon">

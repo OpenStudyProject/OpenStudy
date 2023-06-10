@@ -3,7 +3,7 @@ title = "Templateについて"
 description = "HugoのTemplate"
 date = 2023-04-05
 tag = ["Hugo"]
-author = ["lin-24-ia"]
+contributor = ["lin-24-ia"]
 +++
 
 TemplateはHugoをカスタマイズする上で重要です。HTMLファイルに書くことができます。MDに書いても機能しません。HugoはGo言語のhtml/templateとtext/templateライブラリーを使用しています。

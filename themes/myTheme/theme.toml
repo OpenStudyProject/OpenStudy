@@ -7,6 +7,6 @@ tag = []
 features = []
 min_version = "0.41.0"
 
-[author]
+[contributor]
   name = ""
   homepage = ""

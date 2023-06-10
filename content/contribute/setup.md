@@ -1,7 +1,7 @@
 +++
 title = "環境構築"
 description = "コントリビューションするのに必要な環境構築のやり方"
-author = ["lin-24-ia"]
+contributor = ["lin-24-ia"]
 +++
 
 # 環境構築

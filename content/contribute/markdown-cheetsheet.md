@@ -3,7 +3,7 @@ title = "Markdownの書き方"
 description = "一般的な記法に加えて、OpenStudyで使える記法を説明します。記事を作成する際の参考にしてください。"
 date = 2023-04-05
 tag = ["Markdown"]
-author = ["lin-24-ia"]
+contributor = ["lin-24-ia"]
 +++
 
 # 見出し

@@ -3,7 +3,7 @@ title = "Render Codeblock"
 description = "コードブロックのハイライト"
 date = 1970-01-01
 tag = ["Hugo", "GoldMark", "Highlight"]
-author = ["lin-24-ia"]
+contributor = ["lin-24-ia"]
 +++
 
 Hugoのデフォルトでは、` ``` `に囲まれた部分がコードブロックとして認識されますが、自分でカスタマイズすることもできます。`lauout/_default/_markup/`に`render-codeblock.html`を作ると、そこでレイアウトを処理することができます。なお。特定の言語だけのカスタマイズもすることができます。例えば、`bash`に関するカスタマイズをしたいならば、`render-codeblock-bash.html`が適用されます。

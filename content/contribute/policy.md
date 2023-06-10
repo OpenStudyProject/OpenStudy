@@ -1,7 +1,7 @@
 +++
 title = "サイトの方針"
 description = "OpenStudyが大切にしていることや基本的な方針について説明します。"
-author = ["lin-24-ia"]
+contributor = ["lin-24-ia"]
 +++
 
 # OpenStudy

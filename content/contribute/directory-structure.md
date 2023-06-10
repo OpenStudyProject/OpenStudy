@@ -1,7 +1,7 @@
 +++
 title = "ディレクトリ構造"
 description = "OpenStudyのディレクトリ構造を説明します。"
-author = ["lin-24-ia"]
+contributor = ["lin-24-ia"]
 +++
 
 # ディレクトリ
