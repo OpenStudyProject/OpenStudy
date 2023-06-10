@@ -12,3 +12,6 @@ author = ["lin-24-ia"]
 - `hugo`コマンド
 - `hugo server`コマンド
 - `http://localhost:1313/` にアクセスする
+
+プルリクはCloseを付ける
+デザインを変更する際は前後のスクショを含める
