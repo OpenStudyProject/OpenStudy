@@ -5,18 +5,23 @@
     <div class="icon-and-title">
         {{ if eq $type "notice" }}
             <i class="fa-solid fa-circle-info"></i>
+
         {{ else if eq $type "success" }}
             <i class="fa-solid fa-circle-check"></i>
+
         {{ else if eq $type "warning" }}
             <i class="fa-solid fa-triangle-exclamation"></i>
+
         {{ else if eq $type "error" }}
             <i class="fa-solid fa-circle-xmark"></i>
+
         {{ else }}
             {{ erroridf "alert-dot-html-error" "'$type' inside shortcode 'alert.html' is invalid." }}
+
         {{ end }}
         <span>{{ $title }}</span>
     </div>
     <p>
-        {{ .Inner | markdownify}}
+        {{ .Inner | markdownify }}
     </p>
 </div>
