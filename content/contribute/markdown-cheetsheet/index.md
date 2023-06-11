@@ -111,11 +111,11 @@ OpenStudyでは、HTMLにレンダリングされるとそれぞれが`<h2>`、`
 `![代替文字](画像のURL)`と書きます。空白行を開けることなく`**`で囲むと、キャプションを追加できます。OpenStudyでは角丸で表示されます。
 
 ```text
-![Sandwitch](/images/sandwitch.jpg)
+![Sandwitch](sandwitch.jpg)
 **by Luis Covarrubias from Unsplash**
 ```
 
-![Sandwitch](/images/sandwitch.jpg)
+![Sandwitch](sandwitch.jpg)
 **by Luis Covarrubias from Unsplash**
 
 ## リンクつきの画像
@@ -123,11 +123,11 @@ OpenStudyでは、HTMLにレンダリングされるとそれぞれが`<h2>`、`
 `[![代替文字](画像のURL)](サイトのURL)`と書きます。
 
 ```text
-[![Sandwitch](/images/sandwitch.jpg)](https://unsplash.com/ja/@eledeluis)
+[![Sandwitch](sandwitch.jpg)](https://unsplash.com/ja/@eledeluis)
 **by Luis Covarrubias from Unsplash**
 ```
 
-[![Sandwitch](/images/sandwitch.jpg)](https://unsplash.com/ja/@eledeluis)
+[![Sandwitch](sandwitch.jpg)](https://unsplash.com/ja/@eledeluis)
 **by Luis Covarrubias from Unsplash**
 
 # コード
