@@ -1,3 +1,3 @@
-function func1(e) {
+function toggleMenu(e) {
     e.classList.toggle("closed");
 }

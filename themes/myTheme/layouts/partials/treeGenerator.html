@@ -20,9 +20,9 @@
         {{ range $section.Sections }}
             <div class="nav-section">
                 {{ if .IsAncestor $current }}
-                    <li onclick="func1(this)">{{ .LinkTitle }}</li>
+                    <li onclick="toggleMenu(this)">{{ .LinkTitle }}</li>
                 {{ else }}
-                    <li class="closed" onclick="func1(this)">{{ .LinkTitle }}</li>
+                    <li class="closed" onclick="toggleMenu(this)">{{ .LinkTitle }}</li>
                 {{ end }}
                 {{ template "treeGenerator" (dict "section" . "current" $current) }}
             </div>
