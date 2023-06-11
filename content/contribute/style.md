@@ -40,11 +40,11 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
 記事にタグを追加できます。配列です。新規にタグを作成する際は、`assets/sass/_variables.scss`を編集する必要があります。
 
 ```scss {title="_variables.scss"}
-    (
-        class: 'markdown',
-        description: 'いい言語',
-        color: hsl(204, 100%, 43%),
-    )
+(
+    class: 'markdown',
+    description: 'いい言語',
+    color: hsl(204, 100%, 43%),
+)
 ```
 
 上のようにタグ名、そのタグの説明、カラーを指定して、配列に追加してください。なおタグ名はできるだけ英語の小文字で書いてください。
