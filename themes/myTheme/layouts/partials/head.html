@@ -47,7 +47,7 @@
 
     <!-- Top Page CSS -->
     {{ if .IsHome }}
-        {{ $style := resources.Get "sass/top.scss" | toCSS | minify | fingerprint }}
+        {{ $style := resources.Get "sass/index.scss" | toCSS | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ end }}
 
