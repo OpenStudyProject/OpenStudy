@@ -1,6 +1,7 @@
 @import 'hugo:vars';
 @import '_variables.scss';
 @import '_markdown.scss';
+@import '_functions.scss';
 
 $categories: ();
 
@@ -76,6 +77,7 @@ $categories: ();
                         color: map-get($category, 'color');
                         background-color: #{map-get($category, 'color')}16;
                         border: solid 1px map-get($category, 'color');
+                        background-color: adjust-color(string2hsl(map-get($category, 'color')), $alpha: -0.9375);
                     }
                 }
                 
