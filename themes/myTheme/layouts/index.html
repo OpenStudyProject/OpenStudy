@@ -10,7 +10,10 @@
         <div class="container category">
             <div class="category-container">
                 {{ range .Site.Sections.ByTitle }}
-                    {{ if ne .Title "Contribute" }}
+
+                    {{/*  Exclude "Contribute" and "Others" category  */}}
+
+                    {{ if and (ne .Title "Contribute") (ne .Title "Others") }}
                         <a href="{{ .RelPermalink }}" class="category-item">
                             {{ if fileExists ((.Title | lower) | printf "static/thumbnails/%s" | printf "%s.svg") }}
                                 <img src="/thumbnails/{{ .Title | lower }}.svg" alt="Category-Thumbnail">
@@ -21,13 +24,20 @@
                         </a>
                     {{ end }}
                 {{ end }}
+
+                {{/*  "Others" category comes last  */}}
+
+                <a href="/others/" class="category-item">
+                    <img src="/thumbnails/others.svg" alt="Category-Thumbnail">
+                    <p>Others</p>
+                </a>
             </div>
         </div>
     </div>
 
     <div class="wrapper">
         <div class="container">
-            <h2>技術ブログやQiita、Zennなどの場合</h2>
+            <h2><span>技術ブログや</span><span>Qiita、</span><span>Zennなどの場合</span></h2>
             <div class="person-text-container">
                 <div class="person-text">
                     <i class="fa-solid fa-user-pen"></i>
@@ -45,7 +55,7 @@
                     <i class="fa-regular fa-file-lines"></i>
                 </div>
             </div>
-            <h2>基本的に1つの記事は1人が書いたもの</h2>
+            <h2><span>基本的に</span><span>1つの記事は</span><span>1人が書いたもの</span></h2>
             <ul>
                 <li>情報が<strong>断片的</strong>になる</li>
                 <li>他の人の記事を<strong>修正できない</strong></li>
@@ -79,17 +89,19 @@
             </div>
             <i class="fa-solid fa-arrow-down"></i>
             <i class="fa-regular fa-file-lines"></i>
-            <h2>すべての人が既存の記事に追記、修正もできる</h2>
+            <h2><span>すべての人が</span><span>既存の記事に</span><span>追記、</span><span>修正もできる</span></h2>
         </div>
     </div>
 
     <div class="wrapper">
         <div class="container">
-            <h2>強力な知識のデータベースです</h2>
-            <p>少数の人がすべてを網羅するよりも、多数の人が各々の得意分野を書いた方が圧倒的に有利であり、効率もいいはずです。記事が編集されればされるほど、多くのエンジニアの知識が凝集した、正確かつ有用で価値のあるページになります。</p>
+            <h2><span>強力な知識の</span><span>データベースです</span></h2>
+            <p>少数の人がすべてを網羅するよりも、多数の人が各々の得意分野を書いた方が圧倒的に有利であり、効率もいいはずです。</p>
+            <p>記事が編集されればされるほど、多くのエンジニアの知識が凝集した、正確かつ有用で価値のあるページになります。</p>
             <h3>パワフルな Hugo とシンプルな Markdown</h3>
-            <p>高速な静的サイトジェネレーターのHugoを使用しているため、記事の分類やタグ付けが非常に簡単です。多くの人の共同執筆でありながらシンプルなため、記事を書くことだけに集中できます。</p>
-            <h4>content/python/introduction.md</h4>
+            <p>高速な静的サイトジェネレーターのHugoを使用しているため、記事の分類やタグ付けが非常に簡単です。</p>
+            <p>多くの人の共同執筆でありながらシンプルなため、記事を書くことだけに集中できます。</p>
+            <h4>Markdown</h4>
             <pre>
 <code>+++
 title = "Markdownの書き方"
@@ -114,7 +126,7 @@ OpenStudyでは、HTMLにレンダリングされるとそれぞれが に対応
 
 ハイフン`-`、プラス`+`、アスタリスク`*`のいずれかを先頭に記述します。スペース4つでネストできます。</code></pre>
         <i class="fa-solid fa-arrow-down"></i>
-        <h4>レンダリングされたページ</h4>
+        <h4>HTML</h4>
         <iframe src="/contribute/markdown-cheetsheet/"></iframe>
         <h3>GitHubで管理しています</h3>
         <p>OpenStudyのコンテンツはGitHubで公開しているオープンソースです。どなたでも、新しい記事を作成したり、既存の記事に追記、修正できます。</p>
