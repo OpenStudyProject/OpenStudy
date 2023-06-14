@@ -28,7 +28,7 @@
             <div class="tag-container">
                 <ul class="tag">
                     {{ range .Params.tag }}
-                        <a href="{{ .Site.BaseURL }}tag/{{ . | lower }}">
+                        <a href="{{ $.Site.BaseURL }}tag/{{ . | lower }}">
                             <li class="{{ . | lower }}">{{ . }}</li>
                         </a>
                     {{ end }}
