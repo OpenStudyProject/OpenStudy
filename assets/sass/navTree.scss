@@ -46,7 +46,7 @@ nav.navTree {
         list-style-type: none;
 
         li {
-            font-size: 14px;
+            font-size: 12px;
             padding: 6px 12px;
 
             @if type-of($current-category-color) == color {
