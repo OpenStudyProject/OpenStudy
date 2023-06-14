@@ -16,9 +16,9 @@
                     {{ if and (ne .Title "Contribute") (ne .Title "Others") }}
                         <a href="{{ .RelPermalink }}" class="category-item">
                             {{ if fileExists ((.Title | lower) | printf "static/thumbnails/%s" | printf "%s.svg") }}
-                                <img src="/thumbnails/{{ .Title | lower }}.svg" alt="Category-Thumbnail">
+                                <img src="{{ .Site.BaseURL }}thumbnails/{{ .Title | lower }}.svg" alt="Category-Thumbnail">
                             {{ else if fileExists (.Title | lower) | printf "static/thumbnails/%s" | printf "%s.png" }}
-                                <img src="/thumbnails/{{ .Title | lower }}.png" alt="Category-Thumbnail">
+                                <img src="{{ .Site.BaseURL }}thumbnails/{{ .Title | lower }}.png" alt="Category-Thumbnail">
                             {{ end }}
                             <p>{{ .Title }}</p>
                         </a>
@@ -27,8 +27,8 @@
 
                 {{/*  "Others" category comes last  */}}
 
-                <a href="/others/" class="category-item">
-                    <img src="/thumbnails/others.svg" alt="Category-Thumbnail">
+                <a href="{{ .Site.BaseURL }}others/" class="category-item">
+                    <img src="{{ .Site.BaseURL }}thumbnails/others.svg" alt="Category-Thumbnail">
                     <p>Others</p>
                 </a>
             </div>
@@ -36,7 +36,7 @@
     </div>
 
     {{ .Site.BaseURL }}
-    <a href="/">sample link</a>
+    <a href="{{ .Site.BaseURL }}">sample link</a>
 
     <div class="wrapper">
         <div class="container">
@@ -130,7 +130,7 @@ OpenStudyでは、HTMLにレンダリングされるとそれぞれが に対応
 ハイフン`-`、プラス`+`、アスタリスク`*`のいずれかを先頭に記述します。スペース4つでネストできます。</code></pre>
         <i class="fa-solid fa-arrow-down"></i>
         <h4>HTML</h4>
-        <iframe src="/contribute/markdown-cheetsheet/"></iframe>
+        <iframe src="{{ .Site.BaseURL }}contribute/markdown-cheetsheet/"></iframe>
         <h3>GitHubで管理しています</h3>
         <p>OpenStudyのコンテンツはGitHubで公開しているオープンソースです。どなたでも、新しい記事を作成したり、既存の記事に追記、修正できます。</p>
         </div>
@@ -139,7 +139,7 @@ OpenStudyでは、HTMLにレンダリングされるとそれぞれが に対応
     <div class="wrapper">
         <div class="container">
             <h2><span>あなたの知識が</span><span>大きな力になります</span></h2>
-            <a href="/contribute" class="contribute">Contribute</a>
+            <a href="{{ .Site.BaseURL }}contribute" class="contribute">Contribute</a>
         </div>
     </div>
 {{ end }}

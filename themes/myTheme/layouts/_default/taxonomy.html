@@ -2,7 +2,7 @@
 
 {{ define "main" }}
     <div class="container">
-        <a href="/tag/"><p class="tag-root">すべてのタグ</p></a>
+        <a href="{{ .Site.BaseURL }}tag/"><p class="tag-root">すべてのタグ</p></a>
         <h1 class="{{ .Title | lower }}">{{ .Title }}</h1>
         <ul class="terms">
             {{ range .RegularPages | sort }}
