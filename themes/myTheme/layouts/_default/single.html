@@ -71,7 +71,7 @@
                     {{ if .IsSection }}
                         {{ $path = print (.RelPermalink | path.Clean) "/_index.md" }}
                     {{ else }}
-                        {{ $path = print (.RelPermalink | path.Clean) ".md" }}
+                        {{ $path = print (.RelPermalink | path.Clean) "/index.md" }}
                     {{ end }}
                     <a href="https://github.com/lin-24-ia/OpenStudy/tree/main/content{{ $path }}" target="_blank" rel="noopener noreferrer">
                         <div class="repository">
