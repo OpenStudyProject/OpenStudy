@@ -190,7 +190,8 @@ article {
     }
 
     .accordion-container {
-        box-shadow: 2px 4px 10px 2px #ddd;
+        box-shadow: 1px 4px 10px 2px #ddd;
+        border-radius: 12px;
 
         .accordion-title {
             display: block;
