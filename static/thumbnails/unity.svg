@@ -1,40 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
 <svg
-   width="500"
-   height="500"
    version="1.1"
-   id="svg134"
-   sodipodi:docname="unity.svg"
+   id="Logo"
+   x="0px"
+   y="0px"
+   viewBox="0 0 85.559996 96.64"
+   xml:space="preserve"
+   sodipodi:docname="U_Logo_MadeWith_RichBlack_RGB.svg"
+   width="85.559998"
+   height="96.639999"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs138" />
-  <sodipodi:namedview
-     id="namedview136"
-     pagecolor="#505050"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#505050"
-     showgrid="false"
-     inkscape:zoom="0.91781182"
-     inkscape:cx="282.19292"
-     inkscape:cy="352.46877"
-     inkscape:window-width="1440"
-     inkscape:window-height="847"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg134" />
-  <path
-     fill="#110b09"
-     d="m 415.74585,401.01459 -89.779,-151.01458 89.779,-151.014573 43.27976,151.014573 z M 215.9317,386.27828 103.12908,274.39982 H 282.6871 l 89.77899,151.01457 z m 0,-273.01861 156.07734,-39.136112 -89.779,151.014572 H 102.67203 Z M 445.21346,0 241.25064,52.948269 210.86389,104.97238 149.63335,104.5103 0,250.00001 l 149.63335,145.48972 61.23054,-0.46208 30.38675,52.02411 203.96282,53.41035 L 500,302.02413 469.15118,250.46209 500,198.89503 Z"
-     id="path132"
-     sodipodi:nodetypes="cccccccccccccccccccccccccccc"
-     style="stroke-width:5.0226" />
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs181" /><sodipodi:namedview
+   id="namedview179"
+   pagecolor="#505050"
+   bordercolor="#eeeeee"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#505050"
+   showgrid="false"
+   inkscape:zoom="3.7172011"
+   inkscape:cx="56.763138"
+   inkscape:cy="62.27804"
+   inkscape:window-width="1652"
+   inkscape:window-height="1205"
+   inkscape:window-x="356"
+   inkscape:window-y="96"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Logo" />
+<style
+   type="text/css"
+   id="style132">
+	.st0{fill:#4C4C4C;}
+	.st1{fill:#808080;}
+</style>
+
+
+
+
+
+<path
+   class="st0"
+   d="M 85.56,67.62 V 22.54 L 46.52,0 v 17.29 l 15.3,8.83 c 0.55,0.31 0.57,1.17 0,1.48 0,0 -18.18,10.5 -18.18,10.5 -0.55,0.32 -1.2,0.3 -1.71,0 L 23.75,27.6 c -0.56,-0.3 -0.57,-1.18 0,-1.48 L 39.04,17.29 V 0 L 0,22.54 v 45.08 -0.21 0.21 L 14.97,58.98 V 41.32 c -0.01,-0.63 0.73,-1.08 1.28,-0.74 l 18.18,10.5 c 0.55,0.32 0.86,0.89 0.86,1.48 v 20.99 c 0.01,0.63 -0.73,1.08 -1.28,0.74 L 18.71,65.46 3.74,74.1 42.78,96.64 81.82,74.1 66.85,65.46 51.55,74.29 c -0.54,0.33 -1.3,-0.1 -1.28,-0.74 0,0 0,-20.99 0,-20.99 0,-0.63 0.35,-1.19 0.86,-1.48 l 18.18,-10.5 c 0.54,-0.33 1.3,0.09 1.28,0.74 v 17.66 z"
+   id="path144" />
+<path
+   d="M 42.78,96.64 81.82,74.1 66.85,65.46 51.55,74.29 c -0.54,0.33 -1.3,-0.1 -1.28,-0.74 0,0 0,-20.99 0,-20.99 0,-0.63 0.35,-1.19 0.86,-1.48 l 18.18,-10.5 c 0.54,-0.33 1.3,0.09 1.28,0.74 0,0 0,17.66 0,17.66 l 14.97,8.64 V 22.54 l -42.78,24.7 z"
+   id="path146" />
+<path
+   class="st1"
+   d="m 46.52,0 v 17.29 l 15.3,8.83 c 0.55,0.31 0.57,1.17 0,1.48 0,0 -18.18,10.5 -18.18,10.5 -0.55,0.32 -1.2,0.3 -1.71,0 L 23.75,27.6 c -0.56,-0.3 -0.57,-1.18 0,-1.48 0,0 15.29,-8.83 15.29,-8.83 V 0 L 0,22.54 42.78,47.24 85.56,22.54 Z"
+   id="path148" />
+<path
+   class="st0"
+   d="M 34.02,74.29 18.72,65.46 3.75,74.1 42.79,96.64 V 47.24 L 0.01,22.54 v 45.08 -0.21 0.21 L 14.98,58.98 V 41.32 c -0.01,-0.63 0.73,-1.08 1.28,-0.74 0,0 18.18,10.5 18.18,10.5 0.55,0.32 0.86,0.89 0.86,1.48 v 20.99 c 0.01,0.62 -0.73,1.07 -1.28,0.74 z"
+   id="path150" />
+
+
 </svg>
