@@ -11,14 +11,29 @@
         {{/*  Navigation tree  */}}
 
         {{ partial "navTree.html" . }}
-        
+
         <div class="article-container">
-            {{ with .Params.categoryImage }}
+
+            {{/*  If current page is the root of its category:  */}}
+
+            {{ if eq . (index $hierarchy 1) }}
                 <div class="category-image">
+                    {{ with .Params.categoryImage }}
 
-                    {{/*  Category image must be placed right under its directory  */}}
+                        {{/*  Category image must be placed right under its directory  */}}
 
-                    <img src="{{ . }}" alt="category-image-of-{{ $.Title }}">
+                        <img src="{{ . }}" alt="category-image-of-{{ $.Title }}">
+
+                    {{ else }}
+
+                        {{/*  Use thumbnail image  */}}
+
+                        {{ if fileExists ((.Title | lower) | printf "static/thumbnails/%s" | printf "%s.svg") }}
+                            <img src="{{ .Site.BaseURL }}thumbnails/{{ .Title | lower }}.svg" alt="Category-Thumbnail">
+                        {{ else if fileExists (.Title | lower) | printf "static/thumbnails/%s" | printf "%s.png" }}
+                            <img src="{{ .Site.BaseURL }}thumbnails/{{ .Title | lower }}.png" alt="Category-Thumbnail">
+                        {{ end }}
+                    {{ end }}
                 </div>
             {{ end }}
 
@@ -41,6 +56,8 @@
                         <span>作成した人</span>
                         {{ with .Params.contributor }}
                             <span class="person-count">{{ . | len }}</span>
+                        {{ else }}
+                            <span class="person-count">0</span>
                         {{ end }}
                     </div>
                     <div class="contributors-icon">
