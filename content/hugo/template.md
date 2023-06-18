@@ -1,14 +1,12 @@
 +++
 title = "Templateについて"
-description = "HugoのTemplate"
-date = 2023-04-05
-tag = ["Hugo"]
+description = "TemplateはHugoをカスタマイズする上で重要です。"
 contributor = ["lin-24-ia"]
 +++
 
-TemplateはHugoをカスタマイズする上で重要です。HTMLファイルに書くことができます。MDに書いても機能しません。HugoはGo言語のhtml/templateとtext/templateライブラリーを使用しています。
-
 # 基本的な文法
+
+HTMLファイルに書くことができます。MDに書いても機能しません。HugoはGo言語のhtml/templateとtext/templateライブラリーを使用しています。
 
 - `{{ }}`の中に書く
 

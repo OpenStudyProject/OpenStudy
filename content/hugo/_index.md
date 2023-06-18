@@ -1,15 +1,12 @@
 +++
 title = "Hugo"
-description = "世界最速の静的サイトジェネレーター"
-date = 2023-03-27
+description = "Go言語で書かれた世界最速の静的サイトジェネレーター"
 type = "default"
 layout = "single"
 color = "hsl(321, 100%, 50%)"
-categoryImage = "hugo_original.svg"
+categoryImage = "hugo.svg"
 contributor = ["lin-24-ia"]
 +++
-
-Hugoは、Go言語で書かれたオープンソースの静的サイトジェネレーターです。
 
 # 静的サイトジェネレーターとは
 

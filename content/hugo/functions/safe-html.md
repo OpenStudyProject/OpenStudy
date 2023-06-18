@@ -1,10 +1,10 @@
 +++
 title = "SafeHTML"
 description = "HTMLタグをエスケープせずに表示するためのものです。"
-date = 1970-01-01
-tag = ["Hugo"]
 contributor = ["lin-24-ia"]
 +++
+
+# safeHTMLを使わない場合
 
 通常、HTMLのコードをパラメータとして渡すと、自動的にタグがエスケープされます。
 
@@ -19,6 +19,8 @@ copyright = "&copy; 2015 Jane Doe / <a href="https://creativecommons.org/license
 ```html { title="そのままの場合" }
 <p>© 2015 Jane Doe.  &lt;a href=&#34;https://creativecommons.org/licenses by/4.0/&#34;&gt;Some rights reserved&lt;/a&gt;.</p>
 ```
+
+# safeHTMLを使ったとき
 
 ここで、`{{ .Site.Copyright | safeHTML }}`とすることで、エスケープされなくなります。
 

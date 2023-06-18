@@ -1,12 +1,8 @@
 +++
 title = "Partial, Template, Shortcodeのまとめ"
 description = "Hugoの基本的な文法について解説します。"
-date = 2023-04-05
-tag = ["Hugo"]
 contributor = ["lin-24-ia"]
 +++
-
-混乱しやすのでまとめました。
 
 # Partial
 

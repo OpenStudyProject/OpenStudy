@@ -1,8 +1,6 @@
 +++
 title = "クイックスタート"
 description = "Hugoのインストールと基本的なサイトの構築まで説明します。"
-date = 2023-04-05
-tag = ["Hugo"]
 contributor = ["lin-24-ia"]
 weight = 1
 +++
