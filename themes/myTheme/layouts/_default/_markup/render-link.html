@@ -7,5 +7,10 @@
     {{ if strings.HasPrefix .Destination "http" }}
         target="_blank" rel="noopener noreferrer"
     {{ end }}>
-        {{ .Text | safeHTML }}
+
+    {{ .Text | safeHTML }}
+
+    {{ if strings.HasPrefix .Destination "http" }}
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    {{ end }}
 </a>
