@@ -1,4 +1,4 @@
 +++
 title = "" # keep empty
-descrption = ""
+description = "すべてのエンジニアの知識の結晶を最高に分かりやすく次世代へ"
 +++
