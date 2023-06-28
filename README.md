@@ -2,8 +2,6 @@
 
 [OpenStudy](https://openstudy.jp)はエンジニアのための知識共有サイトです。誰かが書いた記事を、他の誰かがGitHubを通じて追記、訂正、編集してアップデートできます。
 
-![](/static/master/screenshot.png)
-
 ## 目的: 有用な知識を分かりやすく体系化する
 
 
