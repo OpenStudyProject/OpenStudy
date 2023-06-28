@@ -28,7 +28,7 @@ Markdownなどのテキストから、HTMLのウェブサイトを生成する�
 
 ## CMSとの比較
 
-WordPressなどのCMSは、サーバーにユーザーからアクセスされるたびに、データベースにあるファイルを集めてウェブページを生成します。プログラミングの知識不要で使えるものが多いです。
+WordPressなどのCMS(Contents Management System)は、ユーザーがサーバーにアクセスされるたびに、データベースにあるファイルを集めてウェブページを生成します。プログラミングの知識不要で使えるものが多いです。
 
 ### 静的サイトジェネレーターのメリット
 
@@ -40,15 +40,23 @@ WordPressなどのCMSは、サーバーにユーザーからアクセスされ�
 - サーバー側でデータを処理できる
 - プログラミングの知識不要で使える
 
-## その他の有名な静的サイトジェネレーター
+## Hugo以外の有名な静的サイトジェネレーター
 
-- [Next.js](https://nextjs.org)
-- [Gatsby](https://www.gatsbyjs.com)
-- [jekyll](https://jekyllrb.com)
+### [Next.js](https://nextjs.org)
+
+Reactベースです。開発元はVercel。
+
+### [Gatsby](https://www.gatsbyjs.com)
+
+同じくReactベース。
+
+### [jekyll](https://jekyllrb.com)
+
+Ruby製です。
 
 # Hugoの特徴とできること
 
-Go言語の知識は不要です。
+Hugoを使うにあたってGo言語の知識は不要です。
 
 ### ビルドが高速
 
@@ -56,7 +64,7 @@ Go言語の知識は不要です。
 
 ### 編集内容が即座に反映される
 
-LiveReload機能がある
+LiveReload機能があります。
 
 ### たくさんのテーマから選べる
 
@@ -66,7 +74,7 @@ LiveReload機能がある
 
 Netlify、Heroku、GoDaddy、DreamHost、GitHub Pages、GitLab Pages、Surge、Firebase、Google Cloud Storage、Amazon S3、Rackspace、Azure、CloudFrontなどの有名なCDNへ簡単にデプロイできます。
 
-## 柔軟性が高い
+### 柔軟性が高い
 
 - それぞれの記事のURLを指定できる
 - カテゴリやタグで分類できる
