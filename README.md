@@ -1,6 +1,9 @@
 # OpenStudy
 
+[![build](https://github.com/OpenStudyProject/OpenStudy/actions/workflows/hugo.yml/badge.svg)](https://github.com/OpenStudyProject/OpenStudy/actions/workflows/hugo.yml)
+
 [OpenStudy](https://openstudy.jp)はエンジニアのための知識共有サイトです。誰かが書いた記事を、他の誰かがGitHubを通じて追記、訂正、編集してアップデートできます。
+
 
 ## 目的: 有用な知識を分かりやすく体系化する
 
@@ -27,7 +30,7 @@
 初心者向けの内容を体系的に分かりやすく解説する記事と、プログラムの理論的な背景を含めた高度な内容を含む記事が棲み分けされ、それぞれのニーズを満たせればいいなと考えています。
 
 
-## 技術記事を書くメリット
+### 技術記事を書くメリット
 
 - 自身の勉強になる
 - 承認欲求
@@ -38,4 +41,8 @@
 技術記事も同じように手軽でありたいと思います。
 
 
+## 記事を書く
 
+以下にまとめてあります。
+
+[Contribute](https://openstudy.jp/contribute)
