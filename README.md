@@ -1,12 +1,14 @@
-# OpenStudy
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/content/contribute/OpenStudyWithTitleDark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="/content/contribute/OpenStudyWithTitle.svg">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="/content/contribute/OpenStudyWithTitle.svg">
+</picture>
 
 [![build](https://github.com/OpenStudyProject/OpenStudy/actions/workflows/hugo.yml/badge.svg)](https://github.com/OpenStudyProject/OpenStudy/actions/workflows/hugo.yml)
 
 [OpenStudy](https://openstudy.jp)はエンジニアのための知識共有サイトです。誰かが書いた記事を、他の誰かがGitHubを通じて追記、訂正、編集してアップデートできます。
 
-
 ## 目的: 有用な知識を分かりやすく体系化する
-
 
 ## QiitaやZennや技術ブログの問題点
 
