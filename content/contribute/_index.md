@@ -4,6 +4,8 @@ description = "OpenStudyはエンジニアのための知識共有サイトで�
 color = "hsl(200, 100%, 60%)"
 type = "default"
 layout = "single"
+categoryImage = "OpenStudyWithTitle.svg"
+contributor = ["lin-24-ia"]
 +++
 
 # 目的: 有用な知識を分かりやすく体系化する
