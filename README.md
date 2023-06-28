@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="/content/contribute/OpenStudyWithTitleDark.svg">
   <source media="(prefers-color-scheme: light)" srcset="/content/contribute/OpenStudyWithTitle.svg">
-  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="/content/contribute/OpenStudyWithTitle.svg">
+  <img alt="OpenStydy logo with title" src="/content/contribute/OpenStudyWithTitle.svg">
 </picture>
 
 [![build](https://github.com/OpenStudyProject/OpenStudy/actions/workflows/hugo.yml/badge.svg)](https://github.com/OpenStudyProject/OpenStudy/actions/workflows/hugo.yml)

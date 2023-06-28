@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1757.006"
-   height="469.685"
-   viewBox="0 0 464.87448 124.27082"
+   width="1687.006"
+   height="489.685"
+   viewBox="0 0 446.35364 129.56249"
    version="1.1"
    id="svg5"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
@@ -28,8 +28,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.36976184"
-     inkscape:cx="-139.27884"
-     inkscape:cy="220.41214"
+     inkscape:cx="-177.14105"
+     inkscape:cy="296.13656"
      inkscape:window-width="1652"
      inkscape:window-height="1205"
      inkscape:window-x="0"
@@ -39,8 +39,8 @@
     <inkscape:grid
        type="xygrid"
        id="grid132"
-       originx="-8.5649702"
-       originy="-4.0106346"
+       originx="-8.5649684"
+       originy="-4.0106345"
        enabled="false" />
     <inkscape:grid
        type="axonomgrid"
@@ -48,8 +48,8 @@
        units="px"
        spacingy="26.458332"
        empspacing="5"
-       originx="520.6011"
-       originy="525.15551" />
+       originx="520.60098"
+       originy="525.1555" />
   </sodipodi:namedview>
   <defs
      id="defs2" />
@@ -60,7 +60,7 @@
      transform="translate(-8.5649839,-4.0106362)">
     <g
        id="g420"
-       transform="matrix(0.26999929,-0.04947525,0.04947525,0.26999929,-16.352839,9.5358065)"
+       transform="matrix(0.26999929,-0.04947525,0.04947525,0.26999929,-25.613255,12.18164)"
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.61527;stroke-dasharray:none;stroke-opacity:1">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.61527;stroke-dasharray:none;stroke-opacity:1"
@@ -76,7 +76,7 @@
        aria-label="OpenStudy "
        id="text416"
        style="font-size:72.0188px;letter-spacing:-1.81512px;stroke-width:13.0098;stroke-linejoin:round;fill:#ffffff;fill-opacity:1"
-       transform="matrix(0.82726033,0,0,0.82726033,23.025939,11.426003)">
+       transform="matrix(0.82726033,0,0,0.82726033,13.765523,14.071836)">
       <path
          d="m 180.44127,39.912691 q 3.20005,3.516543 4.88799,8.61553 1.72311,5.098988 1.72311,11.569427 0,6.470439 -1.75827,11.604591 -1.72311,5.098987 -4.85283,8.510034 -3.23522,3.551708 -7.66606,5.345145 -4.39568,1.793437 -10.05732,1.793437 -5.52097,0 -10.05731,-1.828602 -4.50117,-1.828602 -7.66606,-5.30998 -3.16489,-3.481377 -4.888,-8.545199 -1.68794,-5.063822 -1.68794,-11.569426 0,-6.400108 1.68794,-11.46393 1.68794,-5.098987 4.92316,-8.721027 3.09456,-3.446212 7.66607,-5.274814 4.60667,-1.828602 10.02214,-1.828602 5.62647,0 10.09248,1.863767 4.50118,1.828603 7.6309,5.239649 z m -0.63298,20.184957 q 0,-10.197975 -4.5715,-15.718947 -4.57151,-5.556138 -12.48373,-5.556138 -7.98255,0 -12.55406,5.556138 -4.53634,5.520972 -4.53634,15.718947 0,10.30347 4.64184,15.789277 4.64183,5.450642 12.44856,5.450642 7.80672,0 12.4134,-5.450642 4.64183,-5.485807 4.64183,-15.789277 z"
          id="path419"
