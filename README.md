@@ -4,9 +4,9 @@
   <img alt="OpenStydy logo with title" src="/content/contribute/OpenStudyWithTitle.svg">
 </picture>
 
-[![build](https://github.com/OpenStudyProject/OpenStudy/actions/workflows/hugo.yml/badge.svg)](https://github.com/OpenStudyProject/OpenStudy/actions/workflows/hugo.yml)
-
 [OpenStudy](https://openstudy.jp)はエンジニアのための知識共有サイトです。誰かが書いた記事を、他の誰かがGitHubを通じて追記、訂正、編集してアップデートできます。
+
+[![build](https://github.com/OpenStudyProject/OpenStudy/actions/workflows/hugo.yml/badge.svg)](https://github.com/OpenStudyProject/OpenStudy/actions/workflows/hugo.yml)
 
 ## 目的: 有用な知識を分かりやすく体系化する
 
