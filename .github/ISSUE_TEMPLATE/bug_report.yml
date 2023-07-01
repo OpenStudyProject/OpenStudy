@@ -1,0 +1,75 @@
+name: Bug Report
+description: OpenStudy のバグを報告する
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        * 質問は [Discussions](https://github.com/OpenStudyProject/OpenStudy/discussions) の Q&A カテゴリに書いてください。
+        * 似たようなバグが既に Issues に報告されていないか確認してください。
+
+  - type: textarea
+    attributes:
+      label: バグの内容
+      description: 必要であればリンクやスクリーンショットも追加してください。
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: バグを再現する方法
+      description: 必要であればリンクやスクリーンショットも追加してください。
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 動作環境
+      description: 必要であればリンクやスクリーンショットも追加してください。
+    validations:
+      required: true
+
+  - type: dropdown
+  id: browser
+  attributes:
+    label: ブラウザの種類
+    options:
+      - Chrome
+      - Safari
+      - Edge
+      - FireFox
+      - Opera
+      - その他
+  validations:
+    required: true
+
+  - type: textarea
+  attributes:
+    label: OSのバージョン
+    description: OSのバージョンを記入してください。
+  validations:
+    required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: OSの種類
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+
+  - type: textarea
+  attributes:
+    label: OSのバージョン
+    description: OSのバージョンを記入してください。
+  validations:
+    required: true
+
+  - type: textarea
+    attributes:
+      label: その他
+      description: その他の情報はここに書いてください。
