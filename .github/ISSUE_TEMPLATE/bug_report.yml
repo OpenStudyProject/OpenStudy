@@ -31,25 +31,25 @@ body:
       required: true
 
   - type: dropdown
-  id: browser
-  attributes:
-    label: ブラウザの種類
-    options:
-      - Chrome
-      - Safari
-      - Edge
-      - FireFox
-      - Opera
-      - その他
-  validations:
-    required: true
+    id: browser
+    attributes:
+      label: ブラウザの種類
+      options:
+        - Chrome
+        - Safari
+        - Edge
+        - FireFox
+        - Opera
+        - その他
+    validations:
+      required: true
 
   - type: textarea
-  attributes:
-    label: OSのバージョン
-    description: OSのバージョンを記入してください。
-  validations:
-    required: true
+    attributes:
+      label: OSのバージョン
+      description: OSのバージョンを記入してください。
+    validations:
+      required: true
 
   - type: dropdown
     id: os
@@ -63,11 +63,11 @@ body:
       required: true
 
   - type: textarea
-  attributes:
-    label: OSのバージョン
-    description: OSのバージョンを記入してください。
-  validations:
-    required: true
+    attributes:
+      label: OSのバージョン
+      description: OSのバージョンを記入してください。
+    validations:
+      required: true
 
   - type: textarea
     attributes:
