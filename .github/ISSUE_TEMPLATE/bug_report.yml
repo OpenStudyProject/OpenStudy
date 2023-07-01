@@ -6,6 +6,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        バグの報告に協力していただきありがとうございます！
+        
         * 似たようなバグが既に Issues に報告されていないか確認してください。
         * 質問は [Discussions](https://github.com/OpenStudyProject/OpenStudy/discussions) の Q&A カテゴリに書いてください。
 
