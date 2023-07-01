@@ -1,0 +1,15 @@
+# Comment to be posted to on first time issues
+newIssueWelcomeComment: >
+  Issue を作成していただきありがとうございます！
+
+# Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
+
+# Comment to be posted to on PRs from first time contributors in your repository
+newPRWelcomeComment: >
+  Pull Request を作成していただきありがとうございます！
+
+# Configuration for first-pr-merge - https://github.com/behaviorbot/first-pr-merge
+
+# Comment to be posted to on pull requests merged by a first time user
+firstPRMergeComment: >
+  Congrats on merging your first pull request!!
