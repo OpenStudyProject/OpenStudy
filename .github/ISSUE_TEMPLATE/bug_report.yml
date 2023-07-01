@@ -46,8 +46,8 @@ body:
 
   - type: textarea
     attributes:
-      label: OSのバージョン
-      description: OSのバージョンを記入してください。
+      label: ブラウザのバージョン
+      description: ブラウザのバージョンを記入してください。
     validations:
       required: true
 
