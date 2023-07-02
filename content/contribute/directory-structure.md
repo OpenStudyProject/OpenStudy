@@ -1,12 +1,12 @@
 +++
 title = "ディレクトリ構造"
-description = "OpenStudyのディレクトリ構造を説明します。"
+description = "OpenStudyのディレクトリ構造です。"
 contributor = ["lin-24-ia"]
 +++
 
 # ディレクトリ
 
-    (root)/
+    OpenStudy
         ┣ assets
         ┣ content
         ┣ data
@@ -39,6 +39,3 @@ static
 
 theme
 パーシャルファイルなど。
-
-# コントリビューションの例
-

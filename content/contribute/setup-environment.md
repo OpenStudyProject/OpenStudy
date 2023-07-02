@@ -1,17 +1,30 @@
 +++
 title = "環境構築"
-description = "コントリビューションするのに必要な環境構築のやり方"
+description = "環境構築のやり方を説明します。"
 contributor = ["lin-24-ia"]
+weight = 2
 +++
 
-# 環境構築
+# GitHubのアカウントを作成する
 
-- リポジトリのフォーク
-- リポジトリのプル
-- Hugoのインストール
+まだGitHubのアカウントを持っていない場合は作成してください。
+
+# リポジトリをフォークする
+
+OpenStudyのリポジトリを自分のアカウントにフォークします。
+
+# Hugoのインストール
+
+## MacOSの場合
+
+HomeBrewから
+
+```shell
+brew install hugo
+```
+
+でインストールできます。
+
 - `hugo`コマンド
 - `hugo server`コマンド
 - `http://localhost:1313/` にアクセスする
-
-プルリクはCloseを付ける
-デザインを変更する際は前後のスクショを含める
