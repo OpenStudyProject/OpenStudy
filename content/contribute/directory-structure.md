@@ -14,7 +14,7 @@ contributor = ["lin-24-ia"]
         ┣ resources
         ┣ static
         ┗ theme
-            ┗ myTheme
+            ┗ openstudy
                 ┣ archytype
                 ┣ layouts
                 ┗ static
