@@ -108,4 +108,4 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
 
 ### type, layout
 
-これはこのページが`themes/myTheme/layout/_default/single.html`のレイアウトを使用するように指定するために書きます。Hugoでは`_index.md`ファイルはSectionとして扱われるため、うまく記事として生成されません。そのため手動で指定する必要があります。
+これはこのページが`themes/openstudy/layout/_default/single.html`のレイアウトを使用するように指定するために書きます。Hugoでは`_index.md`ファイルはSectionとして扱われるため、うまく記事として生成されません。そのため手動で指定する必要があります。
