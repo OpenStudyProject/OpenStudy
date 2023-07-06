@@ -1,20 +1,20 @@
-name: Bug Report
-description: OpenStudy.jp のバグを報告する
+name: Report bug
+description: 不具合を報告する
 labels:
   - bug
 body:
   - type: markdown
     attributes:
       value: |
-        バグの報告に協力していただきありがとうございます！
+        issue を作成していただきありがとうございます！
         
-        * 似たようなバグが既に Issues に報告されていないか確認してください。
+        * 似たような issue が既にないか確認してください。
         * 質問は [Discussions](https://github.com/OpenStudyProject/OpenStudy/discussions) の Q&A カテゴリに書いてください。
 
   - type: textarea
     attributes:
       label: バグの内容
-      description: バグのスクリーンショットも追加してください。
+      description: 必要であればスクリーンショットも追加してください。
     validations:
       required: true
 
@@ -33,7 +33,7 @@ body:
   - type: textarea
     attributes:
       label: 動作環境
-      description: ブラウザとOSの種類とバージョンは必ず記載してください。
+      description: ブラウザとOSの種類とバージョンを記載してください。
     validations:
       required: true
 
