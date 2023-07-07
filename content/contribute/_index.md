@@ -1,12 +1,12 @@
-+++
-title = "Contribute"
-description = "OpenStudyはエンジニアのための知識共有サイトです。誰かが書いた記事を、他の誰かがGitHubを通じて追記、訂正、編集してアップデートできます。"
-color = "hsl(200, 100%, 60%)"
-type = "default"
-layout = "single"
-categoryImage = "OpenStudyWithTitle.svg"
-contributor = ["lin-24-ia"]
-+++
+---
+title: "Contribute"
+description: "OpenStudyはエンジニアのための知識共有サイトです。誰かが書いた記事を、他の誰かがGitHubを通じて追記、訂正、編集してアップデートできます。"
+color: "hsl(200, 100%, 60%)"
+type: "default"
+layout: "single"
+categoryImage: "OpenStudyWithTitle.svg"
+contributor: ["lin-24-ia"]
+---
 
 # 目的: 有用な知識を分かりやすく体系化する
 

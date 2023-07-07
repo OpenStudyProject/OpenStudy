@@ -1,8 +1,8 @@
-+++
-title = "Partial, Template, Shortcodeのまとめ"
-description = "Hugoの基本的な文法について解説します。"
-contributor = ["lin-24-ia"]
-+++
+---
+title: "Partial, Template, Shortcodeのまとめ"
+description: "Hugoの基本的な文法について解説します。"
+contributor: ["lin-24-ia"]
+---
 
 # Partial
 

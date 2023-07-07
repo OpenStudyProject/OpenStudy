@@ -1,9 +1,9 @@
-+++
-title = "環境構築"
-description = "環境構築のやり方を説明します。"
-contributor = ["lin-24-ia"]
-weight = 2
-+++
+---
+title: "環境構築"
+description: "環境構築のやり方を説明します。"
+contributor: ["lin-24-ia"]
+weight: 2
+---
 
 # GitHubのアカウントを作成する
 
