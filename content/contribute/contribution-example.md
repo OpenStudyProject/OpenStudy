@@ -1,9 +1,9 @@
-+++
-title = "Contribution の例"
-description = "OpenStudyに参加する方法はたくさんありますが、ここでは一例を紹介します。多くの方の参加をお待ちしています。"
-author = ["lin-24-ia"]
-weight = 1
-+++
+---
+title: "Contribution の例"
+description: "OpenStudyに参加する方法はたくさんありますが、ここでは一例を紹介します。多くの方の参加をお待ちしています。"
+author: ["lin-24-ia"]
+weight: 1
+---
 
 # 記事に関すること
 

@@ -1,9 +1,9 @@
-+++
-title = "Render Codeblock"
-description = "Hugoのデフォルトでは、ダブルクオーテーションに囲まれた部分がコードブロックとして認識されますが、自分でカスタマイズすることもできます。"
-tag = ["GoldMark", "Highlight"]
-contributor = ["lin-24-ia"]
-+++
+---
+title: "Render Codeblock"
+description: "Hugoのデフォルトでは、ダブルクオーテーションに囲まれた部分がコードブロックとして認識されますが、自分でカスタマイズすることもできます。"
+tag: ["GoldMark", "Highlight"]
+contributor: ["lin-24-ia"]
+---
 
 # パラメータの種類
 

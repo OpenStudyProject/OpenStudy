@@ -1,8 +1,8 @@
-+++
-title = "ディレクトリ構造"
-description = "OpenStudyのディレクトリ構造です。"
-contributor = ["lin-24-ia", "nemua"]
-+++
+---
+title: "ディレクトリ構造"
+description: "OpenStudyのディレクトリ構造です。"
+contributor: ["lin-24-ia", "nemua"]
+---
 
 # ディレクトリ
 

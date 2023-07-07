@@ -1,12 +1,12 @@
-+++
-title = "Hugo"
-description = "Go言語で書かれた世界最速の静的サイトジェネレーター"
-type = "default"
-layout = "single"
-color = "hsl(321, 100%, 50%)"
-categoryImage = "hugo.svg"
-contributor = ["lin-24-ia"]
-+++
+---
+title: "Hugo"
+description: "Go言語で書かれた世界最速の静的サイトジェネレーター"
+type: "default"
+layout: "single"
+color: "hsl(321, 100%, 50%)"
+categoryImage: "hugo.svg"
+contributor: ["lin-24-ia"]
+---
 
 # 静的サイトジェネレーターとは
 

@@ -1,8 +1,8 @@
-+++
-title = "Templateについて"
-description = "TemplateはHugoをカスタマイズする上で重要です。"
-contributor = ["lin-24-ia"]
-+++
+---
+title: "Templateについて"
+description: "TemplateはHugoをカスタマイズする上で重要です。"
+contributor: ["lin-24-ia"]
+---
 
 # 基本的な文法
 

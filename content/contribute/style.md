@@ -1,8 +1,8 @@
-+++
-title = "記事を書く上での注意点"
-description = "OpenStudyで統一している書き方を説明します。"
-contributor = ["lin-24-ia"]
-+++
+---
+title: "記事を書く上での注意点"
+description: "OpenStudyで統一している書き方を説明します。"
+contributor: ["lin-24-ia"]
+---
 
 # 書き方
 
@@ -36,14 +36,14 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
 
 通常の記事ページに書く FrontMatter は以下です。
 
-    +++
-    title = ""
-    description = ""
-    tag = []
+    ---
+    title: ""
+    description: ""
+    tag: []
     weight
-    contributor = []
-    draft = true
-    +++
+    contributor: []
+    draft: true
+    ---
 
 ### title
 
@@ -81,22 +81,22 @@ FrontMatter とは記事のメタデータを記したものです。記事の�
 
 ### draft (optional)
 
-`draft = true`とすると下書きとして認識され、そのページはビルドされなくなります。
+`draft: true`とすると下書きとして認識され、そのページはビルドされなくなります。
 
 ## カテゴリのトップページ
 
 カテゴリのトップページに書くFrontMatterは通常の記事ページとは異なります。
 
-    +++
-    title = ""
-    description = ""
-    color = "hsl(321, 100%, 50%)"
-    categoryImage = ""
-    type = "default"
-    layout = "single"
-    contributor = []
-    draft = true
-    +++
+    ---
+    title: ""
+    description: ""
+    color: "hsl(321, 100%, 50%)"
+    categoryImage: ""
+    type: "default"
+    layout: "single"
+    contributor: []
+    draft: true
+    ---
 
 ### color
 

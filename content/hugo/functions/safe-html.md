@@ -1,8 +1,8 @@
-+++
-title = "SafeHTML"
-description = "HTMLタグをエスケープせずに表示するためのものです。"
-contributor = ["lin-24-ia"]
-+++
+---
+title: "SafeHTML"
+description: "HTMLタグをエスケープせずに表示するためのものです。"
+contributor: ["lin-24-ia"]
+---
 
 # safeHTMLを使わない場合
 
