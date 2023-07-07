@@ -3,7 +3,7 @@ languageCode = 'ja-jp'
 defaultContentLanguage = "ja"
 hasCJKLanguage = true
 title = 'OpenStudy'
-theme = 'myTheme'
+theme = 'openstudy'
 pluralizeListTitles = false
 enableGitInfo = true
 
