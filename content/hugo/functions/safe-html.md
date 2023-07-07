@@ -11,7 +11,7 @@ contributor: ["lin-24-ia"]
 例えば、フッターに表示する用のコピーライトを`config.toml`に書いたとしましょう。
 
 ```toml { title="config.toml" }
-copyright: "&copy; 2015 Jane Doe / <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>"
+copyright = "&copy; 2015 Jane Doe / <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>"
 ```
 
 これを`{{ .Site.Copyright }}`として出力した場合、HTMLタグはエスケープされるため、以下のように`<a>`タグが機能しなくなってしまいます。

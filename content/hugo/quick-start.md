@@ -46,7 +46,7 @@ $ git clone https://github.com/vimux/mainroad
 `YOUR_SITE/config.toml`にテーマの設定をします。
 
 ```toml
-theme: "mainroad"
+theme = "mainroad"
 ```
 
 # 記事を書いてみる

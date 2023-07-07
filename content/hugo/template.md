@@ -40,7 +40,7 @@ https://gohugo.io/variables/page/
 {{ $name := "World" }}
 Hello, {{ $name }}!
 
-{{ $name: "Hugo" }}
+{{ $name = "Hugo" }}
 Hello, {{ $name }}!
 
 -> Hello, World!

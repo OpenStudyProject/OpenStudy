@@ -138,7 +138,7 @@ OpenStudyでは、HTMLにレンダリングされるとそれぞれが`<h2>`、`
 ````text
 ```js
 function helloWorld(param1, param2) {
-    let count: 0;
+    let count = 0;
 
     if (param2 == count - param1) {
         console.log('Hello, World!');
@@ -151,7 +151,7 @@ function helloWorld(param1, param2) {
 
 ```js
 function helloWorld(param1, param2) {
-    let count: 0;
+    let count = 0;
 
     if (param2 == count - param1) {
         console.log('Hello, World!');
@@ -314,12 +314,12 @@ function helloWorld(param1, param2) {
 
 ```text
 $$
-e^{i\theta}: \cos\theta + i\sin\theta
+e^{i\theta} = \cos\theta + i\sin\theta
 $$
 ```
 
 $$
-e^{i\theta}: \cos\theta + i\sin\theta
+e^{i\theta} = \cos\theta + i\sin\theta
 $$
 
 ## インライン数式
