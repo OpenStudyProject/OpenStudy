@@ -1,7 +1,7 @@
 ---
 title: "Contribution の例"
 description: "OpenStudyに参加する方法はたくさんありますが、ここでは一例を紹介します。多くの方の参加をお待ちしています。"
-author: ["lin-24-ia"]
+contributor: ["lin-24-ia"]
 weight: 1
 ---
 
